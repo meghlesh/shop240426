@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Confer - Consulting Website Template Free Download</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+
+            /* TOP BAR Start Css */
+
+.top-bar{
+background:#1f6fae;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 40px;
+font-size:14px;
+}
+
+.top-left{
+display:flex;
+}
+
+.top-item{
+display:flex;
+align-items:center;
+gap:10px;
+padding-right:20px;
+margin-right:20px;
+border-right:1px solid rgba(255,255,255,0.3);
+}
+
+.top-right{
+display:flex;
+gap:20px;
+}
+
+.social i{
+cursor:pointer;
+color: white;
+}
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 8px 12px;
+    font-size: 11px;
+    flex-wrap: nowrap;
+  }
+
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-item {
+    gap: 5px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  .top-right {
+    gap: 10px;
+  }
+
+  .social i {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .top-left {
+    gap: 6px;
+  }
+
+  .top-item {
+    gap: 4px;
+    padding-right: 6px;
+    margin-right: 6px;
+  }
+
+  .social i {
+    font-size: 12px;
+  }
+}
+/* TOP BAR end CSS  */
+            
+
+
+
+/* HEADER */
+ .header {
+            background: #0A2540;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 50px;
+            flex-wrap: wrap;
+            /* important for toggle */
+        }
+
+        /* LOGO */
+
+        #brand {
+            width: 180px;
+            margin-left: -30px;
+            
+        }
+
+        /* NAVIGATION */
+
+        .nav {
+            display: flex;
+            align-items: center;
+             gap: 30px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            margin-right: 4px;
+            margin-top: 18px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+    transition: 0.3s;
+        }
+
+        .nav ul li a:hover,
+        .nav ul li a.active {
+            color: #2ea3f2;
+            border-bottom: 2px solid #2ea3f2;
+                padding-bottom: 4px;
+        }
+
+
+
+        /* BUTTONS */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Common Button */
+.btn {
+    padding: 8px 35px;
+    font-size: 13px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* LOGIN BUTTON */
+.login {
+    border: 1px solid #38bdf8;
+    color: white;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.login:hover {
+    background: #38bdf8;
+}
+
+/* REGISTER BUTTON */
+.register {
+    border: 1px solid #38bdf8;
+    color: white;      /* blue text */
+    background: transparent;
+    transition: 0.3s;
+}
+
+/* ON HOVER / CLICK LOOK */
+.register:hover {
+    background: #38bdf8;
+    color: #fff;
+}
+       
+        /*======================================= */
+        /* HAMBURGER BUTTON */
+        /* ======================================= */
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            margin-right: -30px;
+            
+        }
+
+        /*nav bar ends here*/
+
+        /* preview page css start */
+        :root {
+            --bg-dark: #0A2540;
+            --primary-blue: #0796FE;
+            --sub-content: #797979;
+            --white: #FFFFFF;
+            --gradient: linear-gradient(to right, #0796FE, #0A2540);
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--sub-content);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .heading-font {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 200;
+            color: var(--bg-dark);
+            font-weight: 300;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-item a {
+            text-decoration: none;
+            color: var(--sub-content);
+            font-size: 15px;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--primary-blue) !important;
+            font-weight: 500;
+        }
+
+        /* Main Image & Thumbnails */
+
+        .product-main-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Tablet */
+        @media (max-width: 992px) {
+            .product-main-img {
+                height: 300px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .product-main-img {
+                height: 220px;
+            }
+        }
+
+        .thumb-img {
+            width: 100%;
+            height: 70px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        /* Mobile fix */
+        @media (max-width: 576px) {
+            .thumb-img {
+                height: 55px;
+            }
+        }
+
+        .action-btns {
+            flex-wrap: wrap;
+        }
+
+        .action-btns .btn {
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            background: transparent;
+            font-size: 14px;
+            padding: 8px 15px;
+            flex: 1 1 30%;
+            text-align: center;
+        }
+
+        .action-btns .btn:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .action-btns .btn {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* Sidebar Info */
+        .product-title {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .price-tag {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--bg-dark);
+            margin: 15px 0;
+        }
+
+        .license-card {
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fff;
+
+            /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
+        }
+
+        .license-option {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .license-option.active {
+            border-color: var(--primary-blue);
+            background-color: #f0f7ff;
+        }
+
+        .license-option {
+    gap: 14px; 
+}
+/* .license-option:hover {
+    border-color: var(--primary-blue);
+    background-color: #f0f7ff;
+} */
+/* .license-option:hover,
+.license-option.active {
+    border-color: var(--primary-blue);
+    background-color: #f0f7ff;
+} */
+        .add-to-cart-btn {
+            background-color: var(--primary-blue);
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+.add-to-cart-btn a {
+    color: white;         
+    text-decoration: none; 
+    display: block;        
+}
+
+.add-to-cart-btn a:hover {
+    color: white;          
+    text-decoration: none;
+}
+        /* Tabs Section */
+        .product-box {
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+
+
+        .tab-box {
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            background: #fff;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .custom-tabs {
+            border-bottom: 1px solid #dcdcdc;
+            padding: 0 20px;
+            margin-bottom: 0;
+        }
+
+
+        .tab-content-area {
+            border: none;
+            padding: 25px;
+        }
+
+        .custom-tabs .nav-link {
+            color: var(--bg-dark);
+            border: none;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+
+        .custom-tabs .nav-link.active {
+            background-color: var(--primary-blue) !important;
+            color: white !important;
+            border-radius: 0;
+        }
+
+
+
+        ul.feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.feature-list li::before {
+            content: "•";
+            color: #797979;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: 0;
+        }
+
+
+        /* auther css start */
+
+        :root {
+            --bg-dark: #0A2540;
+            --primary-blue: #0796FE;
+            --sub-content: #797979;
+            --light-blue-bg: #e1f2ff;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f4f4f4;
+
+        }
+
+        /* Author Card Styling */
+        .author-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            border: 1px solid #eee;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Header Section */
+        .author-header {
+            background-color: var(--light-blue-bg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .author-header h3 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+            color: var(--bg-dark);
+            margin: 0;
+            text-transform: capitalize;
+            font-size: 28px;
+        }
+
+        .blue-underline {
+            width: 50px;
+            height: 6px;
+            background-color: var(--primary-blue);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Body Section */
+        .author-body {
+            padding: 30px;
+        }
+
+        .author-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .author-name {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            color: var(--bg-dark);
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+
+        .rating-stars {
+            color: #ffb400;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .rating-text {
+            color: var(--sub-content);
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .author-bio {
+            color: var(--sub-content);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Stats Section */
+        .stats-item h4 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+
+        .stats-item p {
+            color: var(--sub-content);
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* Button */
+        .view-profile-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            width: 180px;
+            text-align: center;
+        }
+
+        .view-profile-btn:hover {
+            background-color: var(--bg-dark);
+            color: white;
+        }
+
+        /* Responsive stack for mobile */
+        @media (max-width: 576px) {
+            .author-body {
+                text-align: center;
+            }
+
+            .stats-container {
+                justify-content: center !important;
+            }
+        }
+
+
+#details h5{
+    color: #0A2540 ;
+}
+
+     #heading-h5{
+    color: #0A2540 ;
+}
+     
+ /* ==== DOCUMENTATION SECTION ===== */
+
+        body{
+            background:#f5f7fa;
+            font-family: 'Inter',sans-serif;
+        }
+
+        .custom-card{
+            border:1px solid #e0e0e0;
+            border-radius:8px;
+            transition:0.3s;
+            height:100%;
+        }
+
+        .custom-card:hover{
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .icon-box{
+            width:55px;
+            height:55px;
+            background:#eaf4ff;
+            color: #0796FE;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:6px;
+            font-size:22px;
+        }
+
+        .download-link{
+            text-decoration:none;
+            color: #0796FE;
+            font-weight:500;
+            font-size: 1.25rem;
+            letter-spacing: 0.2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .download-link i{
+            font-size: 1.1rem;
+            color:  #0796FE;
+        }
+
+        .download-link:hover{
+            color:  #0796FE;
+        }
+
+        .resource-box{
+            border:1px solid #e0e0e0;
+            border-radius:8px;
+        }
+
+        .resource-number{
+            background:#e6f2ff;
+            color: #0796FE;
+            padding:4px 10px;
+            border-radius:4px;
+            font-size:14px;
+            font-weight: bold;
+        }
+        .custom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+        /* documentation css end */
+        /* review css start */
+        :root {
+            --bg-heading-color: #0A2540;
+            --primary-theme: #0796FE;
+            --sub-content-font: #797979;
+            --white: #FFFFFF;
+            --light-bg: #f8fbff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #fdfdfd;
+            color: var(--sub-content-font);
+            padding: 20px 0;
+        }
+
+        .main-heading {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 200;
+            color: var(--bg-heading-color);
+            margin-bottom: 30px;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .rating-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 70px;
+            font-weight: 400;
+            line-height: 1;
+            color: var(--bg-heading-color);
+        }
+
+        .stars-orange {
+            color: #ffb400;
+            font-size: 14px;
+        }
+
+        /* Custom Progress Bars */
+        .progress-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .progress-label {
+            width: 20px;
+            color: var(--bg-heading-color);
+            font-weight: bold;
+        }
+
+        .progress-count {
+            width: 20px;
+            text-align: right;
+            color: var(--bg-heading-color);
+        }
+
+        .progress {
+            flex-grow: 1;
+            height: 8px;
+            background-color: #e9ecef;
+            margin: 0 15px;
+            border-radius: 10px;
+        }
+
+        .progress-bar {
+            background-color: var(--primary-theme);
+        }
+
+        /* Review Card */
+        .review-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fff;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            color: var(--bg-heading-color);
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+
+        .verified-badge {
+            background-color: #e6f7ef;
+            color: #28a745;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .star-rating-row {
+            margin: 8px 0;
+            font-size: 13px;
+            color: var(--sub-content-font);
+        }
+
+        .review-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--sub-content-font);
+        }
+
+        /* Button */
+        .btn-load-more {
+            border: 2px solid var(--primary-theme);
+            color: var(--primary-theme);
+            background: transparent;
+            font-weight: bold;
+            padding: 10px 40px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 1px;
+            transition: 0.3s;
+        }
+
+        .btn-load-more:hover {
+            background-color: var(--primary-theme);
+            color: white;
+        }
+
+        /* Responsive  */
+        @media (max-width: 768px) {
+            .rating-section {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* review css end */
+
+
+/* FOOTER Start CSS */
+
+ .footer {
+            background: #0A2540;
+            color: white;
+            padding: 50px 30px 20px;
+            margin-top: 60px;
+        }
+
+        /* FOOTER GRID */
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        /* FOOTER LOGO */
+
+        .footer-logo {
+            width: 170px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+
+        .footer-contact {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #cfd9e6;
+            
+        }
+
+       .footer-contact i {
+            color: #2ea3f2;
+            margin-top: 6px;
+        }
+
+        /* TITLES */
+
+        .footer-title {
+            font-size: 22px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #2ea3f2;
+        }
+
+        /* LINKS */
+
+        .footer-links {
+            list-style: none;
+            
+           
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+            width: fit-content;
+            
+            
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #cfd9e6;
+            display: flex;
+            gap: 10px;
+            
+        }
+
+        .footer-links a:hover {
+            color: #2ea3f2;
+        }
+
+        .footer-links i {
+            color: #2ea3f2;
+            padding-top: 6px;
+        }
+
+        /* NEWSLETTER */
+
+        .footer-text {
+            color: #cfd9e6;
+            margin-bottom: 20px;
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #3c5570;
+            color: white;
+        }
+
+        .newsletter button {
+            padding: 12px 20px;
+            background: #2ea3f2;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background: #1a87e7;
+        }
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid #223b55;
+            margin-top: 30px;
+            margin-bottom: -20px;
+            padding-top: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom a{
+            color: #cfd9e6;
+            text-decoration: none;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .footer-social i {
+            color: white;
+            transition: 0.3s;
+        }
+
+
+
+        /* ======================================= */
+        /* TABLET RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:1024px) {
+
+            /* show toggle */
+
+            .menu-toggle {
+                display: block;
+            }
+
+            /* navigation layout */
+
+            .nav {
+                width: 100%;
+                display: none;
+                padding: 15px 0;
+                
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+                /* LEFT ALIGN */
+                padding-left: 30px;
+                /* spacing from left */
+                width: 100%;
+            }
+
+            .actions {
+                flex-direction: column;
+                margin-top: -30px;
+                /* LEFT ALIGN BUTTONS */
+                padding-bottom: 20px;
+                padding-right: 150px;
+            }
+
+
+            /* when toggle active */
+
+            .nav.active {
+                display: flex;
+            }
+
+            /* footer becomes 2 columns */
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+        }
+
+        /* ======================================= */
+        /* MOBILE RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:768px) {
+
+            
+
+            
+
+            /* footer becomes single column */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* center footer bottom */
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+        }
+
+        /* small phones */
+
+        @media (max-width:420px) {
+
+            .newsletter {
+                flex-direction: column;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+        }
+
+/* Footer end  CSS*/
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+
+        <div class="top-left">
+
+            <div class="top-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>10:00AM - 7:00PM Mon - Sat</span>
+            </div>
+
+            <div class="top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 93262 46981</span>
+            </div>
+
+        </div>
+
+        <div class="top-right">
+            <div class="social"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="social"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+
+    </div>
+    <!-- Top Bar End -->
+
+
+    <!-- Nav Bar Start -->
+
+    <header class="header">
+
+        <a href="index.html"><img src="img/creativesweb.png" id="brand"></a>
+
+        <!-- Hamburger button -->
+
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="nav" id="navMenu">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Product (1).html" class="active">PRODUCT</a></li>
+                <!-- <li><a href="#">BECOME AUTHER</a></li> -->
+                <!-- <li><a href="#">CATEGORIES</a></li> -->
+                <li><a href="AuthorDashboard.html">BECOME AUTHOR</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="#">HELP CENTER</a></li>
+                <!-- <li><a href="#">SUPPORT</a></li> -->
+            </ul>
+
+            <div class="actions">
+                <a href="login.html" class="btn login">LOGIN</a>
+
+                <a href="Register.html" class="btn register">REGISTER</a>
+            </div>
+
+        </nav>
+
+    </header>
+    </div>
+    <!-- Nav Bar End -->
+
+
+    <div class="container my-4">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="Product (1).html">Product</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product Detail Page</li>
+            </ol>
+        </nav>
+
+        <div class="row g-4">
+            <!-- Left Side: Images & Description -->
+            <div class="col-lg-7">
+                <img src="./img/ProDetail5.png" class="product-main-img mb-3" alt="Stock Management System">
+
+                <div class="row g-2 mb-4">
+                    <div class="col-3 col-sm-2"><img src="./img/ProDetail1.png" class="thumb-img" alt="thumb"></div>
+                    <div class="col-3 col-sm-2"><img src="./img/ProDetail2.jpeg " class="thumb-img" alt="thumb">
+                    </div>
+                    <div class="col-3 col-sm-2"><img src="./img/ProDetail3.jpeg "  class="thumb-img" alt="thumb">
+                    </div>
+                    <div class="col-3 col-sm-2"><img src="./img/ProDetail4.jpeg " class="thumb-img" alt="thumb"></div>
+                    <div class="col-3 col-sm-2"><img src="./img/ProDetail6.png" class="thumb-img" alt="thumb">
+                    </div>
+                </div>
+
+                <div class="action-btns d-flex gap-2 mb-4">
+                    <button class="btn"><i class="bi bi-display"></i> Screenshot</button>
+                    <button class="btn"><i class="bi bi-play-circle"></i> Preview Video</button>
+                    <button class="btn"><i class="bi bi-window-sidebar"></i> View Demo</button>
+                </div>
+
+                <h4 class="mb-3">Short Description</h4>
+                <p>The Stock Management System is a powerful web-based inventory management solution designed to help
+                    businesses track products, manage suppliers, control stock movements, and generate accurate reports.
+                    The system provides real-time inventory visibility while supporting batch tracking, expiry date
+                    monitoring, and automated alerts to ensure efficient stock control and prevent losses.</p>
+            </div>
+
+            <!-- Right Side: Pricing & Licensing -->
+
+            <div class="col-lg-5">
+
+                <div class="product-box">
+
+                    <h1 class="product-title">Stock Management System</h1>
+                    <p class="mb-1 text-muted" style="font-size: 14px;">by Creative Web Solution</p>
+
+                    <div class="text-warning mb-2">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted ms-1">(18)</span>
+                    </div>
+
+                    <div class="price-tag">₹7,450</div>
+<hr>
+                    <div class="license-card">
+                        <h5 class="heading-font mb-3" style="font-size: 18px;">Type Of Licence</h5>
+
+                        <!-- Regular License -->
+                        <div class="license-option active d-flex align-items-start">
+
+                            <input type="checkbox" name="licence" class="me-2 mt-1" checked>
+
+                            <div>
+                                <strong class="d-block text-dark">Regular Licence</strong>
+                                <span class="text-dark fw-bold">Rs.7,450</span>
+                                <ul class="small mt-2 mb-0 ps-3">
+                                    <li>Use for a single business/store</li>
+                                    <li>No redistribution allowed</li>
+                                    <li>Includes basic support and updates</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- Extended License -->
+                        <div class="license-option d-flex align-items-start">
+
+                            <input type="checkbox" name="licence" class="me-2 mt-1">
+
+                            <div>
+                                <strong class="d-block text-dark">Extended Licence</strong>
+                                <span class="text-muted">Contact for pricing</span>
+                                <ul class="small mt-2 mb-0 ps-3">
+                                    <li>Use for SaaS or multi-client deployment</li>
+                                    <li>Permission to charge end users</li>
+                                    <li>Extended support and customization options</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <button class="add-to-cart-btn" ><a href="Cart.html">Add To Cart</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Section: Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="tab-box">
+                    <ul class="nav nav-tabs custom-tabs" id="productTab" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab"
+                                data-bs-target="#overview" type="button">Overview</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details"
+                                type="button">Technical Details</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs"
+                                type="button">Documents</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews"
+                                type="button">Reviews</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content tab-content-area" id="productTabContent">
+                        <div class="tab-pane fade show active" id="overview">
+                            <h2 class="mb-3" style="font-size: 24px; ;">Overview</h2>
+                            <p>The Stock Management System is a powerful web-based inventory management solution
+                                designed to
+                                help businesses track products, manage suppliers, control stock movements, and generate
+                                accurate reports.</p>
+                            <p>The system provides real-time inventory visibility while supporting batch tracking,
+                                expiry
+                                date monitoring, and automated alerts to ensure efficient stock control and prevent
+                                losses.
+                            </p>
+
+                            <h5 class=" mt-4" id="heading-h5">Features</h5>
+                            <ul class="feature-list mt-2">
+                                <li>Product and category management</li>
+                                <li>Real-time stock tracking</li>
+                                <li>Supplier management</li>
+                                <li>Purchase order management</li>
+                                <li>Batch-wise inventory tracking</li>
+                                <li>Expiry date monitoring and alerts</li>
+                                <li>FEFO (First Expiry First Out) stock movement</li>
+                                <li>Low stock and out-of-stock notifications</li>
+                                <li>Sales integration with POS systems</li>
+                                <li>Inventory and supplier performance reports</li>
+                                <li>Role-based user access control</li>
+                                <li>Activity logs and audit trails</li>
+                            </ul>
+
+                            <h5 class="mt-4" id="heading-h5">Use Cases</h5>
+                            <ul class="feature-list mt-2">
+                                <p>This software is ideal for businesses such as</p>
+                                <li> Retail stores</li>
+                                <li>Pharmacies and medical stores</li>
+                                <li>Wholesale distributors</li>
+                                <li> Supermarkets and grocery chains</li>
+                                <li>Electronics stores</li>
+                                <li> FMCG distribution businesses</li>
+
+                            </ul>
+
+                            <h5 class=" mt-4" id="heading-h5">Technical Highlights</h5>
+                            <ul class="feature-list mt-2">
+                                <li> Real-time stock movement tracking</li>
+                                <li> Batch-level inventory control</li>
+                                <li> Automated expiry alerts</li>
+                                <li>FEFO inventory logic enforcement</li>
+                                <li>Role-based access and activity tracking</li>
+                                <li> Scalable architecture for future expansion</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="details">
+
+                            <h2 class="mb-3" style="font-size: 24px;">Technology Stack</h2>
+
+                            <h5 class=" mt-3">Frontend</h5>
+                            <ul class="feature-list mt-2">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+
+                            <h5 class="  mt-3">Backend</h5>
+                            <ul class="feature-list mt-2">
+                                <li>Python</li>
+                            </ul>
+
+                            <h5 class="  mt-3">Database</h5>
+                            <ul class="feature-list mt-2">
+                                <li>MySQL / PostgreSQL</li>
+                            </ul>
+
+                            <h5 class="  mt-3">Framework Compatibility</h5>
+                            <p>Compatible with modern hosting environments and can integrate with:</p>
+                            <ul class="feature-list mt-2">
+                                <li>POS systems</li>
+                                <li>ERP platforms</li>
+                                <li>Third-party APIs</li>
+                                <li>Cloud storage services</li>
+                            </ul>
+
+                            <h5 class=" mt-3">Software Requirements</h5>
+                            <p>Server Requirements:</p>
+                            <ul class="feature-list mt-2">
+                                <li>PHP 8.0+ / Node.js</li>
+                                <li>MySQL 5.7+</li>
+                                <li>Apache or Nginx server</li>
+                                <li>SSL certificate recommended</li>
+                            </ul>
+
+                            <h5 class="  mt-3">Installation Instructions</h5>
+                            <p>Basic installation steps:</p>
+                            <ul class="feature-list mt-2">
+                                <li>Upload project files to server</li>
+                                <li>Import the database file</li>
+                                <li>Configure environment settings</li>
+                                <li>Set admin login credentials</li>
+                                <li>Access the dashboard and start managing inventory</li>
+                            </ul>
+
+                        </div>
+
+
+                           
+                        
+                         <div class="tab-pane fade" id="docs">
+                            <section class="documentation">
+
+                                <!-- Title -->
+                                <h3 class="mb-4">Product Documentation</h3>
+
+                                <!-- Cards -->
+                                <div class="row g-4">
+
+                                    <!-- Card 1 -->
+                                    <div class="col-md-4">
+                                        <div class="p-4 custom-card">
+                                            <div class="icon-box mb-3">
+                                                <i class="fa-regular fa-user"></i>
+                                            </div>
+                                            <h5 style="color: #0A2540  ;">User Guide</h5>
+                                            <p class="text-muted">
+                                                Provides instructions for daily operations such as managing products,
+                                                stock updates, and generating reports.
+                                            </p>
+                                            <a href="#" class="download-link">
+                                                <i class="fa-solid fa-download"></i> Download Pdf
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 2 -->
+                                    <div class="col-md-4">
+                                        <div class="p-4 custom-card">
+                                            <div class="icon-box mb-3">
+                                                <i class="fa-solid fa-file"></i>
+                                            </div>
+                                            <h5 style="color: #0A2540  ;">Installation Guide</h5>
+                                            <p class="text-muted">
+                                                Step-by-step instructions for installing and configuring the system.
+                                            </p>
+                                            <a href="#" class="download-link">
+                                                <i class="fa-solid fa-download"></i> Download Pdf
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3 -->
+                                    <div class="col-md-4">
+                                        <div class="p-4 custom-card">
+                                            <div class="icon-box mb-3">
+                                                <i class="fa fa-lightbulb"></i>
+                                            </div>
+                                            <h5 style="color: #0A2540  ;">Developer Guide</h5>
+                                            <p class="text-muted">
+                                                Technical documentation for customization, API integrations, and system
+                                                extensions.
+                                            </p>
+                                            <a href="#" class="download-link">
+                                                <i class="fa-solid fa-download"></i> Download Pdf
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Additional Resources -->
+                                <div class="p-4 mt-5 resource-box">
+                                    <h5 class="mb-3" style="color: #0A2540  ;">Additional Resources</h5>
+
+                                    <ul class="list-unstyled">
+                                        <li class="d-flex align-items-center mb-2">
+                                            <span class="resource-number me-2">1</span>
+                                            Video tutorials for setup and configuration
+                                        </li>
+                                        <li class="d-flex align-items-center mb-2">
+                                            <span class="resource-number me-2">2</span>
+                                            API documentation for third-party integrations
+                                        </li>
+                                        <li class="d-flex align-items-center mb-2">
+                                            <span class="resource-number me-2">3</span>
+                                            Sample data and configuration files
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <span class="resource-number me-2">4</span>
+                                            Community forum access and support tickets
+                                        </li>
+                                    </ul>
+                                </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="reviews">
+                            <div class="container">
+                                <h1 class="main-heading text-start">Reviews</h1>
+
+                                <!-- Summary Section -->
+                                <div class="summary-box">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 rating-section text-center">
+                                            <div class="rating-number">3.5</div>
+                                            <div class="stars-orange mb-1">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <div class="small" style="color: var(--bg-heading-color);">Rating (18)</div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <!-- Progress Bars -->
+                                            <div class="progress-row">
+                                                <span class="progress-label">5</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 75%"></div>
+                                                </div>
+                                                <span class="progress-count">7</span>
+                                            </div>
+                                            <div class="progress-row">
+                                                <span class="progress-label">4</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 45%"></div>
+                                                </div>
+                                                <span class="progress-count">4</span>
+                                            </div>
+                                            <div class="progress-row">
+                                                <span class="progress-label">3</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 25%"></div>
+                                                </div>
+                                                <span class="progress-count">2</span>
+                                            </div>
+                                            <div class="progress-row">
+                                                <span class="progress-label">2</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 15%"></div>
+                                                </div>
+                                                <span class="progress-count">1</span>
+                                            </div>
+                                            <div class="progress-row">
+                                                <span class="progress-label">1</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 35%"></div>
+                                                </div>
+                                                <span class="progress-count">3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Review List -->
+                                <div class="reviews-list">
+                                    <!-- Review 1 -->
+                                    <div class="review-card">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="reviewer-name">Sakshi Patil</h5>
+                                            <span class="verified-badge">Verified User</span>
+                                        </div>
+                                        <div class="star-rating-row">
+                                            <span class="stars-orange">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </span>
+                                            <span class="ms-2">5 Star</span>
+                                        </div>
+                                        <p class="review-text">Excellent inventory management system! The batch tracking
+                                            and expiry alerts have saved us thousands in waste. Highly recommended for
+                                            pharmacies.</p>
+                                    </div>
+
+                                    <!-- Review 2 -->
+                                    <div class="review-card">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="reviewer-name">Sejal Jaunde</h5>
+                                            <span class="verified-badge">Verified User</span>
+                                        </div>
+                                        <div class="star-rating-row">
+                                            <span class="stars-orange">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </span>
+                                            <span class="ms-2">5 Star</span>
+                                        </div>
+                                        <p class="review-text">Perfect for our retail chain. Easy to use, great
+                                            reporting features, and the support team is very responsive.</p>
+                                    </div>
+
+                                    <!-- Review 3 -->
+                                    <div class="review-card">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="reviewer-name">Raghav Jaiswal</h5>
+                                            <span class="verified-badge">Verified User</span>
+                                        </div>
+                                        <div class="star-rating-row">
+                                            <span class="stars-orange">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </span>
+                                            <span class="ms-2">5 Star</span>
+                                        </div>
+                                        <p class="review-text">Excellent inventory management system! The batch tracking
+                                            and expiry alerts have saved us thousands in waste. Highly recommended for
+                                            pharmacies.</p>
+                                    </div>
+
+                                    <!-- Review 4 -->
+                                    <div class="review-card">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="reviewer-name">Rashmi Shinde</h5>
+                                            <span class="verified-badge">Verified User</span>
+                                        </div>
+                                        <div class="star-rating-row">
+                                            <span class="stars-orange">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </span>
+                                            <span class="ms-2">5 Star</span>
+                                        </div>
+                                        <p class="review-text">Very comprehensive system with all the features we need.
+                                            Installation was straightforward and documentation is clear.</p>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-load-more">Load More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="author-card">
+            <!-- Header -->
+            <div class="author-header">
+                <h3>About The Author</h3>
+                <div class="blue-underline"></div>
+            </div>
+
+            <!-- Body Content -->
+            <div class="author-body">
+                <div class="row">
+                    <!-- Image Col -->
+                    <div class="col-md-2 text-center text-md-start mb-3 mb-md-0">
+                        <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-hipster-lambersexual-model-sexy-man-dressed-tshirt-jeans-fashion-male-isolated-blue-wall-studio_158538-26731.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="author-img" alt="Shivkumar Patil">
+                    </div>
+
+                    <!-- Info Col -->
+                    <div class="col-md-10">
+                        <h4 class="author-name">Shivkumar Patil</h4>
+
+                        <div class="rating-stars mb-3">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="rating-text">4.5</span>
+                        </div>
+
+                        <p class="author-bio">
+                            Creative Web Solution specializes in building scalable business management software
+                            including inventory systems, marketplaces, booking platforms, and SaaS solutions. With over
+                            50+ business software products and thousands of satisfied customers worldwide, we're
+                            committed to delivering high-quality, reliable solutions that help businesses grow.
+                        </p>
+
+                        <!-- Stats Row -->
+                        <div class="d-flex gap-5 stats-container flex-wrap">
+                            <div class="stats-item">
+                                <h4>50+</h4>
+                                <p>Product posted</p>
+                            </div>
+                            <div class="stats-item">
+                                <h4>150+</h4>
+                                <p>Purchased</p>
+                            </div>
+                            <div class="stats-item">
+                                <h4>4.5</h4>
+                                <p>Rating</p>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <a href="#" class="view-profile-btn">View Profile &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- column 1 -->
+
+            <div>
+
+               <a href="index.html"><img src="img/creativesweb.png" class="footer-logo"></a>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>LWT, 203, C/O, ITI RD, above PNG,<br>
+                        near Parihar Chowk, Aundh,<br>
+                        Maharashtra-411007</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 93262 46981</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@creativewebsolution.in</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>www.creativewebsolution.in</span>
+                </div>
+
+            </div>
+
+
+            <!-- column 2 -->
+
+            <div>
+
+                <h3 class="footer-title">Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="Product (1).html"><i class="fa-solid fa-chevron-right"></i> Product</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Become Author</a></li>
+                    <li><a href="Blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i>Help Center</a></li>
+                    <li><a href="Cart.html"><i class="fa-solid fa-chevron-right"></i> Cart</a></li>
+                </ul>
+
+
+            </div>
+
+
+            <!-- column 3 -->
+
+            <div>
+
+                <h3 class="footer-title">Newsletters</h3>
+
+                <p class="footer-text">
+                    Elevate your business with Creative Web Solution.
+                    Experience growth through smart websites and cutting edge digital strategies.
+                </p>
+
+                <div class="newsletter">
+                    <input type="email" placeholder="Email goes here">
+                    <button>Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- footer bottom -->
+
+        <div class="footer-bottom">
+
+            <p style="color:gray;">
+                Copyright © 2026
+                <a href="#" style="color:white;">Creative Web Solution</a>.
+                ALL RIGHTS RESERVED
+            </p>
+
+            <div class="footer-social">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+
+        /* toggle menu */
+
+        const toggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("navMenu");
+
+        toggle.onclick = () => {
+            nav.classList.toggle("active");
+        };
+
+    </script>
+    <!-- change -->
+    <!-- <script>
+const licenseOptions = document.querySelectorAll(".license-option");
+
+licenseOptions.forEach(option => {
+    option.addEventListener("click", () => {
+
+       
+        licenseOptions.forEach(opt => {
+            opt.classList.remove("active");
+            opt.querySelector("input").checked = false;
+        });
+
+        option.classList.add("active");
+        option.querySelector("input").checked = true;
+    });
+});
+</script> -->
+<script>const licenseOptions = document.querySelectorAll(".license-option");
+
+licenseOptions.forEach(option => {
+    option.addEventListener("click", (e) => {
+
+        const checkbox = option.querySelector("input");
+
+        if (e.target.tagName !== "INPUT") {
+            checkbox.checked = !checkbox.checked;
+        }
+
+        if (checkbox.checked) {
+            option.classList.add("active");
+        } else {
+            option.classList.remove("active");
+        }
+    });
+});</script>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>

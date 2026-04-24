@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Confer - Consulting Website Template Free Download</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .carousel {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        section {
+            margin-top: 0 !important;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
+            background: #f5f5f5;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            color: #333;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .hero-image img {
+            width: 400px;
+        }
+
+        /* HERO SECTION */
+        /* .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 5vw 80px;
+    overflow: hidden;
+
+    /* ===== BACKGROUND COLOR ADDED ===== */
+        /* background-color: #f8f9fa;   Light Gray */
+        /* ===== END ===== */
+        /* //} */
+
+        /* Diagonal green background */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px;
+        }
+
+        .hero-content {
+            width: 50%;
+        }
+
+        .hero-image {
+            width: 50%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Trusted badge */
+        .trusted {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(10px, 1.2vw, 13px);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--dark);
+            text-transform: uppercase;
+            margin-bottom: clamp(24px, 4vw, 48px);
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards 0.1s;
+        }
+
+        /* Main headline */
+        .headline {
+            font-family: 'Space Mono', monospace;
+
+            /* ===== FONT SIZE REDUCED SLIGHTLY ===== */
+            font-size: clamp(42px, 7vw, 110px);
+            /* ===== END ===== */
+
+            font-weight: 700;
+            line-height: 0.95;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: clamp(24px, 3vw, 40px);
+            opacity: 0;
+            animation: fadeUp 0.7s ease forwards 0.25s;
+        }
+
+        .headline span {
+            display: block;
+        }
+
+        /* Subtext */
+        .subtext {
+            font-size: clamp(15px, 1.8vw, 20px);
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 580px;
+            margin-bottom: clamp(32px, 5vw, 56px);
+            opacity: 0;
+            animation: fadeUp 0.7s ease forwards 0.4s;
+        }
+
+        /* Badges row */
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            opacity: 0;
+            animation: fadeUp 0.7s ease forwards 0.55s;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-size: clamp(12px, 1.3vw, 15px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: default;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .badge-dark {
+            background: var(--dark);
+            color: #fff;
+        }
+
+        .badge-light {
+            background: #fff;
+            color: var(--dark);
+            border: 1.5px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-icon {
+            font-size: 1.1em;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(28px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero::before {
+                width: 100%;
+                height: 45%;
+                top: auto;
+                bottom: 0;
+                clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            .hero {
+                padding: 80px 24px 100px;
+                justify-content: flex-start;
+            }
+
+            .badges {
+                gap: 10px;
+            }
+
+            .badge {
+                padding: 12px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero::before {
+                clip-path: polygon(0 35%, 100% 5%, 100% 100%, 0% 100%);
+            }
+
+            .badges {
+                gap: 8px;
+            }
+
+            .badge {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Top Bar Start -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="far fa-clock"></i>
+                            <h2>9:00AM - 6:00PM</h2>
+                            <p>Mon - Sat</p>
+                        </div>
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <h2>+123 456 7890</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-bar-right">
+                        <div class="social">
+
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <img src="img/creativesweb.png" alt="ShopVerse Logo" width="150" height="50">
+
+            <!-- Toggle Button -->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="Service.html" class="nav-item nav-link">Services</a>
+                    <a href="about.html" class="nav-item nav-link">Packages & Pricing</a>
+
+
+                    <!-- Shop Dropdown -->
+                    <!-- <div class="nav-item ">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                       Packages & Pricing
+                    </a>
+                    <!-- <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">All Products</a>
+                        <a href="#" class="dropdown-item">New Arrivals</a>
+                        <a href="#" class="dropdown-item">Best Sellers</a>
+                        <a href="#" class="dropdown-item">Offers</a>
+                    </div> -->
+                    <!-- </div> -->
+
+                    <a href="feature.html" class="nav-item nav-link">Add-ons</a>
+                    <a href="advisor.html" class="nav-item nav-link">Resources</a>
+                    <a href="review.html" class="nav-item nav-link">FAQs</a>
+                    <a href="review.html" class="nav-item nav-link">About Us</a>
+
+                    <!-- Pages Dropdown -->
+                    <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu">
+                        <a href="blog.html" class="dropdown-item">Blog Page</a>
+                        <a href="single.html" class="dropdown-item">Single Page</a>
+                    </div>
+                </div> -->
+
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+
+                    <!-- Login Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i> Account
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="login.html" class="dropdown-item">
+                                <i class="fa fa-sign-in-alt mr-2"></i> Login
+                            </a>
+                            <a href="register.html" class="dropdown-item">
+                                <i class="fa fa-user-plus mr-2"></i> Register
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fa fa-user-circle mr-2"></i> My Profile
+                            </a>
+                            <a href="orders.html" class="dropdown-item">
+                                <i class="fa fa-box mr-2"></i> My Orders
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="logout.php" class="dropdown-item text-danger">
+                                <i class="fa fa-sign-out-alt mr-2"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+    <!-- Hero Sections-->
+    <!-- <section class="hero">
+  <div class="hero-content">
+    <h1 class="headline">
+      <h1>Build Your Professional Website Today</h1>
+    </h1>
+     <p>
+            We provide website design, landing pages, and digital marketing services 
+            to grow your business online.
+        </p>
+
+
+          <button class="btn">View Services</button>
+
+          <div class="hero-image">
+       <img src="img/shop1.png" alt="Shop image">
+    </div>
+</section> -->
+    <!-- Hero Sections  End-->
+
+    <!-- Cards -->
+    <!-- <div class="row g-4">
+   Card 1 -->
+    <!-- <div class="col-lg-3 col-md-6 fade-item" 
+             style="opacity:0; transform:translateY(30px); transition:all 0.8s ease;">
+            <div style="background:#fff; border-radius:15px; padding:35px 25px; text-align:center;
+                        box-shadow:0 5px 20px rgba(0,0,0,0.05); height:100%;
+                        transition:0.4s ease;"
+                 onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)';"
+                 onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 5px 20px rgba(0,0,0,0.05)';">
+
+                <div style="font-size:40px; color:#0d6efd; margin-bottom:20px;">
+                    <i class="bi bi-gem"></i>
+                </div>
+                <h5 class="fw-bold">Premium Curation</h5>
+                <p class="text-muted mt-3">
+                    Every product is carefully selected for quality and performance.
+                </p>
+            </div>
+        </div> -->
+
+    <!-- Card 2 -->
+    <!-- <div class="col-lg-3 col-md-6 fade-item"
+             style="opacity:0; transform:translateY(30px); transition:all 0.8s ease;">
+            <div style="background:#fff; border-radius:15px; padding:35px 25px; text-align:center;
+                        box-shadow:0 5px 20px rgba(0,0,0,0.05); height:100%;
+                        transition:0.4s ease;"
+                 onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)';"
+                 onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 5px 20px rgba(0,0,0,0.05)';">
+
+                <div style="font-size:40px; color:#0d6efd; margin-bottom:20px;">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h5 class="fw-bold">Lightning Fast</h5>
+                <p class="text-muted mt-3">
+                    Same-day dispatch and real-time tracking on all orders.
+                </p>
+            </div>
+        </div> -->
+
+    <!-- Card 3 -->
+    <!-- <div class="col-lg-3 col-md-6 fade-item"
+             style="opacity:0; transform:translateY(30px); transition:all 0.8s ease;">
+            <div style="background:#fff; border-radius:15px; padding:35px 25px; text-align:center;
+                        box-shadow:0 5px 20px rgba(0,0,0,0.05); height:100%;
+                        transition:0.4s ease;"
+                 onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)';"
+                 onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 5px 20px rgba(0,0,0,0.05)';">
+
+                <div style="font-size:40px; color:#0d6efd; margin-bottom:20px;">
+                    <i class="bi bi-star"></i>
+                </div>
+                <h5 class="fw-bold">Verified Reviews</h5>
+                <p class="text-muted mt-3">
+                    Thousands of authentic customer reviews to guide you.
+                </p>
+            </div>
+        </div> -->
+
+    <!-- Card 4 -->
+    <!-- <div class="col-lg-3 col-md-6 fade-item"
+             style="opacity:0; transform:translateY(30px); transition:all 0.8s ease;">
+            <div style="background:#fff; border-radius:15px; padding:35px 25px; text-align:center;
+                        box-shadow:0 5px 20px rgba(0,0,0,0.05); height:100%;
+                        transition:0.4s ease;"
+                 onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)';"
+                 onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 5px 20px rgba(0,0,0,0.05)';">
+
+                <div style="font-size:40px; color:#0d6efd; margin-bottom:20px;">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <h5 class="fw-bold">Safe & Secure</h5>
+                <p class="text-muted mt-3">
+                    Secure payment gateway with zero hidden charges.
+                </p>
+            </div>
+        </div> -->
+
+    <!-- </div> -->
+    <!-- </div>
+</section> -->
+
+    <!---- 26/02/2026 - IT Product Categories With Online Images -->
+
+    <!-- <section style="padding:80px 0; background:#f8f9fa;">
+<div class="container">
+
+    <!-- Heading -->
+    <!-- <div class="text-center mb-4">
+        <h2 style="font-size:38px; font-weight:700; color:#0a1f44;">
+            IT Product Categories
+        </h2>
+        <p style="color:#666; max-width:600px; margin:auto;">
+            Discover high-quality IT hardware, software and enterprise solutions 
+            designed for modern businesses.
+        </p>
+    </div> -->
+
+    <!-- Filter Buttons -->
+    <!-- <div class="text-center mb-5">
+        <button class="btn btn-primary" style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;" onclick="filterCategory('all')">All</button>
+        <button class="btn btn-outline-primary" style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;" onclick="filterCategory('hardware')">Hardware</button>
+        <button class="btn btn-outline-primary" style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;" onclick="filterCategory('software')">Software</button>
+        <button class="btn btn-outline-primary" style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;" onclick="filterCategory('network')">Networking</button>
+    </div> -->
+
+    <!-- Categories -->
+    <!-- <div class="row g-4"> -->
+
+    <!-- Laptops -->
+    <!-- <div class="col-lg-3 col-md-6 col-12 category-item hardware">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+                     alt="Laptops"
+                     style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Laptops</h5>
+                    <p style="font-size:14px; color:#666;">Business & gaming laptops.</p>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- Desktops -->
+    <!-- <div class="col-lg-3 col-md-6 col-12 category-item hardware">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+                     alt="Desktops"
+                     style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Desktops</h5>
+                    <p style="font-size:14px; color:#666;">High performance workstations.</p>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- Software -->
+    <!-- <div class="col-lg-3 col-md-6 col-12 category-item software">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                     alt="Software"
+                     style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Software</h5>
+                    <p style="font-size:14px; color:#666;">Productivity & business tools.</p>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- Networking -->
+    <!-- <div class="col-lg-3 col-md-6 col-12 category-item network">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8"
+                     alt="Networking"
+                     style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Networking</h5>
+                    <p style="font-size:14px; color:#666;">Routers & enterprise solutions.</p>
+                </div>
+            </div>
+        </div> -->
+    <!-- 
+    </div>
+
+</div>
+</section> -->
+
+
+
+    <!-- Ecosystem Section With Background Images -->
+
+    <!---- 26/02/2026 - IT Product Categories With Online Images -->
+
+    <!-- <section style="padding:80px 0; background:#f8f9fa;">
+<div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-4">
+        <h2 style="font-size:38px; font-weight:700; color:#0a1f44;">
+            IT Product Categories
+        </h2>
+        <p style="color:#666; max-width:600px; margin:auto;">
+            Discover high-quality IT hardware, software and enterprise solutions
+            designed for modern businesses.
+        </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-5">
+        <button class="btn btn-primary" style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;"
+            onclick="filterCategory('all')">All</button>
+        <button class="btn btn-outline-primary"
+            style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;"
+            onclick="filterCategory('hardware')">Hardware</button>
+        <button class="btn btn-outline-primary"
+            style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;"
+            onclick="filterCategory('software')">Software</button>
+        <button class="btn btn-outline-primary"
+            style="border-radius:30px; padding:8px 20px; margin:5px; font-size:14px;"
+            onclick="filterCategory('network')">Networking</button>
+    </div>
+
+    <!-- Categories -->
+    <div class="row g-4">
+
+        <!-- Laptops -->
+        <div class="col-lg-3 col-md-6 col-12 category-item hardware">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptops"
+                    style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Laptops</h5>
+                    <p style="font-size:14px; color:#666;">Business & gaming laptops.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktops -->
+        <div class="col-lg-3 col-md-6 col-12 category-item hardware">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7" alt="Desktops"
+                    style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Desktops</h5>
+                    <p style="font-size:14px; color:#666;">High performance workstations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software -->
+        <div class="col-lg-3 col-md-6 col-12 category-item software">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Software"
+                    style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Software</h5>
+                    <p style="font-size:14px; color:#666;">Productivity & business tools.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Networking -->
+        <div class="col-lg-3 col-md-6 col-12 category-item network">
+            <div style="background:#fff; border-radius:15px; overflow:hidden; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 45px rgba(13,110,253,0.15)'"
+                onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'">
+
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8" alt="Networking"
+                    style="width:100%; height:200px; object-fit:cover;">
+
+                <div style="padding:20px;">
+                    <h5 style="font-weight:600;">Networking</h5>
+                    <p style="font-size:14px; color:#666;">Routers & enterprise solutions.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </section> -->
+
+
+    <!---- Best Seller Slider Section Start ---->
+
+    <section style="padding:80px 0; background:#f8f9fa; overflow:hidden;">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <h2 style="font-size:38px; font-weight:700; color:#0a1f44;">
+                    Best Seller Products
+                </h2>
+                <p style="color:#666; max-width:600px; margin:auto;">
+                    Explore our most popular and high-demand IT products trusted by customers.
+                </p>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div style="position:relative;">
+
+                <!-- Left Button -->
+                <button onclick="slideLeft()"
+                    style="position:absolute; left:-20px; top:40%; z-index:10; border:none; background:#0d6efd; color:#fff; width:40px; height:40px; border-radius:50%;">
+                    ‹
+                </button>
+
+                <!-- Slider -->
+                <div id="productSlider"
+                    style="display:flex; gap:20px; overflow-x:auto; scroll-behavior:smooth; padding:10px;">
+
+                    <!-- Product Card -->
+                    <div style="min-width:450px; background:#fff; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
+
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+                            style="width:100%; height:220px; object-fit:cover;">
+
+                        <div style="padding:20px; text-align:center;">
+                            <h5 style="font-weight:600;">HP Business Laptop</h5>
+                            <p style="color:#0d6efd; font-weight:600;">₹65,000</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div style="min-width:450px; background:#fff; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
+
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+                            style="width:100%; height:220px; object-fit:cover;">
+
+                        <div style="padding:20px; text-align:center;">
+                            <h5 style="font-weight:600;">Gaming Desktop</h5>
+                            <p style="color:#0d6efd; font-weight:600;">₹85,000</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div style="min-width:450px; background:#fff; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
+
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                            style="width:100%; height:220px; object-fit:cover;">
+
+                        <div style="padding:20px; text-align:center;">
+                            <h5 style="font-weight:600;">Business Software Suite</h5>
+                            <p style="color:#0d6efd; font-weight:600;">₹25,000</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div style="min-width:450px; background:#fff; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='none'">
+
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8"
+                            style="width:100%; height:220px; object-fit:cover;">
+
+                        <div style="padding:20px; text-align:center;">
+                            <h5 style="font-weight:600;">WiFi Router Pro</h5>
+                            <p style="color:#0d6efd; font-weight:600;">₹4,500</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Button -->
+                <button onclick="slideRight()"
+                    style="position:absolute; right:-20px; top:40%; z-index:10; border:none; background:#0d6efd; color:#fff; width:40px; height:40px; border-radius:50%;">
+                    ›
+                </button>
+
+            </div>
+
+
+
+        </div>
+    </section>
+    <!---- Trust Indicator Section Start ---->
+    <!---- Trust Indicator Section With Images Start ---->
+
+    <section style="padding:80px 0; background:#ffffff;">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <h2 style="font-size:38px; font-weight:700; color:#0a1f44;">
+                    Why Customers Trust Us
+                </h2>
+                <p style="color:#666; max-width:650px; margin:auto;">
+                    We deliver reliable IT solutions with proven results and long-term client relationships.
+                </p>
+            </div>
+
+            <div class="row g-4 text-center">
+
+                <!-- Happy Clients -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div style="background:#f8f9fa; border-radius:15px; overflow:hidden; transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.08)'"
+                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                            style="width:100%; height:180px; object-fit:cover;">
+
+                        <div style="padding:30px 20px;">
+                            <h2 class="counter" data-target="1200" style="font-weight:700; color:#0d6efd;">0</h2>
+                            <p style="color:#666;">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Completed -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div style="background:#f8f9fa; border-radius:15px; overflow:hidden; transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.08)'"
+                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+                            style="width:100%; height:180px; object-fit:cover;">
+
+                        <div style="padding:30px 20px;">
+                            <h2 class="counter" data-target="850" style="font-weight:700; color:#0d6efd;">0</h2>
+                            <p style="color:#666;">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div style="background:#f8f9fa; border-radius:15px; overflow:hidden; transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.08)'"
+                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+
+                        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+                            style="width:100%; height:180px; object-fit:cover;">
+
+                        <div style="padding:30px 20px;">
+                            <h2 class="counter" data-target="15" style="font-weight:700; color:#0d6efd;">0</h2>
+                            <p style="color:#666;">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div style="background:#f8f9fa; border-radius:15px; overflow:hidden; transition:0.4s;"
+                        onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.08)'"
+                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+
+                        <img src="https://images.unsplash.com/photo-1581090700227-1e8a5c6c5c43"
+                            style="width:100%; height:180px; object-fit:cover;">
+
+                        <div style="padding:30px 20px;">
+                            <h2 class="counter" data-target="24" style="font-weight:700; color:#0d6efd;">0</h2>
+                            <p style="color:#666;">24/7 Support</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact Start -->
+    <div class="contact">
+        <div class="container">
+            <div class="section-header">
+                <p>Get In Touch</p>
+                <h2>Get In Touch For Any Query</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Our Head Office</h3>
+                            <p>123 Street, New York, USA</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fa fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Call for Help</h3>
+                            <p>+012 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email for Information</h3>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                    required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                    required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" placeholder="Message" required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+
+
+
+    <!-- Blog Start -->
+    <div class="blog">
+        <div class="container">
+            <div class="section-header">
+                <p>Consulting Blog</p>
+                <h2>Latest From Our Consulting Blog</h2>
+            </div>
+            <div class="owl-carousel blog-carousel">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/blog-1.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
+                        <div class="blog-meta">
+                            <i class="fa fa-list-alt"></i>
+                            <a href="">Category</a>
+                            <i class="fa fa-calendar-alt"></i>
+                            <p>01-Jan-2045</p>
+                        </div>
+                        <div class="blog-text">
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte
+                                liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili
+                                ornare velit non vulpte liqum metus tortor
+                            </p>
+                            <a class="btn" href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/blog-2.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
+                        <div class="blog-meta">
+                            <i class="fa fa-list-alt"></i>
+                            <a href="">Category</a>
+                            <i class="fa fa-calendar-alt"></i>
+                            <p>01-Jan-2045</p>
+                        </div>
+                        <div class="blog-text">
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte
+                                liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili
+                                ornare velit non vulpte liqum metus tortor
+                            </p>
+                            <a class="btn" href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/blog-3.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
+                        <div class="blog-meta">
+                            <i class="fa fa-list-alt"></i>
+                            <a href="">Category</a>
+                            <i class="fa fa-calendar-alt"></i>
+                            <p>01-Jan-2045</p>
+                        </div>
+                        <div class="blog-text">
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte
+                                liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili
+                                ornare velit non vulpte liqum metus tortor
+                            </p>
+                            <a class="btn" href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <img src="img/creativesweb.png" alt="ShopVerse Logo" width="150px" height="50"
+                                    class="me-2"><br><br>
+                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-link">
+                                <h2>Quick Links</h2>
+                                <a href="">Terms of use</a>
+                                <a href="">Privacy policy</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu
+                            placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                        </p>
+                        <div class="form">
+                            <input class="form-control" placeholder="Email goes here">
+                            <button class="btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Fade In On Scroll
+        const items = document.querySelectorAll('.fade-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.3 });
+
+        items.forEach(item => observer.observe(item));
+        //25/02/2026
+        // Simple Hover Animation
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = "translateY(-8px)";
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = "translateY(0)";
+            });
+        });
+
+        <!-- Filter Script -->
+
+        function filterCategory(category) {
+            let items = document.querySelectorAll('.category-item');
+
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                }
+                else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        let count = 0;
+
+        function addToCart() {
+            count++;
+            document.getElementById("cartCount").innerText = count;
+        }
+
+        function slideLeft() {
+            document.getElementById("productSlider").scrollLeft -= 470;
+        }
+
+        function slideRight() {
+            document.getElementById("productSlider").scrollLeft += 470;
+        }
+
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            counter.innerText = '0';
+
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const increment = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target + (target == 24 ? "/7" : "+");
+                }
+            };
+
+            updateCounter();
+        });
+
+    </script>
+</body>
+
+</html>

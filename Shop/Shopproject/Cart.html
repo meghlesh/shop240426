@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/Cart.css">
+
+    <style>
+        /* TOP BAR Start Css */
+        .top-bar {
+            background: #1f6fae;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            font-size: 14px;
+        }
+
+        .top-left {
+            display: flex;
+        }
+
+        .top-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-right: 20px;
+            margin-right: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .top-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social i {
+            cursor: pointer;
+        }
+
+
+
+        /* TOP BAR end CSS  */
+       /* HEADER */
+.header {
+    background: #0A2540;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 50px;
+}
+
+/* LOGO */
+#brand {
+    width: 180px;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: 0.3s;
+}
+
+/* Active + Hover */
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 4px;
+}
+
+/* BUTTONS */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Common Button */
+.btn {
+    padding: 8px 35px;
+    font-size: 13px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+   /* RIGHT SIDE */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart {
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+        /* header End CSS */
+
+
+        /* CART SECTION Start CSS */
+
+        .cart-section{
+background:white;
+padding:40px 0;
+font-family:'Segoe UI', sans-serif;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+margin-bottom:20px;
+font-size:14px;
+color:#6b7280;
+}
+.breadcrumb a{
+text-decoration:none;
+color:#6b7280;
+}
+
+.subcontainer{
+background: #fff;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+/* Title */
+.cart-title{
+font-size:32px;
+color:#0A2540;
+margin-bottom:5px;
+}
+
+.cart-subtitle{
+color:#6b7280;
+margin-bottom:25px;
+}
+
+/* Layout */
+.cart-wrapper{
+display:flex;
+gap:25px;
+}
+
+/* LEFT */
+.cart-left{
+flex:2;
+}
+
+/* ITEM */
+.cart-item{
+display:flex;
+gap:15px;
+background:#fff;
+padding:15px;
+border:1px solid #e5e7eb;
+border-radius:6px;
+margin-bottom:15px;
+align-items:center;
+}
+
+.cart-item img{
+width:120px;
+height:80px;
+object-fit:cover;
+border-radius:5px;
+}
+
+.item-details{
+flex:1;
+}
+
+.item-details h3{
+font-size:18px;
+color:#0A2540;
+margin-bottom:5px;
+}
+
+.item-details p{
+font-size:14px;
+color:#6b7280;
+margin-bottom:10px;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.tag.blue {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.tag.gray {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.remove{
+color:red;
+font-size:13px;
+text-decoration:none;
+display:block;
+margin-top:8px;
+}
+
+.price{
+color:#1e88e5;
+font-weight:600;
+font-size:18px;
+}
+
+/* INFO BOX */
+.info-boxes{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.info{
+flex:1;
+background:#e3f4ff;
+padding:15px;
+border-radius:6px;
+}
+
+.info h4{
+font-size:15px;
+color:rgb(55, 141, 212);
+margin-bottom:5px;
+}
+
+.info p{
+font-size:13px;
+color:#6b7280;
+}
+
+/* RIGHT */
+.cart-right{
+flex:1;
+background:#fff;
+padding:20px;
+border-radius:6px;
+border:1px solid #e5e7eb;
+}
+
+.cart-right h3{
+margin-bottom:15px;
+}
+
+.summary p{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:14px;
+}
+
+.discount{
+color:#1e88e5;
+}
+
+.total{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+font-size:18px;
+}
+
+.total span{
+color:#1e88e5;
+font-weight:600;
+}
+
+/* BUTTONS */
+.checkout{
+width:100%;
+background:#1e88e5;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:5px;
+margin-bottom:10px;
+cursor:pointer;
+}
+
+.continue{
+width:100%;
+background:#f1f3f6;
+border:none;
+padding:12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FEATURES */
+.features{
+margin-top:15px;
+font-size:13px;
+color:#6b7280;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.cart-wrapper{
+flex-direction:column;
+}
+
+.info-boxes{
+flex-direction:column;
+}
+}
+
+        /* CART SECTION End CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* body {
+  background: white;
+  padding: 40px 20px;
+} */
+
+/* SECTION */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* TITLE */
+.section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+/* UNDERLINE */
+.underline {
+  width: 60px;
+  height: 6px;
+  background: #1e90ff;
+  margin: 10px auto 25px;
+  border-radius: 3px;
+}
+
+/* GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 18px;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+/* DESC */
+.card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+.btn-wrap {
+  margin-top: 25px;
+}
+
+.btn {
+  background: #0f2f4f;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+}
+
+
+
+          /* FOOTER Start CSS */
+
+        .footer {
+            background: #0A2540;
+            color: white;
+            padding: 60px 30px 20px;
+            margin-top: 60px;
+        }
+
+        /* FOOTER GRID */
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        /* FOOTER LOGO */
+
+        .footer-logo {
+            width: 170px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+
+        .footer-contact {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #cfd9e6;
+        }
+
+        .footer-contact i {
+            color: #2ea3f2;
+        }
+
+        /* TITLES */
+
+        .footer-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #2ea3f2;
+        }
+
+        /* LINKS */
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #cfd9e6;
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-links i {
+            color: #2ea3f2;
+        }
+
+        /* NEWSLETTER */
+
+        .footer-text {
+            color: #cfd9e6;
+            margin-bottom: 20px;
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #3c5570;
+            color: white;
+        }
+
+        .newsletter button {
+            padding: 12px 20px;
+            background: #2ea3f2;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid #223b55;
+            margin-top: 40px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        /* ======================================= */
+        /* TABLET RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:1024px) {
+
+            /* show toggle */
+
+            .menu-toggle {
+                display: block;
+            }
+
+            /* navigation layout */
+
+            .nav {
+                width: 100%;
+                flex-direction: column;
+                display: none;
+                padding: 15px 0;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+                /* LEFT ALIGN */
+                padding-left: 30px;
+                /* spacing from left */
+                width: 100%;
+            }
+
+            .actions {
+                flex-direction: column;
+                align-items: flex-start;
+                /* LEFT ALIGN BUTTONS */
+                margin-top: 15px;
+                padding-left: 30px;
+            }
+
+
+            /* when toggle active */
+
+            .nav.active {
+                display: flex;
+            }
+
+            /* footer becomes 2 columns */
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+        }
+
+        /* ======================================= */
+        /* MOBILE RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:768px) {
+
+            /* hide top bar */
+
+            .top-bar {
+                display: none;
+            }
+
+            /* footer becomes single column */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* center footer bottom */
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+        }
+
+        /* small phones */
+
+        @media (max-width:420px) {
+
+            .newsletter {
+                flex-direction: column;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+        }
+
+        /* Footer end  CSS*/
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+
+        <div class="top-left">
+
+            <div class="top-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>10:00AM - 7:00PM Mon - Sat</span>
+            </div>
+
+            <div class="top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 93262 46981</span>
+            </div>
+
+        </div>
+
+        <div class="top-right">
+            <div class="social"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="social"><i class="fa-brands fa-instagram"></i></div>
+        </div>
+
+    </div>
+    <!-- Top Bar End -->
+
+
+    <!-- Nav Bar Start -->
+
+    <header class="header">
+
+        <img src="img/creativesweb.png" id="brand">
+
+        <!-- Hamburger button -->
+
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="nav" id="navMenu">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#" class="active">PRODUCT</a></li>
+                <!-- <li><a href="#">BECOME AUTHER</a></li> -->
+                <!-- <li><a href="#">CATEGORIES</a></li> -->
+                <li><a href="#">BECOME AUTHOR</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="#">HELP CENTER</a></li>
+                <!-- <li><a href="#">SUPPORT</a></li> -->
+            </ul>
+
+            <div class="header-right">
+    <span class="cart">🛒</span>
+    <img src="https://i.pravatar.cc/40" class="avatar" />
+  </div>
+
+        </nav>
+
+    </header>
+    </div>
+    <!-- Nav Bar End -->
+
+<section class="cart-section">
+
+<div class="container">
+       
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="index.html">Home</a> > 
+    <a href="Product (1).html">Product</a> > 
+    <a href="Cart.html">Cart</a>
+</nav>
+
+<h2 class="cart-title">Your Cart</h2>
+<p class="cart-subtitle">
+Review your selected products and proceed to secure checkout.
+</p>
+
+<div class="cart-wrapper">
+    <!-- LEFT SIDE -->
+    <div class="cart-left" id="cartContainer">
+        <!-- Dynamic items will come here -->
+        
+        <!-- INFO BOX (same as page 1) -->
+        <div class="info-boxes">
+            <div class="info">
+                <h4>⚡ Instant Access</h4>
+                <p>All products will be available for download immediately after purchase.</p>
+            </div>
+
+            <div class="info">
+                <h4>✔ License Assurance</h4>
+                <p>Each product comes with a valid license for secure and legal usage.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="cart-right">
+
+        <h3>Order Summary</h3>
+
+        <div class="summary">
+            <p>Subtotal <span id="subtotal">₹0</span></p>
+            <p>Discount <span id="discount" class="discount">₹0</span></p>
+            <p>Taxes (GST 18%) <span id="tax">₹0</span></p>
+        </div>
+
+        <hr>
+
+        <h4 class="total">Total Amount <span id="total">₹0</span></h4>
+
+        <button class="checkout">Proceed To Checkout →</button>
+        <button class="continue">Continue Shopping</button>
+
+        <ul class="features">
+            <li>✔ 100% Secure Payment</li>
+            <li>✔ Instant Digital Delivery</li>
+            <li>✔ Licensed & Verified Products</li>
+        </ul>
+
+    </div>
+</div>
+
+</div>
+</section>
+
+<!-- Purchased Products Start -->
+<section>
+<div class="section">
+
+  <h2>Mostly Purchased Products</h2>
+  <div class="underline"></div>
+
+  <div class="products">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="img/Employee management system.png" alt="">
+      <h3>Employee Management System</h3>
+      <p>
+        Complete HR and employee management solution designed for businesses and startups.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="img/Stock management system.png" alt="">
+      <h3>Stock Management</h3>
+      <p>
+        Manage inventory, products, and warehouse operations efficiently.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="img/E-commerce market place.png" alt="">
+      <h3>Task Management System</h3>
+      <p>
+        Organize projects and manage team productivity effectively.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="btn-wrap">
+    <button class="btn">View Product Collection</button>
+  </div>
+
+</div>
+
+</section>
+<!-- Purchased Products end -->
+
+
+        <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- column 1 -->
+
+            <div>
+
+                <img src="img/creativesweb.png" class="footer-logo">
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>LWT, 203, C/O, ITI RD, above PNG,<br>
+                        near Parihar Chowk, Aundh,<br>
+                        Maharashtra-411007</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 93262 46981</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@creativewebsolution.in</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>www.creativewebsolution.in</span>
+                </div>
+
+            </div>
+
+
+            <!-- column 2 -->
+
+            <div>
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Store</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Marketplace</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Become Author</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Support</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+
+            <!-- column 3 -->
+
+            <div>
+
+                <h3 class="footer-title">Newsletters</h3>
+
+                <p class="footer-text">
+                    Elevate your business with Creative Web Solution.
+                    Experience growth through smart websites and cutting edge digital strategies.
+                </p>
+
+                <div class="newsletter">
+                    <input type="email" placeholder="Email goes here">
+                    <button>Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- footer bottom -->
+
+        <div class="footer-bottom">
+
+            <p style="color:gray;">
+                Copyright © 2026
+                <a href="#" style="color:white;">Creative Web Solution</a>.
+                ALL RIGHTS RESERVED
+            </p>
+
+            <div class="footer-social">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+     <script>
+// async function loadCart() {
+//     const token = localStorage.getItem("token");
+
+//     if (!token) {
+//         alert("Please login first ❌");
+//         return;
+//     }
+
+//     try {
+//     const response = await fetch("http://localhost:8080/api/cart", {
+//         method: "GET",
+//         headers: {
+//             "Authorization": "Bearer " + token
+//         }
+//     });
+
+//     const result = await response.json();
+
+//     if (result.success) {
+//         renderCart(result.data);
+//     } else {
+//         alert("Failed to load cart ❌");
+//     }
+
+// } catch (error) {
+//     console.error(error);
+//     alert("Server error ❌");
+// }
+// }
+</script>
+    <script>
+        function renderCart(cart) {
+    const container = document.querySelector(".cart-left");
+    container.innerHTML = "";
+
+    if (cart.items.length === 0) {
+        container.innerHTML = "<p>Your cart is empty 🛒</p>";
+        document.getElementById("subtotal").innerText = "₹0";
+        document.getElementById("discount").innerText = "₹0";
+        document.getElementById("tax").innerText = "₹0";
+        document.getElementById("total").innerText = "₹0";
+        
+        return;
+    }
+
+    cart.items.forEach(item => {
+    const html = `
+    <div class="cart-item">
+
+        <img src="${item.imageUrl || 'img/default.png'}" />
+
+        <div class="item-details">
+            <h3>${item.productName}</h3>
+            <p>${item.description || 'Product description'}</p>
+
+            <div class="tags">
+                <span>Regular License</span>
+                <span>Support Included</span>
+            </div>
+
+            <a href="#" onclick="removeItem(${item.productId}); return false;" class="remove">
+                Remove
+            </a>
+        </div>
+
+        <div class="price">₹${item.price}</div>
+
+    </div>
+    `;
+    container.innerHTML += html;
+});
+    container.innerHTML += `
+    <div class="info-boxes">
+        <div class="info">
+            <h4>⚡ Instant Access</h4>
+            <p>All products will be available for download immediately after purchase.</p>
+        </div>
+
+        <div class="info">
+            <h4>✔ License Assurance</h4>
+            <p>Each product comes with a valid license for secure and legal usage.</p>
+        </div>
+    </div>
+    `;
+    // ✅ Dynamic values from backend
+    document.getElementById("subtotal").innerText = "₹" + (cart.subtotal || 0);
+    document.getElementById("discount").innerText = "₹" + (cart.discount || 0);
+    document.getElementById("tax").innerText = "₹" + (cart.tax || 0);
+    document.getElementById("total").innerText = "₹" + (cart.totalAmount || 0);
+}
+</script>
+
+     <script>
+// window.onload = function () {
+//     loadCart();
+// };
+</script>
+
+<script>
+async function removeItem(productId) {
+    const token = localStorage.getItem("token");
+
+    try {
+        const response = await fetch(`http://localhost:8080/api/cart/remove/${productId}`, {
+            method: "DELETE",
+            headers: {
+                "Authorization": "Bearer " + token
+            }
+        });
+
+        if (!response.ok) {
+            alert("Failed to remove item ❌");
+            return;
+        }
+        await checkCart();
+    } catch (error) {
+        console.error(error);
+        alert("Error removing item ❌");
+    }
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    checkCart();
+});
+
+// async function checkCart() {
+//     const token = localStorage.getItem("token");
+
+//     if (!token) {
+//         window.location.href = "addcart.html";
+//         return;
+//     }
+
+//     try {
+//         const response = await fetch("http://localhost:8080/api/cart", {
+//             headers: {
+//                 "Authorization": "Bearer " + token
+//             }
+//         });
+
+//         const result = await response.json();
+
+//         if (!result.data || result.data.items.length === 0) {
+//             window.location.href = "addcart.html";
+//         }
+    async function checkCart() {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        window.location.href = "addcart.html";
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:8080/api/cart", {
+            headers: {
+                "Authorization": "Bearer " + token
+            }
+        });
+
+        const result = await response.json();
+
+        if (!result.data || result.data.items.length === 0) {
+            window.location.href = "addcart.html";
+        } else {
+            renderCart(result.data); //render here
+        }
+
+        } catch (error) {
+        console.error(error);
+        window.location.href = "addcart.html";
+    }
+}
+</script>
+
+

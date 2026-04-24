@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Confer - Consulting Website Template Free Download</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* TOP BAR Start Css */
+
+        .top-bar {
+            background: #1f6fae;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            font-size: 14px;
+        }
+
+        .top-left {
+            display: flex;
+        }
+
+        .top-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-right: 20px;
+            margin-right: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .top-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social i {
+            cursor: pointer;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 8px 12px;
+                font-size: 11px;
+                flex-wrap: nowrap;
+            }
+
+            .top-left {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .top-item {
+                gap: 5px;
+                padding-right: 10px;
+                margin-right: 10px;
+            }
+
+            .top-right {
+                gap: 10px;
+            }
+
+            .social i {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-bar {
+                padding: 6px 8px;
+                font-size: 13px;
+            }
+
+            .top-left {
+                gap: 6px;
+            }
+
+            .top-item {
+                gap: 4px;
+                padding-right: 6px;
+                margin-right: 6px;
+            }
+
+            .social i {
+                font-size: 12px;
+            }
+        }
+
+        /* TOP BAR end CSS  */
+
+
+
+
+        /* HEADER */
+        .header {
+            background: #0A2540;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 50px;
+            flex-wrap: wrap;
+            /* important for toggle */
+        }
+
+        /* LOGO */
+
+        #brand {
+            width: 180px;
+            margin-left: -30px;
+
+        }
+
+        /* NAVIGATION */
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            margin-right: 4px;
+            margin-top: 18px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: 0.3s;
+        }
+
+        .nav ul li a:hover,
+        .nav ul li a.active {
+            color: #2ea3f2;
+            border-bottom: 2px solid #2ea3f2;
+            padding-bottom: 4px;
+        }
+
+
+
+        /* BUTTONS */
+        .actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Common Button */
+        .btn {
+            padding: 8px 35px;
+            font-size: 13px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+
+        /* LOGIN BUTTON */
+        .login {
+            border: 1px solid #38bdf8;
+            color: white;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .login:hover {
+            background: #38bdf8;
+        }
+
+        /* REGISTER BUTTON */
+        .register {
+            border: 1px solid #38bdf8;
+            color: white;
+            /* blue text */
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        /* ON HOVER / CLICK LOOK */
+        .register:hover {
+            background: #38bdf8;
+            color: #fff;
+        }
+
+        /*======================================= */
+        /* HAMBURGER BUTTON */
+        /* ======================================= */
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            margin-right: -30px;
+
+        }
+
+        /*nav bar ends here*/
+
+        /* product section css start */
+
+        :root {
+            --bg-dark: #0A2540;
+            --primary-blue: #0796FE;
+            --sub-content: #797979;
+            --font-white: #FFFFFF;
+            --light-bg: #E3F2FD;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            height: 100vh;
+
+        }
+
+
+
+        /* Top Section */
+        .hero-top {
+            background: url('./img/Headline bg.png') no-repeat center;
+            background-size: cover;
+            color: white;
+
+            height: 47vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+
+        }
+
+
+
+        /* Bottom Section */
+
+        .hero-bottom {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Heading sizes slightly smaller */
+
+        .main-heading {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+
+        .blue-divider {
+            width: 80px;
+            height: 8px;
+            background: #0796FE;
+            margin: 10px auto 20px auto;
+            border-radius: 2px;
+        }
+
+        .sub-heading {
+            font-size: 2rem;
+        }
+
+        .description {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        /* Search Bar Styling */
+        .search-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        .search-input {
+            border: none;
+            padding: 12px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+
+        }
+
+        .search-wrapper .input-group {
+            gap: 10px;
+
+        }
+
+
+
+        .search-btn {
+            border-radius: 4px;
+        }
+
+        .search-btn {
+            background-color: var(--primary-blue);
+            border: none;
+            color: white;
+            padding: 0 30px;
+            border-radius: 0 4px 4px 0;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #0076cc;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero-top {
+                height: auto;
+                padding: 60px 20px;
+                clip-path: none;
+            }
+
+            .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .sub-heading {
+                font-size: 1.4rem;
+            }
+
+            .description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Suggestion Box Container styling */
+        .suggestion-box {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            max-height: 250px;
+            overflow-y: auto;
+            display: none;
+            margin-top: -5px;
+        }
+
+        /* Individual Suggestion Item */
+        .suggestion-item {
+            padding: 12px 20px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #f8f9fa;
+            text-align: left;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Hover Effect */
+        .suggestion-item:hover {
+            background-color: #f1f8ff;
+            color: #0796FE;
+            padding-left: 25px;
+        }
+
+        .suggestion-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .suggestion-box::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        /* sortbar css  */
+
+        body {
+            background-color: #EAF6FF;
+            padding: 0px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Sorting Bar Container */
+        .sorting-bar {
+            background-color: #ffffff;
+            padding: 15px 25px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        /* Left Side Text */
+        .product-count {
+            color: #0A2540;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Right Side Sort Section */
+        .sort-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .sort-label {
+            color: #0A2540;
+            margin-right: 15px;
+            font-size: 1rem;
+        }
+
+        /* Dropdown Styling */
+        .sort-dropdown {
+            width: 180px;
+            border: 1px solid #ced4da;
+            color: #495057;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background-color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .sort-dropdown:focus {
+            border-color: #0796FE;
+            box-shadow: 0 0 0 0.2rem rgba(7, 150, 254, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .sorting-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .sort-wrapper {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .sort-dropdown {
+                width: 100%;
+            }
+        }
+
+        .breadcrumb-custom {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .breadcrumb-link {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .breadcrumb-link:hover {
+            color: #2ea3f2;
+        }
+
+        .breadcrumb-separator {
+            margin: 0 8px;
+            color: white;
+        }
+
+        .breadcrumb-current {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .product {
+            color: #2ea3f2;
+            text-decoration: none;
+        }
+
+        /* sidebar css start */
+        :root {
+            --bg-dark: #0A2540;
+            --primary-blue: #0796FE;
+            --sub-content: #797979;
+            --font-white: #FFFFFF;
+            --light-bg: #EAF6FF;
+
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--bg-dark);
+            padding: 0px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .clear-all {
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .filter-section-title {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-check-label {
+            color: var(--sub-content);
+            font-size: 0.9rem;
+        }
+
+        .star-rating-sidebar {
+            color: #FFB400;
+            font-size: 0.9rem;
+            margin-right: 5px;
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            background: #fff;
+            border: none;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+            transition: 0.3s;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 140px;
+            object-fit: cover;
+            width: 100%;
+            padding: 10px;
+        }
+
+
+        .card-body {
+            padding: 10px 15px 15px 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--sub-content);
+            margin-bottom: 8px;
+            min-height: 50px;
+        }
+
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+
+            min-height: 30px;
+
+        }
+
+
+        .price-range-box {
+            width: 100%;
+        }
+
+
+        #priceRange {
+            width: 100%;
+            height: 6px;
+            border-radius: 5px;
+            outline: none;
+            appearance: none;
+            background: #ddd;
+        }
+
+
+        #priceRange::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #0796FE;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            margin-top: -2px;
+            /*change */
+        }
+
+
+        #priceRange::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #0796FE;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+
+
+
+
+
+        /* Labels */
+        .price-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 4px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .rating-stars {
+            color: #FFB400;
+            font-size: 0.85rem;
+            margin-right: 5px;
+        }
+
+        .rating-stars,
+        .star-rating-sidebar {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .rating-count {
+            color: var(--sub-content);
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+
+        .feature-list {
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            min-height: 100px;
+        }
+
+        .feature-list li {
+            font-size: 0.8rem;
+            color: var(--sub-content);
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: #ccc;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-img {
+                height: 180px;
+            }
+
+            .product-title {
+                font-size: 1rem;
+                min-height: auto;
+            }
+
+            .feature-list {
+                min-height: auto;
+            }
+        }
+
+        /* Buttons */
+        .btn-preview {
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            background: transparent;
+            font-size: 0.9rem;
+            padding: 8px 0;
+            width: 48%;
+        }
+
+        .btn-preview:hover {
+            background: var(--primary-blue);
+            color: #fff;
+        }
+
+        .btn-add-cart {
+            background-color: var(--primary-blue);
+            color: #fff;
+            border: none;
+            font-size: 0.9rem;
+            padding: 8px 0;
+            width: 48%;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #0076cc;
+            color: #fff;
+        }
+
+        /* Range Slider Customization */
+        .form-range::-webkit-slider-thumb {
+            background: var(--primary-blue);
+        }
+
+        @media (max-width: 576px) {
+            .card-body .d-flex {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-preview,
+            .btn-add-cart {
+                width: 100%;
+            }
+        }
+
+        .license-container {
+            margin-top: 10px;
+        }
+
+        .license-box {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .license-box:hover {
+            border-color: var(--primary-blue);
+        }
+
+        .license-box.active {
+            border-color: var(--primary-blue);
+            background: #e6f0ff;
+        }
+
+        .license-box .title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .license-box .price {
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* Pagination Styling */
+        .pagination-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .custom-pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .page-link-custom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            color: #444;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .page-link-custom:hover {
+            border-color: #0796FE;
+            color: #0796FE;
+        }
+
+        .page-link-custom.active {
+            background-color: #0796FE;
+            color: #fff;
+            border-color: #0796FE;
+        }
+
+        .page-link-custom.disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .pagination-dots {
+            color: #797979;
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+        .arrow-icon {
+            color: #0796FE;
+            font-size: 12px;
+        }
+
+        @media (max-width: 576px) {
+            .custom-pagination {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-link-custom {
+                width: 35px;
+                height: 35px;
+                font-size: 12px;
+            }
+        }
+
+
+        /* FOOTER Start CSS */
+
+        .footer {
+            background: #0A2540;
+            color: white;
+            padding: 50px 30px 20px;
+            margin-top: 60px;
+        }
+
+        /* FOOTER GRID */
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        /* FOOTER LOGO */
+
+        .footer-logo {
+            width: 170px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+
+        .footer-contact {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #cfd9e6;
+
+        }
+
+        .footer-contact i {
+            color: #2ea3f2;
+            margin-top: 6px;
+        }
+
+        /* TITLES */
+
+        .footer-title {
+            font-size: 22px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #2ea3f2;
+        }
+
+        /* LINKS */
+
+        .footer-links {
+            list-style: none;
+
+
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+            width: fit-content;
+
+
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #cfd9e6;
+            display: flex;
+            gap: 10px;
+
+        }
+
+        .footer-links a:hover {
+            color: #2ea3f2;
+        }
+
+        .footer-links i {
+            color: #2ea3f2;
+            padding-top: 6px;
+        }
+
+        /* NEWSLETTER */
+
+        .footer-text {
+            color: #cfd9e6;
+            margin-bottom: 20px;
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #3c5570;
+            color: white;
+        }
+
+        .newsletter button {
+            padding: 12px 20px;
+            background: #2ea3f2;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background: #1a87e7;
+        }
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid #223b55;
+            margin-top: 30px;
+            margin-bottom: -20px;
+            padding-top: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom a {
+            color: #cfd9e6;
+            text-decoration: none;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .footer-social i {
+            color: white;
+            transition: 0.3s;
+        }
+
+
+
+        /* ======================================= */
+        /* TABLET RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:1024px) {
+
+            /* show toggle */
+
+            .menu-toggle {
+                display: block;
+            }
+
+            /* navigation layout */
+
+            .nav {
+                width: 100%;
+                display: none;
+                padding: 15px 0;
+
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+                padding-left: 30px;
+                width: 100%;
+            }
+
+            .actions {
+                flex-direction: column;
+                margin-top: -30px;
+                /* LEFT ALIGN BUTTONS */
+                padding-bottom: 20px;
+                padding-right: 150px;
+            }
+
+
+            /* when toggle active */
+
+            .nav.active {
+                display: flex;
+            }
+
+            /* footer becomes 2 columns */
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+        }
+
+        /* ======================================= */
+        /* MOBILE RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:768px) {
+
+
+
+
+
+            /* footer becomes single column */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* center footer bottom */
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+        }
+
+        /* small phones */
+
+        @media (max-width:420px) {
+
+            .newsletter {
+                flex-direction: column;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+        }
+
+        /* Footer end  CSS*/
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+
+        <div class="top-left">
+
+            <div class="top-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>10:00AM - 7:00PM Mon - Sat</span>
+            </div>
+
+            <div class="top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 93262 46981</span>
+            </div>
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="social">
+                <a href="https://www.linkedin.com/company/creativewebsolution404/?viewAsMember=true" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="social">
+                <a href="https://www.instagram.com/creativewebsolution99?utm_source=qr&igsh=OWlxcGlvNG1tNG1s"
+                    target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Top Bar End -->
+
+
+    <!-- Nav Bar Start -->
+
+    <header class="header">
+
+        <a href="index.html"><img src="img/creativesweb.png" id="brand"></a>
+
+        <!-- Hamburger button -->
+
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="nav" id="navMenu">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#" class="active">PRODUCT</a></li>
+                <!-- <li><a href="#">BECOME AUTHER</a></li> -->
+                <!-- <li><a href="#">CATEGORIES</a></li> -->
+                <li><a href="BecomeAuthor.html">BECOME AUTHOR</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Help_Center.html">HELP CENTER</a></li>
+                <!-- <li><a href="#">SUPPORT</a></li> -->
+            </ul>
+
+            <div class="actions">
+                <a href="login.html" class="btn login">LOGIN</a>
+
+                <a href="Register.html" class="btn register">REGISTER</a>
+            </div>
+
+        </nav>
+
+    </header>
+    </div>
+    <!-- Nav Bar End -->
+
+
+    <!-- Top Blue Section -->
+
+
+    <header class="hero-top">
+        <div class="container">
+            <h1 class="main-heading">PRODUCT</h1>
+            <p class="breadcrumb-custom">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">></span>
+                <a href="Product (1).html" class="product">Product</a> 
+                <!-- change -->
+
+            </p>
+        </div>
+    </header>
+
+    <!-- Bottom Light Section -->
+    <section class="hero-bottom">
+        <div class="container">
+            <h2 class="sub-heading">Browse Digital Products</h2>
+            <div class="blue-divider"></div>
+
+            <p class="description">
+                Discover ready-to-use scripts, plugins, templates, and developer tools created by <br> professional
+                developers worldwide.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="search-wrapper">
+                <div class="input-group mb-3 shadow-sm">
+                    <input type="text" class="form-control search-input"
+                        placeholder="Search code, plugins, templates..." aria-label="Search">
+                    <button class="btn search-btn" type="button">Search</button>
+                </div>
+                <div id="suggestionBox" class="suggestion-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Sorting Bar Section Start -->
+        <div class="sorting-bar">
+            <h2 class="product-count">All products (10)</h2>
+
+            <div class="sort-wrapper">
+                <span class="sort-label">Sort by</span>
+                <select class="form-select sort-dropdown">
+                    <!-- <option selected value="newest">Newest</option> -->
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <!-- <option value="rating">Best Rating</option> -->
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <!-- Sorting Bar Section End -->
+    <div class="container">
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-3 col-md-12">
+                <div class="sidebar">
+                    <div class="filter-title">
+                        Filter by <a href="#" class="clear-all">Clear all</a>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-section-title">Category</div>
+                        <select class="form-select form-select-sm text-muted">
+                            <option selected>Category</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="price-range-box">
+                        <input type="range" id="priceRange" min="0" max="20000" value="10000">
+
+                        <div class="price-labels">
+                            <span>Rs.0</span>
+                            <span id="priceValue">Rs.20,000</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section mt-4">
+                        <div class="filter-section-title">Rating</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label star-rating-sidebar">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </label>
+                        </div>
+                        <div class="form-check mt-1">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label star-rating-sidebar">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star"></i>
+                            </label>
+
+                        </div>
+                        <div class="form-check mt-1">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label star-rating-sidebar">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                            </label>
+
+                        </div>
+                        <div class="form-check mt-1">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label star-rating-sidebar">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                            </label>
+
+                        </div>
+                        <div class="form-check mt-1">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label star-rating-sidebar">
+                                <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="filter-section mt-4">
+                        <div class="filter-section-title">Technology stack</div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">PHP</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Javascript</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Python</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Java</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Node Js</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">.NET</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">.React Native</label></div>
+
+                    </div>
+
+                    <div class="filter-section mt-4">
+                        <div class="filter-section-title">Framework compatibility</div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Laravel</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">React</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Codelgniter</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">React</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Vue.Js</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Angular</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Spring Boot</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox"><label
+                                class="form-check-label">Bootstrap</label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT GRID cards section start -->
+            <div class="col-lg-9 col-md-12">
+                <div class="row  g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Employee management system.png" class="product-img"
+                                alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Employee management system</h5>
+                                <div class="price-row">
+                                    <span class="price">₹9,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Employee database management</li>
+                                    <li>Attendance & leave tracking</li>
+                                    <li>Payroll integration</li>
+                                    <li>Admin dashboard</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 2 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Stock management system.png" class="product-img" alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Stock management System</h5>
+
+                                <div class="price-row">
+                                    <span class="price">₹9,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Product inventory tracking</li>
+                                    <li>Order management</li>
+                                    <li>Stock alerts & reports</li>
+                                    <li>Supplier management</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Car rental service website.png" class="product-img"
+                                alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Car rental service website</h5>
+                                <div class="price-row">
+                                    <span class="price">₹6,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Vehicle booking management</li>
+                                    <li>Car availability tracking</li>
+                                    <li>Online payment integration</li>
+                                    <li>Customer booking history</li>
+                                </ul>
+
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Online doctor appointent.png" class="product-img"
+                                alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Online doctor appointment booking
+                                    platform</h5>
+                                <div class="price-row">
+                                    <span class="price">₹9,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Doctor schedule management</li>
+                                    <li>Online appointment booking</li>
+                                    <li>Patient record management</li>
+                                    <li>Email & SMS appointment reminders</li>
+                                </ul>
+
+                                <div class="license-container">
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Multivendor.png" class="product-img" alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Multi vendor E-commerce
+                                    marketplace platform</h5>
+                                <div class="price-row">
+                                    <span class="price">₹11,500</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Multiple vendor store management</li>
+                                    <li>Product listing and order tracking</li>
+                                    <li>Secure payment gateway integration</li>
+                                    <li>SVendor sales analytics dashboard</li>
+                                </ul>
+
+                                <div class="license-container">
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Eccomerce fashion website.png" class="product-img"
+                                alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">E-commerce fashion website</h5>
+                                <div class="price-row">
+                                    <span class="price">₹7,450</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Product catalog with filters</li>
+                                    <li>Shopping cart and checkout system</li>
+                                    <li>Order and delivery tracking</li>
+                                    <li>Customer account dashboard</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Hotel Booking.png" class="product-img" alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Hotel booking website</h5>
+                                <div class="price-row">
+                                    <span class="price">₹8,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Room availability calendar</li>
+                                    <li>Online reservation system</li>
+                                    <li>Secure payment processing</li>
+                                    <li>Guest booking management</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/E-commerce market place.png" class="product-img" alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">E-commerce marketplace website</h5>
+                                <div class="price-row">
+                                    <span class="price">₹5,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>E-commerce marketplace website</li>
+                                    <li>Multi-category product listings</li>
+                                    <li>Order processing system</li>
+                                    <li>Customer reviews and ratings</li>
+                                </ul>
+
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Courier & Logistics.png" class="product-img" alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Courier & logistics service website</h5>
+                                <div class="price-row">
+                                    <span class="price">₹7,450</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Parcel shipment tracking</li>
+                                    <li>Order pickup and delivery management</li>
+                                    <li>Route and delivery status updates</li>
+                                    <li>Customer notification system</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 10 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Restaurant Management system.png" class="product-img"
+                                alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Restaurant management system
+                                    website</h5>
+                                <div class="price-row">
+                                    <span class="price">₹3,999</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Digital menu management</li>
+                                    <li>Table reservation system</li>
+                                    <li>Online food ordering</li>
+                                    <li>Order and billing management</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Event Management system.png" class="product-img" alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Event management system</h5>
+                                <div class="price-row">
+                                    <span class="price">₹8,899</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>Product inventory tracking</li>
+                                    <li>Order management</li>
+                                    <li>Stock alerts & reports</li>
+                                    <li>Supplier management</li>
+                                </ul>
+
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 d-flex">
+                        <div class="product-card">
+                            <img src="./img/Smart restaurant menu ordering.png" class="product-img"
+                                alt="Software Development">
+                            <div class="card-body">
+                                <h5 class="product-title">Smart Restaurant Menu Ordering</h5>
+                                <div class="price-row">
+                                    <span class="price">₹6,499</span>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="far fa-star"></i>
+                                        <span class="rating-count">(14)</span>
+                                    </div>
+                                </div>
+                                <ul class="feature-list">
+                                    <li>QR-based menu system</li>
+                                    <li>Table-side ordering</li>
+                                    <li>Real-time kitchen updates</li>
+                                    <li>Digital billing</li>
+                                </ul>
+                                <div class="license-container">
+
+                                    <div class="license-box" data-type="regular">
+                                        <div class="title">Regular License</div>
+                                        <div class="price">$10</div>
+                                    </div>
+
+                                    <!-- Default Selected -->
+                                    <div class="license-box active" data-type="extended" id="extendedLicense">
+                                        <div class="title">Extended License</div>
+                                        <div class="price">$100</div>
+                                    </div>
+
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <!-- <button class="btn btn-preview"
+                                        onclick="window.open('PreviewPage.html')">Preview</button> -->
+                                    <button class="btn btn-preview" onclick="window.location.href='PreviewPage.html'">
+                                        Preview
+                                    </button>
+                                    <button class="btn btn-add-cart" onclick="window.location.href='addcart.html'">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No Results Found Message on Product Page -->
+    <div id="no-results-product" style="display: none; text-align: center; padding: 60px 20px;">
+        <i class="fas fa-search" style="font-size: 64px; color: #ddd; display: block; margin-bottom: 20px;"></i>
+        <h4 style="color: #555; margin-bottom: 10px; font-size: 24px;">No Products Found</h4>
+        <p style="color: #888; font-size: 16px;">Sorry, no products match your search. Try different keywords.</p>
+    </div>
+
+
+    <!-- Pagination Section Start -->
+    <div class="pagination-wrapper">
+        <nav aria-label="Product navigation">
+            <ul class="custom-pagination" id="pagination-list">
+                <!-- Previous Arrow -->
+                <li id="prev-li">
+                    <a href="javascript:void(0)" class="page-link-custom" id="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </li>
+
+
+                <!-- Next Arrow -->
+                <li id="next-li">
+                    <a href="javascript:void(0)" class="page-link-custom" id="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Pagination Section End -->
+
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- column 1 -->
+
+            <div>
+
+                <a href="index.html"><img src="img/creativesweb.png" class="footer-logo"></a>
+
+<div class="footer-contact">
+  <a href="https://maps.app.goo.gl/TTv8ueeyD83GUAW86" 
+     target="_blank" 
+     style="color:inherit; text-decoration:none; display:flex; gap:10px;">
+    
+    <i class="fa-solid fa-location-dot"></i>
+
+    <span>
+      LWT, 203, C/O, ITI RD, above PNG,<br>
+      near Parihar Chowk, Aundh,<br>
+      Maharashtra-411007
+    </span>
+
+  </a>
+</div>
+
+<!-- PHONE FIXED (TEL LINK ADDED) -->
+      <div class="footer-contact">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+919326246981" style="color:inherit; text-decoration:none;">
+          +91 93262 46981
+        </a>
+      </div>
+
+<!-- EMAIL FIX (MAILTO ADDED) -->
+      <div class="footer-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:info@creativewebsolution.in" class="footer-link">
+          info@creativewebsolution.in
+        </a>
+      </div>
+
+<div class="footer-contact">
+  <a href="https://www.creativewebsolution.in/" 
+     target="_blank" 
+     style="color:inherit; text-decoration:none; display:flex; gap:10px;">
+    
+    <i class="fa-solid fa-globe"></i>
+
+    <span>www.creativewebsolution.in</span>
+
+  </a>
+</div>
+
+            </div>
+
+
+            <!-- column 2 -->
+
+            <div>
+
+                <h3 class="footer-title">Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="Product (1).html"><i class="fa-solid fa-chevron-right"></i> Product</a></li>
+                    <li><a href="BecomeAuthor.html"><i class="fa-solid fa-chevron-right"></i> Become Author</a></li>
+                    <li><a href="Blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="Help_Center.html"><i class="fa-solid fa-chevron-right"></i> Help Center</a></li>
+                    <li><a href="Cart.html"><i class="fa-solid fa-chevron-right"></i> Cart</a></li>
+                </ul>
+
+
+            </div>
+
+
+            <!-- column 3 -->
+
+            <div>
+
+                <h3 class="footer-title">Newsletters</h3>
+
+                <p class="footer-text">
+                    Elevate your business with Creative Web Solution.
+                    Experience growth through smart websites and cutting edge digital strategies.
+                </p>
+
+                <div class="newsletter">
+                    <input type="email" placeholder="Email goes here">
+                    <button>Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- footer bottom -->
+
+        <div class="footer-bottom">
+
+            <p style="color:gray;">
+                Copyright © 2026
+                <a href="#" style="color:white;">Creative Web Solution</a>.
+                ALL RIGHTS RESERVED
+            </p>
+
+<div class="footer-social">
+<a href="https://www.linkedin.com/company/creativewebsolution404/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/creativewebsolution/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.querySelector('.search-input');
+            const searchBtn = document.querySelector('.search-btn');
+            const suggestionBox = document.getElementById('suggestionBox');
+            const productCards = document.querySelectorAll('.product-card');
+            const productCountText = document.querySelector('.product-count');
+            const noResultsMsg = document.getElementById('no-results-product');
+
+            const productTitles = Array.from(document.querySelectorAll('.product-title'))
+                .map(title => title.innerText);
+
+            // Check for search parameter in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchParam = urlParams.get('search');
+            if (searchParam) {
+                searchInput.value = searchParam;
+                filterProducts(searchParam);
+            }
+
+            function filterProducts(searchTerm) {
+                searchTerm = searchTerm.toLowerCase().trim();
+                let visibleCount = 0;
+
+                productCards.forEach(card => {
+                    const title = card.querySelector('.product-title').innerText.toLowerCase();
+                    const columnWrapper = card.closest('[class*="col-"]');
+
+                    if (searchTerm === '' || title.includes(searchTerm)) {
+                        columnWrapper.style.setProperty('display', 'flex', 'important');
+                        visibleCount++;
+                    } else {
+                        columnWrapper.style.setProperty('display', 'none', 'important');
+                    }
+                });
+
+                // Show or hide "No Results" message
+                if (noResultsMsg) {
+                    if (visibleCount === 0 && searchTerm !== '') {
+                        noResultsMsg.style.display = 'block';
+                    } else {
+                        noResultsMsg.style.display = 'none';
+                    }
+                }
+
+                if (productCountText) {
+                    productCountText.innerText = `All products (${visibleCount})`;
+                }
+
+                suggestionBox.style.display = 'none';
+            }
+
+            searchInput.addEventListener('input', function () {
+                const inputVal = this.value.toLowerCase().trim();
+                suggestionBox.innerHTML = '';
+
+                if (inputVal.length > 0) {
+                    const matches = productTitles.filter(title =>
+                        title.toLowerCase().includes(inputVal)
+                    );
+
+                    if (matches.length > 0) {
+                        matches.forEach(match => {
+                            const div = document.createElement('div');
+                            div.classList.add('suggestion-item');
+                            div.innerText = match;
+
+                            div.addEventListener('click', () => {
+                                searchInput.value = match;
+                                filterProducts(match);
+                            });
+
+                            suggestionBox.appendChild(div);
+                        });
+                        suggestionBox.style.display = 'block';
+                    } else {
+                        suggestionBox.style.display = 'none';
+                    }
+                } else {
+                    suggestionBox.style.display = 'none';
+                    // Show all items when search is cleared
+                    filterProducts('');
+                }
+            });
+
+            searchBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const finalTerm = searchInput.value;
+                filterProducts(finalTerm);
+            });
+
+            document.addEventListener('click', function (e) {
+                if (searchInput && suggestionBox) {
+                    if (!searchInput.contains(e.target) && !suggestionBox.contains(e.target)) {
+                        suggestionBox.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cardsPerPage = 6;
+            let currentPage = 1;
+
+            const productContainer = document.querySelector('.col-lg-9 .row.g-4');
+            const productCountText = document.querySelector('.product-count');
+            const sortDropdown = document.querySelector('.sort-dropdown');
+
+            function updateProductCount() {
+                const totalCards = document.querySelectorAll('.product-card').length;
+                if (productCountText) {
+                    productCountText.innerText = `All products (${totalCards})`;
+                }
+            }
+
+            // २. Sorting Functionality 
+            sortDropdown.addEventListener('change', function () {
+                const sortBy = this.value;
+                let items = Array.from(productContainer.children);
+
+                items.sort((a, b) => {
+                    const priceA = parseInt(a.querySelector('.price').innerText.replace(/[₹,]/g, ''));
+                    const priceB = parseInt(b.querySelector('.price').innerText.replace(/[₹,]/g, ''));
+
+                    const ratingA = a.querySelectorAll('.rating-stars .fas.fa-star').length;
+                    const ratingB = b.querySelectorAll('.rating-stars .fas.fa-star').length;
+
+                    if (sortBy === 'price-low') return priceA - priceB;
+                    if (sortBy === 'price-high') return priceB - priceA;
+                    if (sortBy === 'rating') return ratingB - ratingA;
+                    return 0;
+                });
+
+                items.forEach(item => productContainer.appendChild(item));
+
+                showPage(1);
+            });
+
+            // ३. Pagination Logic
+            const paginationList = document.getElementById('pagination-list');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const nextLi = document.getElementById('next-li');
+
+            function createPagination() {
+                document.querySelectorAll('.page-number-item').forEach(el => el.remove());
+
+                const allItems = document.querySelectorAll('.col-lg-9 .row.g-4 > div');
+                const totalPages = Math.ceil(allItems.length / cardsPerPage);
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const li = document.createElement('li');
+                    li.classList.add('page-number-item');
+                    const a = document.createElement('a');
+                    a.href = "javascript:void(0)";
+                    a.classList.add('page-link-custom', 'page-num');
+                    if (i === currentPage) a.classList.add('active');
+                    a.innerText = i;
+                    a.setAttribute('data-page', i);
+
+                    a.addEventListener('click', () => showPage(i));
+                    li.appendChild(a);
+                    paginationList.insertBefore(li, nextLi);
+                }
+            }
+
+            function showPage(page) {
+                currentPage = page;
+                const allItems = document.querySelectorAll('.col-lg-9 .row.g-4 > div');
+                const totalPages = Math.ceil(allItems.length / cardsPerPage);
+                const start = (page - 1) * cardsPerPage;
+                const end = start + cardsPerPage;
+
+                allItems.forEach((col, index) => {
+                    if (index >= start && index < end) {
+                        col.style.setProperty('display', 'flex', 'important');
+                    } else {
+                        col.style.setProperty('display', 'none', 'important');
+                    }
+                });
+
+                // Active class update
+                document.querySelectorAll('.page-num').forEach(num => {
+                    num.classList.remove('active');
+                    if (parseInt(num.getAttribute('data-page')) === page) num.classList.add('active');
+                });
+
+                updateArrows(totalPages);
+                window.scrollTo({ top: 500, behavior: 'smooth' });
+            }
+
+            function updateArrows(totalPages) {
+                prevBtn.parentElement.classList.toggle('disabled', currentPage === 1);
+                nextBtn.parentElement.classList.toggle('disabled', currentPage === totalPages || totalPages === 0);
+
+                prevBtn.style.opacity = currentPage === 1 ? "0.5" : "1";
+                nextBtn.style.opacity(currentPage === totalPages || totalPages === 0) ? "0.5" : "1";
+            }
+
+            prevBtn.addEventListener('click', () => { if (currentPage > 1) showPage(currentPage - 1); });
+            nextBtn.addEventListener('click', () => {
+                const totalPages = Math.ceil(document.querySelectorAll('.col-lg-9 .row.g-4 > div').length / cardsPerPage);
+                if (currentPage < totalPages) showPage(currentPage + 1);
+            });
+
+            updateProductCount();
+            createPagination();
+            showPage(1);
+        });
+    </script>
+
+    <script>
+
+        /* toggle menu */
+
+        const toggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("navMenu");
+
+        toggle.onclick = () => {
+            nav.classList.toggle("active");
+        };
+
+    </script>
+    <script>
+        const range = document.getElementById("priceRange");
+        const priceValue = document.getElementById("priceValue");
+
+        function updateSlider() {
+            let value = range.value;
+            let max = range.max;
+            priceValue.innerText = "Rs." + Number(value).toLocaleString();
+            let percent = (value / max) * 100;
+            range.style.background = `linear-gradient(to right, #0796FE ${percent}%, #ddd ${percent}%)`;
+        }
+
+
+        updateSlider();
+
+        range.addEventListener("input", updateSlider);
+
+
+
+
+        document.querySelector(".clear-all").addEventListener("click", function (e) {
+            e.preventDefault();
+
+            document.querySelectorAll(".sidebar input[type='checkbox']").forEach(cb => {
+                cb.checked = false;
+            });
+
+            document.querySelectorAll(".sidebar select").forEach(select => {
+                select.selectedIndex = 0;
+            });
+
+            const range = document.getElementById("priceRange");
+            range.value = range.max;
+            range.value = 0;
+            // Update UI text
+            document.getElementById("priceValue").innerText = "Rs." + Number(range.value).toLocaleString();
+
+            let percent = (range.value / range.max) * 100;
+            range.style.background = `linear-gradient(to right, #0796FE ${percent}%, #ddd ${percent}%)`;
+        });
+    </script>
+
+
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>

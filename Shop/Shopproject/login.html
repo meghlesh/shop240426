@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* FULL BACKGROUND */
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:
+linear-gradient(rgba(10,37,64,0.2),
+rgba(10,37,64,0.2)),
+url("img/Login Page.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+/* LOGIN CARD */
+.login-card{
+width:450px;
+background:#fff;
+padding: 30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(122, 149, 207, 0.2);
+
+animation:fadeIn 0.8s ease;
+}
+
+.error-text{
+color: red;
+font-size: 13px;
+margin-top: -12px;
+margin-bottom: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* TITLE */
+.login-title{
+font-size:28px;
+font-weight:700;
+color:#1e88e5;
+margin-bottom:20px;
+}
+
+/* LABEL */
+label{
+display:block;
+font-size:14px;
+font-weight:600;
+margin-bottom:5px;
+}
+
+label span{
+color:red;
+}
+
+/* INPUT */
+.form-control{
+width:100%;
+padding:10px 12px;
+border:1px solid #e2e5e9;
+border-radius:8px;
+background:#f1f3f6;
+margin-bottom:18px;
+font-size:14px;
+}
+
+/* FOCUS BLUE BORDER */
+.form-control:focus{
+outline:none;
+border:1px solid #1e88e5;
+background:#fff;
+}
+
+/* PASSWORD */
+.password-box{
+position:relative;
+}
+
+.password-box i{
+position:absolute;
+right:12px;
+top:35%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#777;
+}
+/* OPTIONS CHECKBOX */
+.options input[type="checkbox"]{
+width:18px;
+height:18px;
+cursor:pointer;
+}
+
+.options label{
+font-size:15px;
+font-weight:500;
+display:flex;
+align-items:center;
+gap:8px;  
+}
+
+/* OPTIONS */
+.options{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+font-size:14px;
+font-weight: 600;
+}
+
+.options a{
+color:#1e88e5;
+text-decoration:none;
+}
+
+/* BUTTON */
+.login-btn{
+width:100%;
+padding:14px;
+background:#1e88e5;
+border:none;
+border-radius:8px;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+}
+
+.login-btn:hover{
+background:#1565c0;
+}
+
+/* DIVIDER */
+hr{
+margin:20px 0;
+border:none;
+border-top:1px solid #121212;
+}
+
+/* REGISTER */
+.register{
+text-align:center;
+font-size:14px;
+color:#333;
+}
+
+.register a{
+color:#1288ef;
+font-size:14px;
+font-weight:600;        
+text-decoration:none;
+border-bottom:2px solid #1288ef;   
+padding-bottom:2px;
+transition:0.3s;
+}
+
+.register a:hover{
+color:#0d6efd;
+border-bottom:2px solid #0d6efd;
+}
+/* LOGO TOP RIGHT */
+.logo{
+position:absolute;
+top:40px;
+right:60px;
+}
+
+.logo img{
+width:180px;
+}
+
+
+/* MOBILE VIEW */
+@media (max-width: 768px){
+
+body{
+padding:20px;
+}
+
+/* LOGIN CARD */
+.login-card{
+width:100%;
+max-width:380px;
+padding:25px;
+border-radius:16px;
+}
+
+/* TITLE */
+.login-title{
+font-size:24px;
+margin-bottom:15px;
+}
+
+/* INPUT */
+.form-control{
+padding:9px 10px;
+font-size:13px;
+}
+
+/* BUTTON */
+.login-btn{
+padding:12px;
+font-size:14px;
+}
+
+/* OPTIONS */
+.options{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-direction:row;   
+gap:10px;
+}
+.options a{
+white-space:nowrap;
+font-size:13px;
+}
+
+.options label{
+white-space:nowrap;
+}
+
+/* CHECKBOX */
+.options input[type="checkbox"]{
+width:16px;
+height:16px;
+}
+
+/* REGISTER */
+.register{
+font-size:13px;
+}
+
+/* LOGO */
+.logo{
+top:20px;
+right:20px;
+}
+
+.logo img{
+width:120px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+    <img src="img/creativesweb.png">
+</div>
+
+<!-- LOGIN CARD -->
+<div class="login-card">
+
+<h2 class="login-title">Login</h2>
+
+<form id="loginForm">
+
+<label>Email <span>*</span></label>
+<input type="email" id="emailInput" class="form-control" placeholder="Enter your email">
+<div id="emailError" class="error-text"></div>
+
+
+<label>Password <span>*</span></label>
+
+
+<div class="password-box">
+<input type="password" class="form-control" id="passwordInput" placeholder="Enter your password">
+<i class="fa fa-eye-slash" id="togglePassword"></i>
+</div>
+<div id="passwordError" class="error-text"></div>
+
+<!-- <label>Role <span>*</span></label> -->
+
+<!-- <select id="roleInput" class="form-control">
+<option value="">Select Role</option>
+<option>Admin</option>
+<option>Buyer</option>
+<option>Seller</option>
+</select> -->
+<!-- <div id="roleError" class="error-text"></div> -->
+
+<div class="options">
+<label><input type="checkbox"> Remember Me</label>
+<a href="forgot_password.html">Forgot Password</a>
+</div>
+
+<div id="errorMsg" style="color:red;margin-bottom:10px;"></div>
+
+<button type= "submit" class="login-btn">Login</button>
+
+<hr>
+
+<p class="register">
+Don't have an account?
+<a href="register.html">Register</a>
+</p>
+
+</form>
+
+</div>
+
+<script>
+
+/* PASSWORD TOGGLE */
+const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("passwordInput");
+
+togglePassword.addEventListener("click", function(){
+
+if(passwordInput.type === "password"){
+passwordInput.type = "text";
+this.classList.replace("fa-eye-slash","fa-eye");
+}else{
+passwordInput.type = "password";
+this.classList.replace("fa-eye","fa-eye-slash");
+}
+
+});
+
+/* FORM VALIDATION */
+
+const loginForm = document.getElementById("loginForm");
+
+const emailInput = document.getElementById("emailInput");
+
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
+
+const errorMsg = document.getElementById("errorMsg");
+
+loginForm.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+errorMsg.innerText="";
+emailError.innerText = "";
+passwordError.innerText = "";
+
+let email = emailInput.value.trim();
+let password = passwordInput.value.trim();
+
+/* EMAIL VALIDATION */
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(email === ""){
+emailError.innerText = "Email is required";
+emailInput.focus();
+return;
+}
+
+if(!emailPattern.test(email)){
+emailError.innerText="Enter valid email address";
+emailInput.focus();
+return;
+}
+
+/* PASSWORD */
+
+if(password === ""){
+passwordError.innerText="Password is required";
+passwordInput.focus();
+return;
+}
+
+/* BACKEND API CALL */
+
+const data = {
+email: email,
+password: password
+};
+
+try{
+
+const response = await fetch("http://localhost:8081/api/login",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+});
+
+const result = await response.json();
+
+if(response.ok && result.success){
+
+// ✅ NEW: extract data
+const userData = result.data;
+
+// ✅ NEW: store token & role
+localStorage.setItem("token", userData.token);
+
+
+// ✅ Show success message
+alert(result.message || "Login Successful");
+
+// ⏳ 1 second delay
+setTimeout(function(){
+
+if (userData.role && userData.role.toLowerCase() === "seller") {
+    window.location.href = "AuthorDashboard.html";
+} 
+else if (userData.role && userData.role.toLowerCase() === "admin") {
+    window.location.href = "AdminDashboard.html";
+}
+
+else{
+window.location.href = "index.html";
+}
+
+}, 500);
+
+}else{
+
+if(result.errors){
+let msg="";
+for(const field in result.errors){
+msg+=result.errors[field]+"\n";
+}
+errorMsg.innerText=msg;
+}else{
+errorMsg.innerText=result.message || "Login failed";
+}
+
+}
+
+}catch(error){
+
+console.error(error);
+errorMsg.innerText="Server error. Try again.";
+
+}
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Web Solution Dashboard</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts: Oswald and Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@200;400&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #0A2540;
+      --primary-blue: #0796FE;
+      --sub-text: #797979;
+      --white: #FFFFFF;
+      --light-bg: #F0F2F5;
+      --table-header: #E9F1F9;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--light-bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sidebar Style */
+    .sidebar {
+      background-color: var(--bg-dark);
+      min-height: 100vh;
+      color: var(--white);
+      position: fixed;
+      width: 240px;
+      z-index: 1000;
+    }
+
+    .sidebar .logo-area {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .logo-img {
+      width: 160px;
+      height: auto;
+    }
+
+    .sidebar a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--primary-blue);
+      border-left: 5px solid var(--primary-blue);
+    }
+
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+    }
+
+    .menu-icon.blue {
+      display: none;
+    }
+
+    .toggle-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-left: -15px;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* EXACT HEADER STYLE */
+    .top-header {
+      background: #FFFFFF;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      border-bottom: 1px solid #E0E0E0;
+      position: fixed;
+      top: 0;
+      left: 240px;
+      right: 0;
+      z-index: 999;
+    }
+
+    .search-bar {
+      background: #F8F9FA;
+      border: 1px solid #E9E9E9;
+      border-radius: 8px;
+      padding: 8px 15px;
+      width: 450px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar i {
+      color: #A0A0A0;
+      margin-right: 10px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+
+    .notification-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      color: var(--sub-text);
+      font-size: 20px;
+    }
+
+    .notification-btn .noti-text {
+      font-size: 10px;
+      margin-top: 2px;
+      color: var(--sub-text);
+    }
+
+    .notification-btn .badge {
+      position: absolute;
+      top: 0px;
+      transform: translate(40%, -40%);
+
+      background: #EF4444;
+      color: white;
+      font-size: 9px;
+      padding: 3px 5px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .user-avatar {
+      width: 42px;
+      height: 42px;
+      background: var(--bg-dark);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .content-body {
+      padding: 30px;
+      padding-top: 85px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .dashboard-title h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      font-size: 35px;
+      margin-bottom: 5px;
+    }
+
+    .dashboard-title p {
+      color: var(--sub-text);
+      font-size: 16px;
+    }
+
+
+    /* Stats Cards */
+
+    .stat-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+      height: 100%;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* icon */
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-text h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0A2540;
+    }
+
+    .stat-text p {
+      margin: 2px 0 0;
+      font-size: 16px;
+      color: #0A2540;
+    }
+
+    .sidebar a:hover .menu-icon.grey {
+      display: none;
+    }
+
+    .sidebar a:hover .menu-icon.blue {
+      display: inline;
+    }
+
+    .sidebar a.active .menu-icon.grey {
+      display: none;
+    }
+
+    .sidebar a.active .menu-icon.blue {
+      display: inline;
+    }
+
+    /* Mobile */
+    @media (max-width: 576px) {
+      .stat-card {
+        padding: 15px;
+      }
+
+      .stat-text h2 {
+        font-size: 20px;
+      }
+
+      .stat-text p {
+        font-size: 13px;
+      }
+    }
+
+    /* icon styles */
+
+
+    .icon-box img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+
+    .icon-box.blue {
+      background: #E7F1FF;
+      color: #0d6efd;
+    }
+
+    .icon-box.purple {
+      background: #F3E8FF;
+      color: #9333ea;
+    }
+
+    .icon-box.orange {
+      background: #FFF3E6;
+      color: #f59e0b;
+    }
+
+    .icon-box.green {
+      background: #E6F9F0;
+      color: #10b981;
+    }
+
+
+
+
+    @media (max-width: 991.98px) {
+      .sidebar {
+        left: -240px;
+        transition: all 0.3s ease;
+      }
+
+      .sidebar.show {
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+      }
+
+      .top-header {
+        left: 0 !important;
+      }
+
+      .search-bar {
+        width: 150px;
+      }
+
+      .notification-btn .noti-text {
+        display: none;
+      }
+    }
+
+
+
+
+
+    @media (min-width: 992px) {
+      .search-bar {
+        width: 450px;
+      }
+    }
+
+
+
+    /* Mobile only wrap */
+    @media (max-width: 576px) {
+      .stat-card {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* Tablet + Desktop */
+    @media (min-width: 577px) {
+      .stat-card {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+    }
+
+
+
+    /* Recent purchase Start css */
+
+    /* MAIN CONTENT */
+
+    .purchase-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin: 3px 0 0 0;
+    }
+
+    /* BUTTON */
+    .view-btn {
+      padding: 6px 16px;
+      border: 1px solid #2daae1;
+      background: transparent;
+      color: #2daae1;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .view-btn:hover {
+      background-color: #0796FE;
+      color: #fff;
+    }
+
+    table thead tr th {
+      background-color: #E1F2FF !important;
+    }
+
+    /* PRODUCT */
+    .product {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .product img {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    /* STATUS */
+    .status {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    .completed {
+      background: #d4edda;
+      color: #2e7d32;
+    }
+
+    .processing {
+      background: #e0e0e0;
+      color: #555;
+    }
+
+    /* ACTION CENTER FIX */
+    .action {
+      text-align: center;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+
+    /* ACTION */
+    .action {
+      text-align: center;
+      font-size: 20px;
+      cursor: pointer;
+
+    }
+
+    /* DROPDOWN */
+    .action-menu {
+      position: absolute;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      min-width: 150px;
+      z-index: 999;
+    }
+
+    .action-menu a {
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .action-menu a:hover {
+      background: #f2f6fa;
+    }
+
+
+
+    /* TABLE HEADER */
+    table thead {
+      background: #E1F2FF;
+    }
+
+    /* ================= MOBILE RESPONSIVE ================= */
+
+    /* TABLE SCROLL ON SMALL DEVICES */
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    /* TABLE TEXT SIZE */
+    table {
+      font-size: 14px;
+    }
+
+    /* TABLE CELL SPACING */
+    table td,
+    table th {
+      white-space: nowrap;
+      padding: 10px;
+    }
+
+    /* TABLE IMAGE SMALLER */
+    @media (max-width: 768px) {
+      .product img {
+        width: 32px;
+        height: 32px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      .status {
+        font-size: 11px;
+        padding: 4px 10px;
+      }
+
+      .view-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+    }
+
+    @media (max-width: 576px) {
+
+      .content-body {
+        padding: 15px;
+        padding-top: 90px;
+      }
+
+      .purchase-section {
+        padding: 15px;
+        margin: 3px 0 0 0;
+      }
+
+      table {
+        font-size: 12px;
+      }
+
+      .product {
+        gap: 6px;
+      }
+
+      .product img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .status {
+        font-size: 10px;
+        padding: 3px 8px;
+      }
+
+      .action {
+        font-size: 16px;
+      }
+
+    }
+
+    /* EXTRA SMALL DEVICES */
+    @media (max-width: 400px) {
+      table {
+        font-size: 11px;
+      }
+
+      .view-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+      }
+    }
+
+    /* Recent purchase end css */
+
+    /* Download History */
+    body {
+      background: #f5f7fb;
+    }
+
+    .card-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .view-all {
+      color: #4da3ff;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .file-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .file-box:hover {
+      background: #f7faff;
+    }
+
+    .file-left img {
+      width: 35px;
+      margin-right: 10px;
+    }
+
+    .file-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .file-meta {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .dot {
+      height: 4px;
+      width: 4px;
+      background: gray;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    .card-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Support Ticket Styles */
+     body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+  }
+
+  .card-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .view-all {
+    font-size: 13px;
+    color: #1e88e5;
+    cursor: pointer;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* space between rows */
+  }
+
+  thead tr {
+    background: #eaf4ff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  thead th {
+    padding: 10px;
+    text-align: left;
+  }
+
+  tbody tr {
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+  }
+
+  tbody td {
+    padding: 12px 10px;
+    font-size: 13px;
+    vertical-align: middle;
+  }
+
+  tbody tr:hover {
+    background: #f7faff;
+  }
+
+  .badge-custom {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .resolved {
+    color: #1ca34a;
+    background: #e6f7ec;
+  }
+
+  .pending {
+    color: #d4a100;
+    background: #fff6d9;
+  }
+
+  .in-progress {
+    color: #1e88e5;
+    background: #e3f2fd;
+    white-space: nowrap;
+  }
+
+  .dots {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .ticket-text {
+    white-space: nowrap;
+  }
+
+  .issue-col {
+    max-width: 220px;
+    white-space: nowrap;
+  }
+
+    /* Recent Notifications */
+
+    body {
+      background-color: #f5f7fb;
+    }
+
+    .card-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .view-all {
+      font-size: 14px;
+      color: #0d6efd;
+      border: 1px solid #0d6efd;
+      background-color: #ffffff;
+      padding: 6px 12px;
+      display: inline-block;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .view-all:hover {
+      background-color: #1e88e5;
+      color: #ffffff;
+    }
+
+    .notification-item {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin-bottom: 12px;
+      background-color: #fff;
+      transition: 0.2s;
+    }
+
+    .notification-item:hover {
+      background-color: #f9fafc;
+    }
+
+    .notification-title {
+      font-weight: 600;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .notification-time {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .notification-desc {
+      font-size: 13px;
+      color: #777;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo-area">
+      <img src="./img/creativesweb.png" alt="Logo" class="logo-img">
+    </div>
+    <nav>
+      <a href="#" class="active"> <img src="./img/Side bar blue icon 1.png" class="menu-icon blue">
+        <img src="./img/Sidebar grey icon 1.png" class="menu-icon grey">
+        <span>Dashboard</span></a>
+
+      <a href="#"> <img src="./img/Sidebar Grey Icon (7).png" class="menu-icon grey">
+        <img src="./img/Sidebar blue icon (7).png" class="menu-icon blue">
+        <span>Purchase</span></a>
+      <a href="#"> <img src="./img/Sidebar Grey Icon (3).png" class="menu-icon grey">
+        <img src="./img/Sidebar blue icon (3).png" class="menu-icon blue">
+        <span>Downloads</span></a>
+      <a href="#"> <img src="./img/Sidebar Grey Icon (5).png" class="menu-icon grey">
+        <img src="./img/Sidebar blue icon (5).png" class="menu-icon blue">
+        <span>Review</span></a>
+      <a href="#"> <img src="./img/Sidebar Grey Icon (6).png" class="menu-icon grey">
+        <img src="./img/Sidebar blue icon (6).png" class="menu-icon blue">
+        <span>Wishlist</span></a>
+      <a href="#"> <img src="./img/Sidebar Grey Icon (2).png" class="menu-icon grey">
+        <img src="./img/Sidebar blue icon (2).png" class="menu-icon blue">
+        <span>Support Ticket</span></a>
+      <a href="#"> <img src="./img/Sidebar Grey Icon (4).png" class="menu-icon grey">
+        <img src="./img/Sidebar blue icon (4).png" class="menu-icon blue">
+        <span>Setting</span></a>
+    </nav>
+  </div>
+
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+
+    <div class="top-header">
+      <div class="d-flex align-items-center">
+        <button class="btn d-lg-none me-2 toggle-btn" id="sidebarToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="search-bar">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+      <div class="header-right">
+
+        <div class="notification-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge">1</span>
+          <small class="noti-text">Notification</small>
+        </div>
+        <div class="user-avatar">AS</div>
+      </div>
+    </div>
+
+    <div class="content-body">
+      <div class="dashboard-title">
+        <h2>Dashboard</h2>
+        <p>Welcome back.</p>
+      </div>
+
+
+      <div class="row g-4 mb-4">
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="stat-card">
+            <div class="icon-box blue">
+              <img src="./img/icon-park-outline_trend.png" alt="">
+            </div>
+            <div class="stat-text">
+              <p>Total Purchase</p>
+
+              <h2>15</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="stat-card">
+            <div class="icon-box purple">
+              <img src="./img/Download.png" alt="">
+            </div>
+            <div class="stat-text">
+              <p>Total Download</p>
+              <h2>12</h2>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="stat-card">
+            <div class="icon-box orange">
+              <img src="./img/ticket.png" alt="">
+            </div>
+            <div class="stat-text">
+              <p>Tickets</p>
+
+              <h2>5</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="stat-card">
+            <div class="icon-box green">
+              <img src="./img/Money Spent.png" alt="">
+            </div>
+            <div class="stat-text">
+              <p>Money Spent</p>
+
+              <h2>12000</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RECENT PURCHASE -->
+      <div class="purchase-section">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5>Recent Purchase</h5>
+          <button class="view-btn">View All</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table align-middle">
+
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product Name</th>
+                <th>Purchase Date</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+
+
+            <tbody>
+              <tr>
+                <td>#ORD -101</td>
+                <td>
+                  <div class="product">
+                    <img src="img/CWS.Inventory.png">
+                    <span>CWS.Inventory</span>
+                  </div>
+                </td>
+                <td>02-04-2026</td>
+                <td>Sakshi Patil</td>
+                <td>Rs.3200</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="action action-btn">⋮</td>
+              </tr>
+
+              <tr>
+                <td>#ORD -145</td>
+                <td>
+                  <div class="product">
+                    <img src="img/EMS.png">
+                    <span>Employee Management System</span>
+                  </div>
+                </td>
+                <td>02-04-2026</td>
+                <td>Ujjwala</td>
+                <td>Rs.5200</td>
+                <td><span class="status processing">Processing</span></td>
+                <td class="action action-btn">⋮</td>
+              </tr>
+
+              <tr>
+                <td>#ORD -123</td>
+                <td>
+                  <div class="product">
+                    <img src="img/TMS.png">
+                    <span>Task Management System</span>
+                  </div>
+                </td>
+                <td>02-04-2026</td>
+                <td>Rashmika</td>
+                <td>Rs.1200</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="action action-btn">⋮</td>
+              </tr>
+
+              <tr>
+                <td>#ORD -245</td>
+                <td>
+                  <div class="product">
+                    <img src="img/Hostel Management System.png">
+                    <span>Hostel Management System</span>
+                  </div>
+                </td>
+                <td>02-04-2026</td>
+                <td>Yasaji</td>
+                <td>Rs.3200</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="action action-btn">⋮</td>
+              </tr>
+
+              <tr>
+                <td>#ORD -063</td>
+                <td>
+                  <div class="product">
+                    <img src="img/Car Rental.png">
+                    <span>Car Rental Service Website</span>
+                  </div>
+                </td>
+                <td>02-04-2026</td>
+                <td>Snehlata</td>
+                <td>Rs.3200</td>
+                <td><span class="status processing">Processing</span></td>
+                <td class="action action-btn">⋮</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="container py-3">
+        <div class="row g-3">
+
+          
+      <!-- Download History -->
+      <div class="col-12 col-lg-4 d-flex">
+        <div class="card-box w-100">
+          <div class="d-flex justify-content-between mb-3">
+            <h5>Download History</h5>
+            <span class="view-all">View All</span>
+          </div>
+
+          <div class="card-content">
+            <div class="file-box">
+              <div class="d-flex align-items-center">
+                <div class="file-left">
+                  <img src="img/Download History.png" alt="Download History" class="file-img">
+                </div>
+                <div>
+                  <div class="file-title">CWS.Inventory Final.zip</div>
+                  <div class="file-meta">VERSION 2.4.0 <span class="dot"></span> OCT 14</div>
+                </div>
+              </div>
+              <div class="icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+
+            </div>
+
+            <div class="file-box">
+              <div class="d-flex align-items-center">
+                <div class="file-left">
+                  <img src="img/Download History.png" alt="Download History" class="file-img">
+                </div>
+                <div>
+                  <div class="file-title">CWS EMS Final.zip</div>
+                  <div class="file-meta">VERSION 2.4.0 <span class="dot"></span> OCT 14</div>
+                </div>
+              </div>
+             <div class="icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+
+            </div>
+
+            <div class="file-box">
+              <div class="d-flex align-items-center">
+                <div class="file-left">
+                  <img src="img/Download History.png" alt="Download History" class="file-img">
+                </div>
+                <div>
+                  <div class="file-title">Hostel Management.zip</div>
+                  <div class="file-meta">VERSION 2.4.0 <span class="dot"></span> OCT 14</div>
+                </div>
+              </div>
+              <img src="img/Sidebar blue icon (3).png" class="file-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Ticket -->
+      <div class="col-12 col-lg-4">
+  <div class="card-box">
+
+    <div class="header">
+      <h5>Support Ticket</h5>
+      <span class="view-all">View All</span>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Issue</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="ticket-text">#TKT-101</td>
+          <td class="issue-col">Unable to download CWS.Inventory zip file</td>
+          <td><span class="badge-custom resolved">Resolved</span></td>
+          <td><i class="bi bi-three-dots-vertical dots"></i></td>
+        </tr>
+
+        <tr>
+          <td class="ticket-text">#TKT-145</td>
+          <td class="issue-col">Not able to do payment</td>
+          <td><span class="badge-custom pending">Open</span></td>
+          <td><i class="bi bi-three-dots-vertical dots"></i></td>
+        </tr>
+
+        <tr>
+          <td class="ticket-text">#TKT-123</td>
+          <td class="issue-col">Facing issue in password change</td>
+          <td><span class="badge-custom in-progress">In Progress</span></td>
+          <td><i class="bi bi-three-dots-vertical dots"></i></td>
+        </tr>
+
+        <tr>
+          <td class="ticket-text">#TKT-245</td>
+          <td class="issue-col">Unable to purchase EMS product</td>
+          <td><span class="badge-custom resolved">Resolved</span></td>
+          <td><i class="bi bi-three-dots-vertical dots"></i></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+      <!-- Recent Notifications -->
+       
+      <div class="col-12 col-lg-4">
+         <div class="notifications-list">
+        <div class="card-box">
+          <div class="d-flex justify-content-between mb-3">
+            <h5>Recent Notifications</h5>
+            <span class="view-all">View All</span>
+          </div>
+
+         
+          <!-- Notification 1 -->
+          <div class="notification-item">
+            <div class="d-flex justify-content-between">
+              <span class="notification-title">New Order Received!</span>
+              <span class="notification-time">55 min ago</span>
+            </div>
+            <div class="notification-desc">
+              You've got a new order worth ₹3,200.
+            </div>
+            <div class="notification-desc">
+              Check details now.
+            </div>
+          </div>
+
+          <!-- Notification 2 -->
+          <div class="notification-item">
+            <div class="d-flex justify-content-between">
+              <span class="notification-title">Payment Received!</span>
+              <span class="notification-time">1 day ago</span>
+            </div>
+            <div class="notification-desc">
+              ₹5,000 has been credited to your account.
+            </div>
+          </div>
+
+          <!-- Notification 3 -->
+          <div class="notification-item">
+            <div class="d-flex justify-content-between">
+              <span class="notification-title">New Product Added!</span>
+              <span class="notification-time">2 days ago</span>
+            </div>
+            <div class="notification-desc">
+              Your product is now live and ready for sales.
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+<!-- Footer -->
+ <div class="text-center mt-3" style="font-size: 14px; color:#6c757d;">
+                    Copyright © 2025 - 2026 <span style="color: #000; font-weight: 500;"> Creative Web Solution.</span>
+                    ALL RIGHTS RESERVED
+                </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const sidebar = document.querySelector('.sidebar');
+
+      if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', function () {
+          sidebar.classList.toggle('show');
+        });
+      }
+
+      document.addEventListener('click', function (event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickInsideButton = sidebarToggle.contains(event.target);
+
+        if (!isClickInsideSidebar && !isClickInsideButton && sidebar.classList.contains('show')) {
+          sidebar.classList.remove('show');
+        }
+      });
+    });
+  </script>
+
+
+  <!-- DROPDOWN OUTSIDE TABLE -->
+  <div id="actionMenu" class="action-menu">
+    <a href="#">Edit</a>
+    <a href="#">View</a>
+    <a href="#">Update Version</a>
+    <a href="#">Delete</a>
+  </div>
+
+
+  <!-- JS -->
+  <script>
+    const menu = document.getElementById("actionMenu");
+    let isOpen = false;
+
+    document.querySelectorAll(".action-btn").forEach(btn => {
+
+    btn.addEventListener("click", function(e) {
+    e.stopPropagation();
+
+    // Toggle (single click)
+    if (isOpen) {
+    menu.style.display = "none";
+    isOpen = false;
+    return;
+    }
+
+    const rect = this.getBoundingClientRect();
+
+    menu.style.display = "block";
+    menu.style.top = rect.bottom + window.scrollY + "px";
+    menu.style.left = rect.left + window.scrollX - 80 + "px";
+
+    isOpen = true;
+    });
+
+
+    btn.addEventListener("dblclick", function(e) {
+    e.stopPropagation();
+    menu.style.display = "none";
+    isOpen = false;
+    });
+
+    });
+
+    document.addEventListener("click", () => {
+    menu.style.display = "none";
+    isOpen = false;
+    });
+    </script>
+
+
+    <!-- recent purchase end -->
+</body>
+
+</html>

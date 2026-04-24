@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts: Oswald and Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@200;400&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --bg-dark: #0A2540;
+      --primary-blue: #0796FE;
+      --sub-text: #797979;
+      --white: #FFFFFF;
+      --light-bg: #F0F2F5;
+      --table-header: #E9F1F9;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--light-bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sidebar Style */
+    .sidebar {
+      background-color: var(--bg-dark);
+      min-height: 100vh;
+      color: var(--white);
+      position: fixed;
+      width: 240px;
+      z-index: 1000;
+    }
+
+    .sidebar .logo-area {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .logo-img {
+      width: 160px;
+      height: auto;
+    }
+
+    .sidebar a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--primary-blue);
+      border-left: 5px solid var(--primary-blue);
+    }
+
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+    }
+
+    .menu-icon.blue {
+      display: none;
+    }
+
+    .toggle-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-left: -15px;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* EXACT HEADER STYLE */
+    .top-header {
+      background: #FFFFFF;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      border-bottom: 1px solid #E0E0E0;
+      position: fixed;
+      top: 0;
+      left: 240px;
+      right: 0;
+      z-index: 999;
+    }
+
+    .search-bar {
+      background: #F8F9FA;
+      border: 1px solid #E9E9E9;
+      border-radius: 8px;
+      padding: 8px 15px;
+      width: 450px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar i {
+      color: #A0A0A0;
+      margin-right: 10px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+
+    .notification-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      color: var(--sub-text);
+      font-size: 20px;
+    }
+
+    .notification-btn .noti-text {
+      font-size: 10px;
+      margin-top: 2px;
+      color: var(--sub-text);
+    }
+
+    .notification-btn .badge {
+      position: absolute;
+      top: 0px;
+      transform: translate(40%, -40%);
+
+      background: #EF4444;
+      color: white;
+      font-size: 9px;
+      padding: 3px 5px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .user-avatar {
+      width: 42px;
+      height: 42px;
+      background: var(--bg-dark);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .content-body {
+      padding: 30px;
+      padding-top: 85px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .dashboard-title h2 {
+      font-family: 'lato', sans-serif;
+      font-weight: 400;
+      font-size: 35px;
+      margin-bottom: 5px;
+    }
+
+    .dashboard-title p {
+      color: var(--sub-text);
+      font-size: 16px;
+    }
+
+
+    /* Stats Cards */
+
+    .stat-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+      height: 100%;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* icon */
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-text h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0A2540;
+    }
+
+    .stat-text p {
+      margin: 2px 0 0;
+      font-size: 16px;
+      color: #0A2540;
+    }
+
+    .sidebar a:hover .menu-icon.grey {
+      display: none;
+    }
+
+    .sidebar a:hover .menu-icon.blue {
+      display: inline;
+    }
+
+    .sidebar a.active .menu-icon.grey {
+      display: none;
+    }
+
+    .sidebar a.active .menu-icon.blue {
+      display: inline;
+    }
+
+    /* Mobile */
+    @media (max-width: 576px) {
+      .stat-card {
+        padding: 15px;
+      }
+
+      .stat-text h2 {
+        font-size: 20px;
+      }
+
+      .stat-text p {
+        font-size: 13px;
+      }
+    }
+
+    /* icon styles */
+
+
+    .icon-box img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+
+    .icon-box.blue {
+      background: #E7F1FF;
+      color: #0d6efd;
+    }
+
+    .icon-box.purple {
+      background: #F3E8FF;
+      color: #9333ea;
+    }
+
+    .icon-box.orange {
+      background: #FFF3E6;
+      color: #f59e0b;
+    }
+
+    .icon-box.green {
+      background: #E6F9F0;
+      color: #10b981;
+    }
+
+
+
+
+    @media (max-width: 991.98px) {
+      .sidebar {
+        left: -240px;
+        transition: all 0.3s ease;
+      }
+
+      .sidebar.show {
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+      }
+
+      .top-header {
+        left: 0 !important;
+      }
+
+      .search-bar {
+        width: 150px;
+      }
+
+      .notification-btn .noti-text {
+        display: none;
+      }
+    }
+
+
+
+
+
+    @media (min-width: 992px) {
+      .search-bar {
+        width: 450px;
+      }
+    }
+
+
+
+    /* Mobile only wrap */
+    @media (max-width: 576px) {
+      .stat-card {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* Tablet + Desktop */
+    @media (min-width: 577px) {
+      .stat-card {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+    }
+
+
+
+
+
+
+    /* --- Purchase Main Section Styles --- */
+    .purchase-body-container {
+      padding: 30px;
+      margin-top: 70px;
+      /* Offset for fixed header */
+    }
+
+    .content-box {
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      box-shadow: 0 10px 24px rgba(15, 41, 86, 0.06);
+      padding: 20px;
+      margin-bottom: 0 !important
+    }
+
+    /* Header & Title */
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .page-heading {
+      font-family: 'Lato', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #1e293b;
+      margin: 0;
+    }
+
+    /* Action Bar (Search + Filter) */
+    .action-bar {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .inner-search {
+      background: #FFFFFF;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 15px;
+      width: 280px;
+      display: flex;
+      align-items: center;
+    }
+
+    .inner-search i {
+      color: #94a3b8;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .inner-search input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    /* Wrapper */
+    .filter-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Button */
+    .filter-btn {
+      background: var(--primary-blue);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    /* Wrapper */
+    .filter-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Button */
+    .filter-btn {
+      background: var(--primary-blue);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    /* DROPDOWN PANEL (SMALL + TIGHT) */
+    .filter-panel {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 240px;
+      /* smaller */
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      display: none;
+      z-index: 9999;
+    }
+
+    /* Show */
+    .filter-panel.active {
+      display: block;
+    }
+
+    /* Header */
+    .filter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .filter-header h4 {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .clear-btn {
+      font-size: 12px;
+      color: #0d6efd;
+      cursor: pointer;
+    }
+
+    /* Form */
+    .filter-group {
+      margin-bottom: 10px;
+    }
+
+    .filter-group label {
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+
+    .filter-group input,
+    .filter-group select {
+      width: 100%;
+      padding: 7px 8px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      font-size: 12px;
+    }
+
+    /* Date icon */
+    .input-box {
+      position: relative;
+    }
+
+    .input-box i {
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+    }
+
+    .input-box input {
+      padding-left: 24px;
+    }
+
+    /* Button */
+    .apply-btn {
+      width: 100%;
+      padding: 8px;
+      font-size: 13px;
+      background: #1e88e5;
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+    }
+
+    /* ✅ MOBILE FIX (REAL DROPDOWN, NOT FULL WIDTH) */
+    @media (max-width: 768px) {
+
+      .filter-panel {
+        position: absolute;
+        /* keep dropdown behavior */
+        top: 40px;
+        right: 0;
+        left: auto;
+        /* prevent stretching */
+        width: 220px;
+        /* smaller on mobile */
+        border-radius: 8px;
+      }
+
+    }
+
+    /* EXTRA SMALL DEVICES */
+    @media (max-width: 480px) {
+
+      .filter-panel {
+        width: 200px;
+        /* tighter */
+        padding: 12px;
+      }
+
+    }
+
+    /* Table Container Card */
+    .table-card {
+      background: #FFFFFF;
+      border-radius: 0px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    /* Table Design */
+    .table thead th {
+      background-color: var(--table-header);
+      color: #475569;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 15px 20px;
+      border-bottom: none;
+      white-space: nowrap;
+    }
+
+    .table tbody td {
+      padding: 15px 20px;
+      color: #334155;
+      font-size: 14px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .order-id {
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* Product Info Cell */
+    .product-cell {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .product-cell img {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .product-cell span {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* Status Badges */
+    .status-badge {
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-badge.completed {
+      background-color: #DBF7EB;
+      color: #0F9F71;
+    }
+
+    .status-badge.processing {
+      background-color: #F1F2F6;
+      color: #6F7F9A;
+    }
+
+    .action-dots {
+      color: #94a3b8;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* --- Mobile Responsiveness --- */
+    @media (max-width: 991px) {
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .top-header {
+        left: 0;
+      }
+
+      .inner-search {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .purchase-body-container {
+        padding: 15px;
+      }
+
+      .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .action-bar {
+        width: 100%;
+      }
+
+      .inner-search {
+        flex: 1;
+      }
+    }
+
+
+
+
+
+    .action-menu {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .action-menu a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .action-menu a:hover {
+      background: #f0f0f0;
+    }
+
+    /* Pagination */
+    /* Base */
+body {
+  font-family: 'lato', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  padding: 20px 40px;
+  
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  
+}
+ 
+
+
+/* Page Box */
+.page-box {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.page-box i {
+  font-size: 14px;
+}
+
+/* Hover */
+.page-box:hover {
+  background: #eee;
+}
+
+/* Active */
+.page-box.active {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Disabled */
+.page-box.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .main {
+    justify-content: right; /* center pagination */
+    padding: 15px;
+  }
+
+  .page-box {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .pagination {
+    justify-content: right;
+    gap: 6px;
+  }
+
+  .page-box {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .page-box {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo-area">
+      <img src="./img/creativesweb.png" alt="Logo" class="logo-img">
+    </div>
+    <nav>
+      <a href="#" class="active"> <img src="./img/Side bar blue icon 1.png" class="menu-icon blue">
+        <img src="./img/Sidebar grey icon 1.png" class="menu-icon grey">
+        <span>Dashboard</span></a>
+
+      <a href="#"> <img src="./img/Purches-Icon.png" class="menu-icon grey">
+        <img src="./img/purches-blue.png" class="menu-icon blue">
+
+        <span>Purchase</span></a>
+      <a href="#"> <img src="./img/Download-icon.png" class="menu-icon grey">
+        <img src="./img/download-blue.png" class="menu-icon blue">
+        <span>Downloads</span></a>
+      <a href="#"> <img src="./img/Review-icon.png" class="menu-icon grey">
+        <img src="./img/review-blue.png" class="menu-icon blue">
+        <span>Review</span></a>
+      <a href="#"> <img src="./img/Wishlist.png" class="menu-icon grey">
+        <img src="./img/wishlist-blue.png" class="menu-icon blue">
+        <span>Wishlist</span></a>
+      <a href="#"> <img src="./img/Sidebar grey icon 6.png" class="menu-icon grey">
+        <img src="./img/Side bar blue icon 6.png" class="menu-icon blue">
+        <span>Support Ticket</span></a>
+      <a href="#"> <img src="./img/Sidebar grey icon 7.png" class="menu-icon grey">
+        <img src="./img/Side Bar Blue icon 9.png" class="menu-icon blue">
+        <span>Setting</span></a>
+    </nav>
+  </div>
+
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+
+    <div class="top-header">
+      <div class="d-flex align-items-center">
+        <button class="btn d-lg-none me-2 toggle-btn" id="sidebarToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="search-bar">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+      <div class="header-right">
+
+        <div class="notification-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge">1</span>
+          <small class="noti-text">Notification</small>
+        </div>
+        <div class="user-avatar">AS</div>
+      </div>
+    </div>
+
+
+
+    <!-- Purchase Body start -->
+    <div class="purchase-body-container">
+      <!-- table start -->
+      <div class="content-box">
+        <div class="content-header">
+          <h2 class="page-heading">Purchase</h2>
+
+          <div class="action-bar">
+            <div class="inner-search">
+            <i class="fa fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search">
+          </div>
+            <div class="filter-wrapper">
+
+              <button class="filter-btn" id="filterToggle">
+                <i class="fa-solid fa-bars-staggered"></i> Filter
+              </button>
+
+              <div class="filter-panel" id="filterPanel">
+
+                <div class="filter-header">
+                  <h4>Filter By</h4>
+                  <span class="clear-btn">Clear All</span>
+                </div>
+
+                <div class="filter-group">
+                  <label>Date</label>
+                  <input type="date" id="filterDate">
+                </div>
+
+                <div class="filter-group">
+                  <label>Order Id</label>
+                  <input type="text" id="filterOrder">
+                </div>
+
+                <div class="filter-group">
+                  <label>Payment Status</label>
+                  <select id="filterStatus">
+                    <option value="">Select</option>
+                    <option>Completed</option>
+                    <option>Processing</option>
+                  </select>
+                </div>
+
+                <button class="apply-btn" id="applyFilter">Apply</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Product Name</th>
+                  <th>Purchase Date</th>
+                  <th>Author</th>
+                  <th>Price</th>
+                  <th>Payment Status</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <tr>
+                  <td class="order-id">#ORD -101</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/CWS.Inventory.png" alt="CWS">
+                      <span>CWS.Inventory</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Sakshi Patil</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+                <tr>
+                  <td class="order-id">#ORD -145</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/Employee management system.png" alt="Employee">
+                      <span>Employee Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Ujjwala</td>
+                  <td>Rs.5200</td>
+                  <td><span class="status-badge processing">Processing</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+                <tr>
+                  <td class="order-id">#ORD -123</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/TMS.png" alt="Task">
+                      <span>Task Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Rashmika</td>
+                  <td>Rs.1200</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+                <tr>
+                  <td class="order-id">#ORD -245</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/Hostel Management System.png" alt="Hostel">
+                      <span>Hostel Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+                <tr>
+                  <td class="order-id">#ORD -205</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/Car Rental Service.png" alt="Hostel">
+                      <span>Car Rental System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+                <tr>
+                  <td class="order-id">#ORD -135</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/CWS.Inventory.png" alt="Hostel">
+                      <span>CWS.Inventary</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge processing">Processing</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+                <tr>
+                  <td class="order-id">#ORD -375</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/Employee management system.png" alt="Hostel">
+                      <span>Employee Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+                <tr>
+                  <td class="order-id">#ORD -295</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/Hostel Management System.png" alt="Hostel">
+                      <span>Hostel Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge processing">Processing</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+                <tr>
+                  <td class="order-id">#ORD -645</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/TMS.png" alt="Hostel">
+                      <span>Task Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+                <tr>
+                  <td class="order-id">#ORD -249</td>
+                  <td>
+                    <div class="product-cell">
+                      <img src="img/Hostel Management System.png" alt="Hostel">
+                      <span>Hostel Management System</span>
+                    </div>
+                  </td>
+                  <td>02-04-2026</td>
+                  <td>Yasaji</td>
+                  <td>Rs.3200</td>
+                  <td><span class="status-badge processing">Processing</span></td>
+                  <td class="text-center"><i class="fa-solid fa-ellipsis-vertical action-dots"></i></td>
+                </tr>
+
+
+        
+              </tbody>
+            </table>
+
+
+
+            <!-- Action Menu Popover -->
+
+            <div id="actionMenu" class="action-menu">
+              <a href="#">Edit</a>
+              <a href="#">View</a>
+              <a href="#">Update Version</a>
+              <a href="#">Delete</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="main">
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+
+      </section>
+
+
+      <footer class="mt-4 text-center text-muted x-small" style="font-size: 12px;">
+        Copyright © 2025 - 2026 <span class="fw-bold">Creative Web Solution.</span> ALL RIGHTS RESERVED
+      </footer>
+
+
+    </div>
+
+
+
+
+    <script>
+      const menu = document.getElementById("actionMenu");
+      let isOpen = false;
+
+      document.querySelectorAll(".action-btn").forEach(btn => {
+
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+
+          // Toggle (single click)
+          if (isOpen) {
+            menu.style.display = "none";
+            isOpen = false;
+            return;
+          }
+
+          const rect = this.getBoundingClientRect();
+
+          menu.style.display = "block";
+          menu.style.top = rect.bottom + window.scrollY + "px";
+          menu.style.left = rect.left + window.scrollX - 80 + "px";
+
+          isOpen = true;
+        });
+
+
+        btn.addEventListener("dblclick", function (e) {
+          e.stopPropagation();
+          menu.style.display = "none";
+          isOpen = false;
+        });
+
+      });
+
+      document.addEventListener("click", () => {
+        menu.style.display = "none";
+        isOpen = false;
+      });
+      // Action Menu Logic
+      const actionMenu = document.getElementById('actionMenu');
+      document.querySelectorAll('.action-dots').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (actionMenu.style.display === 'block') {
+            actionMenu.style.display = 'none';
+          } else {
+            const rect = e.target.getBoundingClientRect();
+            actionMenu.style.display = 'block';
+            actionMenu.style.top = `${rect.bottom + window.scrollY + 5}px`;
+            actionMenu.style.left = `${rect.left + window.scrollX - 120}px`;
+          }
+        });
+      });
+
+      document.addEventListener('click', () => { actionMenu.style.display = 'none'; });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+
+        if (sidebarToggle) {
+          sidebarToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('show');
+          });
+        }
+
+        document.addEventListener('click', function (event) {
+          const isClickInsideSidebar = sidebar.contains(event.target);
+          const isClickInsideButton = sidebarToggle.contains(event.target);
+
+          if (!isClickInsideSidebar && !isClickInsideButton && sidebar.classList.contains('show')) {
+            sidebar.classList.remove('show');
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        const toggleBtn = document.getElementById("filterToggle");
+        const panel = document.getElementById("filterPanel");
+
+        toggleBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          panel.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!panel.contains(e.target)) {
+            panel.classList.remove("active");
+          }
+        });
+
+      });
+    </script>
+
+   <script>
+const totalPages = 10;
+let currentPage = 1;
+
+function createBox(content, page = null, isDisabled = false, isActive = false) {
+  const div = document.createElement("div");
+  div.classList.add("page-box");
+
+  if (content === "prev") {
+    div.innerHTML = '<i class="bi bi-chevron-left"></i>';
+  } else if (content === "next") {
+    div.innerHTML = '<i class="bi bi-chevron-right"></i>';
+  } else {
+    div.innerHTML = content;
+  }
+
+  if (isActive) div.classList.add("active");
+  if (isDisabled) div.classList.add("disabled");
+
+  if (page !== null && !isDisabled) {
+    div.addEventListener("click", () => {
+      currentPage = page;
+      renderPagination();
+    });
+  }
+
+  return div;
+}
+
+function renderPagination() {
+  const container = document.getElementById("pagination");
+  container.innerHTML = "";
+
+  // LEFT BUTTON
+  container.appendChild(
+    createBox("prev", currentPage - 1, currentPage === 1)
+  );
+
+  // PAGE 1
+  container.appendChild(createBox(1, 1, false, currentPage === 1));
+
+  // PAGE 2
+  container.appendChild(createBox(2, 2, false, currentPage === 2));
+
+  // DOTS
+  container.appendChild(createBox("...", null, true));
+
+  // LAST PAGE (5 or totalPages)
+  const last = Math.min(5, totalPages);
+  container.appendChild(
+    createBox(last, last, false, currentPage === last)
+  );
+
+  // RIGHT BUTTON
+  container.appendChild(
+    createBox("next", currentPage + 1, currentPage === totalPages)
+  );
+}
+
+renderPagination();
+</script>
+
+
+<!-- Search Bar Script -->
+<script>
+const searchInput = document.getElementById("searchInput");
+const tableRows = document.querySelectorAll("#tableBody tr");
+
+searchInput.addEventListener("keyup", function () {
+  const value = this.value.toLowerCase();
+
+  tableRows.forEach(row => {
+    const text = row.innerText.toLowerCase();
+
+    if (text.includes(value)) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
+});
+</script>
+
+
+
+
+<!-- Filter Scripts -->
+
+<script>
+document.getElementById("applyFilter").onclick = function () {
+
+  const date = document.getElementById("filterDate").value;
+  const order = document.getElementById("filterOrder").value.toLowerCase();
+  const status = document.getElementById("filterStatus").value.toLowerCase();
+
+  const rows = document.querySelectorAll("#tableBody tr");
+
+  rows.forEach(row => {
+
+    const orderId = row.children[0].innerText.toLowerCase();
+    const rowDate = row.children[2].innerText; 
+    const rowStatus = row.children[5].innerText.toLowerCase();
+
+    let show = true;
+
+    // Order ID match
+    if (order && !orderId.includes(order)) {
+      show = false;
+    }
+
+    // Status match
+    if (status && !rowStatus.includes(status)) {
+      show = false;
+    }
+
+    // FIXED DATE MATCH
+    if (date) {
+      const formattedDate = formatDate(rowDate);
+      if (formattedDate !== date) {
+        show = false;
+      }
+    }
+
+    row.style.display = show ? "" : "none";
+
+  });
+};
+
+// convert table date (02-04-2026) → 2026-04-02
+function formatDate(dateStr) {
+  const parts = dateStr.split("-");
+  return parts[2] + "-" + parts[1] + "-" + parts[0];
+}
+</script>
+
+
+<script>
+document.querySelector(".clear-btn").onclick = function () {
+
+  document.getElementById("filterDate").value = "";
+  document.getElementById("filterOrder").value = "";
+  document.getElementById("filterStatus").value = "";
+
+  document.querySelectorAll("#tableBody tr").forEach(row => {
+    row.style.display = "";
+  });
+
+};
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

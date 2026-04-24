@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Web Solution Dashboard</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Oswald  -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@200;400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --primary-blue: #0796FE;
+            --dark-navy: #0A2540;
+            --sub-content: #797979;
+            --light-bg: #F8F9FA;
+        }
+
+        body {
+            margin-left: 250px;
+            font-family: 'Lato', sans-serif;
+            background-color: #f5f6f8;
+            color: var(--dark-navy);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            height: 70px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #eee;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .search-container {
+            background-color: #F1F3F4;
+            border-radius: 8px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            overflow: visible;
+            left: -15%;
+        }
+
+        @media (min-width: 992px) {
+            .search-align {
+                width: 500px;
+            }
+        }
+
+        .search-container .input-group-text {
+            background: transparent !important;
+            border: none !important;
+            padding-left: 12px;
+            color: #9E9E9E;
+        }
+
+        .search-container input {
+            background: transparent !important;
+            border: none !important;
+            font-size: 14px;
+            box-shadow: none !important;
+        }
+
+        /* Notification Bell & Profile */
+        .bell-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bell-wrapper i {
+            font-size: 26px !important;
+            color: var(--sub-content);
+        }
+
+        .badge-dot {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 18px;
+            height: 18px;
+            background-color: #E74C3C;
+            border: 2px solid white;
+            border-radius: 50%;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .notif-label {
+            font-size: 9px;
+            color: var(--sub-content);
+            margin-top: 1px;
+            text-align: center;
+        }
+
+        .profile-circle {
+            width: 40px;
+            height: 40px;
+            background-color: var(--dark-navy);
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* --- Sidebar Style --- */
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            min-height: 100vh;
+            background-color: #0A2540;
+            border-right: 1px solid #eee;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        #sidebar .position-sticky {
+            padding: px 0 !important;
+        }
+
+        #sidebar .sidebar-branding {
+            text-align: center;
+            padding: 0 10px;
+            margin-bottom: 5px;
+            margin-top: -6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #sidebar .sidebar-branding h6 {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+         .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eee;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .nav-link i {
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
+}
+.active-link i {
+  color: #0796FE;
+}
+        /* .sidebar-icon {
+            width: 24px;
+            height: 23px;
+            object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(100%) hue-rotate(180deg);
+            transition: all 0.3s ease;
+        } */
+
+        /* NAV LINK */
+        .nav-link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px !important;
+            margin: 6px 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* BLUE LINE (border la + corner match) */
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 6px;
+            background-color: #0796FE;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        /* HOVER */
+        .nav-link:hover {
+            background-color: rgba(7, 150, 254, 0.15);
+             color: #0796FE !important;
+        }
+
+        .nav-link:hover::before {
+            opacity: 1;
+        }
+
+        .nav-link:hover .sidebar-icon {
+            filter: invert(43%) sepia(100%) saturate(600%) hue-rotate(177deg) brightness(100%);
+        }
+ .nav-link:hover {
+            background-color: rgba(7, 150, 254, 0.1);
+               
+        }
+
+.nav-link:hover i {
+    color: #0796FE !important;
+}
+
+
+.nav-link:hover::before {
+    opacity: 1;
+}
+        /* ACTIVE */
+        .active-link {
+            background-color: rgba(7, 150, 254, 0.15);
+            color: #0796FE !important;
+            border-radius: 8px;
+            margin: 8px 12px;
+            padding: 12px 20px !important;
+            font-weight: 600;
+        }
+
+        .active-link::before {
+            opacity: 1;
+        }
+
+        .active-link .sidebar-icon {
+            filter: invert(43%) sepia(100%) saturate(600%) hue-rotate(177deg) brightness(100%);
+        }
+
+        .notif-dropdown {
+            position: absolute;
+            top: 60px;
+            right: -15px;
+            width: 350px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .notif-header {
+            padding: 8px;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+        }
+
+        .notif-body {
+            max-height: 190px;
+            overflow-y: auto;
+            padding: 8px;
+        }
+
+        .notif-footer {
+            padding: 8px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .profile-dropdown {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            width: 270px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .profile-top {
+            padding: 15px;
+        }
+
+        .profile-actions {
+            padding: 10px 0;
+        }
+
+        .profile-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .profile-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .mobile-toggle-btn {
+            display: none;
+            border: none;
+            background: transparent;
+            color: var(--dark-navy);
+            font-size: 26px;
+            line-height: 1;
+            padding: 6px 8px;
+        }
+
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 998;
+        }
+
+        @media (max-width: 991.98px) {
+            body {
+                margin-left: 0;
+            }
+
+            .mobile-toggle-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #sidebar {
+                top: 70px;
+                min-height: calc(100vh - 70px);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1001;
+            }
+
+            #sidebar.active {
+                transform: translateX(0);
+            }
+
+            .sidebar-overlay.active {
+                display: block;
+            }
+
+            .navbar-brand {
+                width: auto !important;
+                min-width: 0 !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .search-container {
+                display: none !important;
+            }
+
+            .notif-label {
+                display: none;
+            }
+
+            .notif-dropdown {
+                right: -70px;
+                width: min(330px, calc(100vw - 24px));
+            }
+
+            .profile-dropdown {
+                right: 10px;
+                width: min(270px, calc(100vw - 24px));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top py-2">
+        <div class="container-fluid px-4">
+            <button class="mobile-toggle-btn me-2" id="sidebarToggle" aria-label="Open sidebar">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="AuthorDashboard.html"
+                style="width: calc(16.66% - 1.5rem); min-width: 120px;"></a>
+
+            <div class="search-container search-align d-none d-lg-flex position-relative">
+                <span class="input-group-text"><i class="fa fa-search"></i></span>
+
+                <input type="text" class="form-control" id="searchInput" placeholder="Search">
+
+                <div id="searchResults" class="p-2 bg-white border rounded shadow"
+                    style="width:100%; max-height:300px; overflow:auto; display:none; position:absolute; top:100%; left:0; z-index:99999;">
+                </div>
+            </div>
+
+            <!-- Right Profile Icons -->
+            <div class="d-flex align-items-center ms-auto">
+                <div class="notification-box me-4 text-center">
+                    <div class="bell-wrapper" id="bellIcon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot" id="notificationBadge"></span>
+                    </div>
+                    <div class="notif-label">Notification</div>
+
+                    <div id="notificationModal" class="notif-dropdown d-none">
+                        <div class="notif-header">
+                            Notifications <span id="notifCount" class="count-badge">0</span>
+                        </div>
+
+                        <div id="notifList" class="notif-body"></div>
+
+                        <div class="notif-footer">
+                            <button id="closeNotif" class="btn btn-sm btn-outline-primary">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="profileCircle" class="profile-circle text-white d-flex align-items-center justify-content-center">
+                    AS
+                </div>
+            </div>
+
+            <div id="profileDropdown" class="profile-dropdown d-none">
+                <div class="profile-top d-flex align-items-center">
+                    <div id="profileAvatar"
+                        class="profile-circle text-white d-flex align-items-center justify-content-center">
+                    </div>
+
+                    <div class="profile-info ms-3">
+                        <div class="fw-bold" id="profileName"></div>
+                        <span class="badge bg-primary" id="profileRole"></span>
+                        <div class="text-muted small mt-1" id="profileEmail"></div>
+                    </div>
+                </div>
+
+                <hr class="m-0">
+
+                <div class="profile-actions">
+                    <div class="profile-item" id="logoutBtn">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Sign Out</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <nav id="sidebar" class="d-md-block px-0">
+                <div class="position-sticky pt-3">
+                    <div class="sidebar-branding">
+                        <img src="img/creativesweb.png" alt="Logo" height="50" style="margin-bottom: 10px;">
+                    </div>
+
+                      <ul class="nav flex-column">
+  <li class="nav-item mb-1">
+    <a class="nav-link active-link" href="AuthorDashboard.html">
+      <i class="bi bi-house me-3"></i> Dashboard
+    </a>
+  </li>
+
+  <li class="nav-item mb-1">
+    <a class="nav-link " href="AuthorProduct.html">
+      <i class="bi bi-box-seam me-3"></i> Products
+    </a>
+  </li>
+
+  <li class="nav-item mb-1">
+    <a class="nav-link" href="#">
+      <i class="bi bi-graph-up me-3"></i> Sales Analytics
+    </a>
+  </li>
+
+  <li class="nav-item mb-1">
+    <a class="nav-link" href="#">
+      <i class="bi bi-currency-rupee me-3"></i> Earnings
+    </a>
+  </li>
+
+  <li class="nav-item mb-1">
+    <a class="nav-link" href="#">
+      <i class="bi bi-wallet2 me-3"></i> Payouts
+    </a>
+  </li>
+
+  <li class="nav-item mb-1">
+    <a class="nav-link" href="#">
+      <i class="bi bi-headset me-3"></i> Support
+    </a>
+  </li>
+
+  <li class="nav-item mb-1">
+    <a class="nav-link" href="#">
+      <i class="bi bi-gear me-3"></i> Setting
+    </a>
+  </li>
+</ul>
+                </div>
+            </nav>
+
+            <!-- Main Dashboard Area -->
+            <main class="px-md-4 py-2" style="width: 100%;"></main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const sidebarToggle = document.getElementById("sidebarToggle");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebarOverlay");
+        const bell = document.getElementById("bellIcon");
+        const notificationModal = document.getElementById("notificationModal");
+        const closeNotif = document.getElementById("closeNotif");
+        const profileCircle = document.getElementById("profileCircle");
+        const profileDropdown = document.getElementById("profileDropdown");
+        const logoutBtn = document.getElementById("logoutBtn");
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener("click", () => {
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+            });
+        }
+
+        if (overlay) {
+            overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+            });
+        }
+
+        if (bell) {
+            bell.addEventListener("click", (event) => {
+                event.stopPropagation();
+                notificationModal.classList.toggle("d-none");
+                profileDropdown.classList.add("d-none");
+            });
+        }
+
+        if (closeNotif) {
+            closeNotif.addEventListener("click", () => {
+                notificationModal.classList.add("d-none");
+            });
+        }
+
+        if (profileCircle) {
+            profileCircle.addEventListener("click", (event) => {
+                event.stopPropagation();
+                profileDropdown.classList.toggle("d-none");
+                notificationModal.classList.add("d-none");
+            });
+        }
+
+        document.addEventListener("click", (event) => {
+            if (notificationModal && bell && !notificationModal.contains(event.target) && !bell.contains(event.target)) {
+                notificationModal.classList.add("d-none");
+            }
+
+            if (profileDropdown && profileCircle && !profileDropdown.contains(event.target) && !profileCircle.contains(event.target)) {
+                profileDropdown.classList.add("d-none");
+            }
+        });
+
+        if (logoutBtn) {
+            logoutBtn.addEventListener("click", () => {
+                localStorage.removeItem("token");
+                window.location.href = "login.html";
+            });
+        }
+    </script>
+</body>
+
+</html>

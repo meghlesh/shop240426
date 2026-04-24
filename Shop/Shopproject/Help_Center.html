@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Confer - Consulting Website Template Free Download</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        /* TOP BAR Start Css */
+
+        .top-bar {
+            background: #1f6fae;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            font-size: 14px;
+        }
+
+        .top-left {
+            display: flex;
+        }
+
+        .top-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-right: 20px;
+            margin-right: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .top-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social i {
+            cursor: pointer;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 8px 12px;
+                font-size: 11px;
+                flex-wrap: nowrap;
+            }
+
+            .top-left {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .top-item {
+                gap: 5px;
+                padding-right: 10px;
+                margin-right: 10px;
+            }
+
+            .top-right {
+                gap: 10px;
+            }
+
+            .social i {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-bar {
+                padding: 6px 8px;
+                font-size: 9px;
+            }
+
+            .top-left {
+                gap: 6px;
+            }
+
+            .top-item {
+                gap: 4px;
+                padding-right: 6px;
+                margin-right: 6px;
+            }
+
+            .social i {
+                font-size: 10px;
+            }
+        }
+
+        /* TOP BAR end CSS  */
+
+
+
+
+        /* HEADER */
+        .header {
+            background: #0A2540;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 50px;
+            flex-wrap: wrap;
+            /* important for toggle */
+        }
+
+        /* LOGO */
+
+        #brand {
+            width: 180px;
+            margin-left: -30px;
+        }
+
+        /* NAVIGATION */
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            margin-right: 4px;
+            margin-top: 18px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: 0.3s;
+        }
+
+        .nav ul li a:hover,
+        .nav ul li a.active {
+            color: #2ea3f2;
+            border-bottom: 2px solid #2ea3f2;
+            padding-bottom: 4px;
+        }
+
+
+
+        /* BUTTONS */
+        .actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Common Button */
+        .btn {
+            padding: 8px 35px;
+            font-size: 13px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+
+        /* LOGIN BUTTON */
+        .login {
+            border: 1px solid #38bdf8;
+            color: white;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .login:hover {
+            background: #38bdf8;
+        }
+
+        /* REGISTER BUTTON */
+        .register {
+            border: 1px solid #38bdf8;
+            color: white;
+            /* blue text */
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        /* ON HOVER / CLICK LOOK */
+        .register:hover {
+            background: #38bdf8;
+            color: #fff;
+        }
+
+        /*======================================= */
+        /* HAMBURGER BUTTON */
+        /* ======================================= */
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            margin-right: -30px;
+
+        }
+
+
+
+
+
+
+        /* --- Hero Section Design --- */
+
+
+/* --- UNIFIED HERO DESIGN --- */
+
+.help-hero-wrapper {
+    position: relative;
+    /* background: url('./img/Hero Section.png') no-repeat center center; */
+    background: url('./img/Hero Section.png') no-repeat center 70%;
+background-size: cover;
+    overflow: hidden;
+}
+
+
+
+.hero-top-solid {
+    position: relative;
+    background: url('./img/Headline bg.png') no-repeat center;
+    background-size: cover;
+    padding: 60px 0 120px;
+    z-index: 10;
+}
+.hero-top-solid::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+    background: url('./img/shape-divider.png') no-repeat center;
+    background-size: cover;
+}
+.hero-top-solid .main-title {
+    font-size: 52px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.hero-top-solid .breadcrumb-text {
+    font-size: 16px;
+    color: #cfd9e6;
+}
+
+.hero-top-solid .breadcrumb-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-top-solid .breadcrumb-text a:last-child {
+    color: #00a2ff;
+}
+
+.hero-top-solid .breadcrumb-text a:hover {
+    color: #00a2ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.hero-bottom-content {
+    position: relative;
+    z-index: 5;
+    padding: 80px 0 120px;
+    color: white;
+}
+
+.hero-bottom-content h2 {
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-bottom-content p {
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 35px;
+}
+
+.btn-contact-us {
+    background-color: #00a2ff;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-contact-us:hover {
+    background-color: #0084d1;
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= HERO RESPONSIVE ================= */
+
+/* ===== PERFECT HERO RESPONSIVE ===== */
+
+.help-hero-wrapper {
+    background-position: center center;
+    background-size: cover;
+}
+
+/* ===== DESKTOP (Default) ===== */
+.hero-top-solid {
+    padding: 70px 0 130px;
+}
+
+.hero-bottom-content {
+    padding: 100px 0 130px;
+}
+
+.hero-top-solid .main-title {
+    font-size: 64px;
+}
+
+.hero-bottom-content h2 {
+    font-size: 55px;
+}
+
+/* ===== LAPTOP ===== */
+@media (max-width: 1200px) {
+    .hero-top-solid {
+        padding: 60px 0 110px;
+    }
+
+    .hero-bottom-content {
+        padding: 80px 0 110px;
+    }
+
+    .hero-top-solid .main-title {
+        font-size: 44px;
+    }
+
+    .hero-bottom-content h2 {
+        font-size: 42px;
+    }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+    .hero-top-solid {
+        padding: 50px 0 90px;
+    }
+
+    .hero-bottom-content {
+        padding: 70px 0 90px;
+    }
+
+    .hero-top-solid .main-title {
+        font-size: 36px;
+    }
+
+    .hero-bottom-content h2 {
+        font-size: 34px;
+    }
+
+    .hero-bottom-content p {
+        font-size: 15px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .hero-top-solid {
+        padding: 40px 0 70px;
+    }
+
+    .hero-bottom-content {
+        padding: 60px 0 70px;
+    }
+
+    .hero-top-solid .main-title {
+        font-size: 28px;
+    }
+
+    .hero-bottom-content h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .hero-bottom-content p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .btn-contact-us {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+    .hero-top-solid {
+        padding: 35px 0 60px;
+    }
+
+    .hero-bottom-content {
+        padding: 50px 0 60px;
+    }
+
+    .hero-top-solid .main-title {
+        font-size: 22px;
+    }
+
+    .hero-bottom-content h2 {
+        font-size: 22px;
+    }
+
+    .hero-bottom-content p {
+        font-size: 13px;
+    }
+}
+
+/* ===== SHAPE FIX (important) ===== */
+@media (max-width: 768px) {
+    .hero-top-solid::after {
+        height: 70px;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-top-solid::after {
+        height: 50px;
+    }
+}
+
+        /* --- Explore Section Design --- */
+        .explore-section {
+            padding: 80px 0;
+            background: #fff;
+            margin-top: -5px;
+        }
+
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title-container h2 {
+            font-size: 34px;
+            font-weight: 600;
+
+            color: #0A2540;
+        }
+
+        .title-line {
+            width: 60px;
+            height: 8px;
+            background-color: #00a2ff;
+            margin: 15px auto 0;
+        }
+
+        .help-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 0px;
+            padding: 20px;
+            height: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+       .help-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .help-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .help-card h5 {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #0A2540;
+        }
+
+        .help-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .read-more-link {
+            color: #00a2ff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: auto;
+        }
+
+        .read-more-link:hover {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+
+
+
+        /* ================= EXPLORE SECTION RESPONSIVE ================= */
+
+        @media (max-width: 992px) {
+            .explore-section {
+                padding: 60px 0;
+            }
+
+            .section-title-container h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .explore-section {
+                padding: 50px 0;
+            }
+
+            .section-title-container {
+                margin-bottom: 40px;
+            }
+
+            .section-title-container h2 {
+                font-size: 24px;
+            }
+
+            .help-card img {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .help-card {
+                padding: 15px;
+            }
+
+            .help-card h5 {
+                font-size: 16px;
+            }
+
+            .help-card p {
+                font-size: 13px;
+            }
+
+            .help-card img {
+                height: 140px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Frequently Asked Questions CSS Start */
+
+        .faq-container {
+            background-color: #E1F2FF;
+            padding-bottom: 50px;
+            padding-top: 20px;
+
+
+        }
+
+        .faq-section {
+            max-width: 930px;
+            margin: 0 auto;
+
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 400;
+            color: #0A2540;
+            margin-bottom: 12px;
+        }
+
+        .faq-line {
+            width: 80px;
+            height: 7px;
+            background: #2da8ff;
+            margin: 0 auto 30px;
+            /* border-radius: 30px; */
+        }
+
+        .faq-item {
+            background: #fFF;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 400;
+            color: #0A2540;
+            text-align: left;
+        }
+
+        .faq-icon {
+            font-size: 24px;
+            color: #111;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 24px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            color: #7B8898;
+            line-height: 1.8;
+            padding-bottom: 18px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 150px;
+            padding-top: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Large Tablets */
+        @media (max-width: 991px) {
+            .faq-section {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            .faq-title {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .faq-line {
+                width: 70px;
+                height: 6px;
+                margin-bottom: 25px;
+            }
+
+            .faq-question {
+                font-size: 17px;
+                padding: 16px 20px;
+            }
+
+            .faq-icon {
+                font-size: 22px;
+            }
+
+            .faq-answer {
+                padding: 0 20px;
+            }
+
+            .faq-answer p {
+                font-size: 14px;
+                line-height: 1.7;
+                padding-bottom: 16px;
+            }
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 0 12px;
+            }
+
+            .faq-title {
+                font-size: 26px;
+            }
+
+            .faq-line {
+                width: 60px;
+                height: 5px;
+                margin-bottom: 22px;
+            }
+
+            .faq-item {
+                border-radius: 6px;
+                margin-bottom: 14px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+                padding: 15px 18px;
+                gap: 10px;
+            }
+
+            .faq-icon {
+                font-size: 20px;
+            }
+
+            .faq-answer {
+                padding: 0 18px;
+            }
+
+            .faq-answer p {
+                font-size: 13px;
+                line-height: 1.6;
+                padding-bottom: 15px;
+            }
+        }
+
+        /* Mobile Devices */
+        @media (max-width: 576px) {
+            .faq-section {
+                padding: 0 10px;
+            }
+
+            .faq-title {
+                font-size: 22px;
+                line-height: 1.3;
+            }
+
+            .faq-line {
+                width: 50px;
+                height: 4px;
+                margin-bottom: 18px;
+            }
+
+            .faq-item {
+                border-radius: 5px;
+                margin-bottom: 12px;
+            }
+
+            .faq-question {
+                font-size: 14px;
+                padding: 14px 15px;
+            }
+
+            .faq-icon {
+                font-size: 18px;
+            }
+
+            .faq-answer {
+                padding: 0 15px;
+            }
+
+            .faq-answer p {
+                font-size: 12px;
+                line-height: 1.5;
+                padding-bottom: 14px;
+            }
+
+            .faq-item.active .faq-answer {
+                max-height: 200px;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 360px) {
+            .faq-title {
+                font-size: 20px;
+            }
+
+            .faq-question {
+                font-size: 13px;
+                padding: 12px;
+            }
+
+            .faq-icon {
+                font-size: 16px;
+            }
+
+            .faq-answer {
+                padding: 0 12px;
+            }
+
+            .faq-answer p {
+                font-size: 11px;
+                padding-bottom: 12px;
+            }
+        }
+
+        /* Frequently Asked Questions CSS end */
+
+
+
+        /* Need Help CSS Start */
+        .help-section {
+            background: #fFF;
+            padding: 50px 20px;
+        }
+
+        .help-container {
+            max-width: 520px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .help-container h2 {
+            font-size: 34px;
+            font-weight: 400;
+            color: #17304d;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .help-container p {
+            font-size: 15px;
+            color: #7b7b7b;
+            font-style: italic;
+            margin-bottom: 22px;
+        }
+
+        .help-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .he-btn {
+            width: 200px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            border-radius: 2px;
+            transition: 0.3s ease;
+        }
+
+        .he-btn-primary {
+            background: #1f95ec;
+            color: #fff;
+            border: 1px solid #1f95ec;
+        }
+
+
+
+        .he-btn-outline {
+            background: transparent;
+            color: #1f95ec;
+            border: 1px solid #1f95ec;
+        }
+
+        .he-btn-primary:hover {
+            background: #1688db;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .he-btn-outline:hover {
+            background: #1f95ec;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .help-section {
+                padding: 40px 15px;
+            }
+
+            .help-container h2 {
+                font-size: 28px;
+            }
+
+            .help-container p {
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+
+            .he-btn {
+                width: 180px;
+                height: 44px;
+                line-height: 44px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .help-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .he-btn {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+
+        /* Need Help CSS end */
+
+
+        /* FOOTER Start CSS */
+
+        .footer {
+            background: #0A2540;
+            color: white;
+            padding: 50px 30px 20px;
+            
+        }
+
+        /* FOOTER GRID */
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        /* FOOTER LOGO */
+
+        .footer-logo {
+            width: 170px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+
+        .footer-contact {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #cfd9e6;
+        }
+
+        .footer-contact i {
+            color: #2ea3f2;
+            margin-top: 6px;
+        }
+
+        /* TITLES */
+
+        .footer-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #2ea3f2;
+        }
+
+        /* LINKS */
+
+        .footer-links {
+            list-style: none;
+
+
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+            width: fit-content;
+
+
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #cfd9e6;
+            display: flex;
+            gap: 10px;
+
+        }
+
+        .footer-links a:hover {
+            color: #2ea3f2;
+        }
+
+        .footer-links i {
+            color: #2ea3f2;
+            padding-top: 6px;
+        }
+
+        /* NEWSLETTER */
+
+        .footer-text {
+            color: #cfd9e6;
+            margin-bottom: 20px;
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #3c5570;
+            color: white;
+        }
+
+        .newsletter button {
+            padding: 12px 20px;
+            background: #2ea3f2;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background: #1a87e7;
+        }
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid #223b55;
+            margin-top: 30px;
+            margin-bottom: -20px;
+            padding-top: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom a {
+            color: #cfd9e6;
+            text-decoration: none;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .footer-social i {
+            color: white;
+            transition: 0.3s;
+        }
+
+
+
+        /* ======================================= */
+        /* TABLET RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:1024px) {
+
+            /* show toggle */
+
+            .menu-toggle {
+                display: block;
+            }
+
+            /* navigation layout */
+
+            .nav {
+                width: 100%;
+                display: none;
+                padding: 15px 0;
+
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+                /* LEFT ALIGN */
+                padding-left: 30px;
+                /* spacing from left */
+                width: 100%;
+            }
+
+            .actions {
+                flex-direction: column;
+                margin-top: -30px;
+                /* LEFT ALIGN BUTTONS */
+                padding-bottom: 20px;
+                padding-right: 150px;
+            }
+
+
+            /* when toggle active */
+
+            .nav.active {
+                display: flex;
+            }
+
+            /* footer becomes 2 columns */
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+        }
+
+        /* ======================================= */
+        /* MOBILE RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:768px) {
+
+
+
+
+
+            /* footer becomes single column */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* center footer bottom */
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+        }
+
+        /* small phones */
+
+        @media (max-width:420px) {
+
+            .newsletter {
+                flex-direction: column;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+        }
+
+        /* Footer end  CSS*/
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+
+        <div class="top-left">
+
+            <div class="top-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>10:00AM - 7:00PM Mon - Sat</span>
+            </div>
+
+            <div class="top-item">
+  <a href="tel:+919326246981" style="color:white; text-decoration:none; display:flex; align-items:center; gap:10px;">
+    <i class="fa-solid fa-phone"></i>
+    <span>+91 93262 46981</span>
+  </a>
+</div>
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="social">
+                <a href="https://www.linkedin.com/company/creativewebsolution404/?viewAsMember=true" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="social">
+                <a href="https://www.instagram.com/creativewebsolution99?utm_source=qr&igsh=OWlxcGlvNG1tNG1s"
+                    target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Top Bar End -->
+
+
+    <!-- Nav Bar Start -->
+
+    <header class="header">
+
+        <a href="index.html"><img src="img/creativesweb.png" id="brand"></a>
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="nav" id="navMenu">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Product (1).html">PRODUCT</a></li>
+                <li><a href="BecomeAuthor.html">BECOME AUTHOR</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a class="active">HELP CENTER</a></li>
+            </ul>
+
+            <div class="actions">
+                <a href="login.html" class="btn login">LOGIN</a>
+                <a href="Register.html" class="btn register">REGISTER</a>
+            </div>
+
+        </nav>
+
+    </header>
+    </div>
+    <!-- Nav Bar End -->
+
+
+
+    <!-- HELP CENTER HERO START -->
+<section class="help-hero-wrapper">
+    <div class="hero-top-solid">
+        <div class="container text-center">
+            <h1 class="main-title">Help Center</h1>
+            <p class="breadcrumb-text mt-3">
+                <a href="index.html">Home</a> > <a href="Help_Center.html">Help Center</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Bottom Part: How can we help you? -->
+    <div class="hero-bottom-content">
+        <div class="container text-center">
+            <h2>How can we help you?</h2>
+            <p>Find Answers, Guides, & Support For Using Our Platform.</p>
+            <a href="#" class="btn-contact-us">CONTACT US</a>
+        </div>
+    </div>
+</section>
+<!-- HELP CENTER HERO END -->
+
+    <!-- EXPLORE SECTION START -->
+    <section class="explore-section">
+        <div class="container">
+            <div class="section-title-container">
+                <h2>Explore Our Help Center</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="help-card">
+                        <img src="./img/Image 1.png" alt="Account">
+                        <h5>Account & Login</h5>
+                        <p>Manage your account, login issues, and password reset. Update profile information and
+                            security settings easily...</p>
+                        <a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="help-card">
+                        <img src="./img/Image 2.png" alt="Buying">
+                        <h5>Buying Products</h5>
+                        <p>Learn how to purchase, download, and manage products. Track orders, invoices, and purchase
+                            history...</p>
+                        <a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="help-card">
+                        <img src="./img/Image 3.png" alt="Selling">
+                        <h5>Selling Products</h5>
+                        <p>Upload and manage your products in the marketplace. Track sales, earnings, and author profile
+                            details...</p>
+                        <a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="help-card">
+                        <img src="./img/Image 4.png" alt="Payments">
+                        <h5>Payments & Payouts</h5>
+                        <p>Understand payment methods and withdrawal process. Check payout schedule, billing, and
+                            payment issues...</p>
+                        <a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="help-card">
+                        <img src="./img/Image 5.png" alt="Technical">
+                        <h5>Technical Issues</h5>
+                        <p>Fix website errors, login problems, and download issues. Get solutions for technical and
+                            system errors...</p>
+                        <a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="help-card">
+                        <img src="./img/Image 6.png" alt="Support">
+                        <h5>Contact Support</h5>
+                        <p>Reach our support team for help and assistance. Submit queries, issues, or feedback...</p>
+                        <a href="#" class="read-more-link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- EXPLORE SECTION END -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- frequently Asked Questions Section Start -->
+
+    <section class="faq-container">
+        <div class="faq-section">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-line"></div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>1. How do I create an account?</span>
+                    <span class="faq-icon">›</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Create an account by signing up with your name, email, and password.<br>
+                        Verify your email address, then log in to start using your account.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>2. How can I my products?</span>
+                    <span class="faq-icon">›</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        You can manage your products through your dashboard after logging in.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>3. How do I receive payments?</span>
+                    <span class="faq-icon">›</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Payments are transferred directly to your linked payment account.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>4. What Is your refund policy?</span>
+                    <span class="faq-icon">›</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Refund requests are reviewed and processed within 5 to 7 business days.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>5. How can i change my password?</span>
+                    <span class="faq-icon">›</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        You can change your password anytime from your account settings page.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Frequently Asked Questions Section End -->
+
+
+    <!-- Need Help Section sart -->
+    <section class="help-section">
+        <div class="help-container">
+            <h2>Need More Help?</h2>
+            <p>We’re ready to solve your problems.</p>
+
+            <div class="help-buttons">
+                <a href="#" class="he-btn he-btn-primary">Contact Support</a>
+                <a href="#" class="he-btn he-btn-outline">Submit Ticket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- need help section end -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- column 1 -->
+
+            <div>
+
+                <a href="index.html"><img src="img/creativesweb.png" class="footer-logo"></a>
+
+<div class="footer-contact">
+  <a href="https://maps.app.goo.gl/TTv8ueeyD83GUAW86" 
+     target="_blank" 
+     style="color:inherit; text-decoration:none; display:flex; gap:10px;">
+    
+    <i class="fa-solid fa-location-dot"></i>
+
+    <span>
+      LWT, 203, C/O, ITI RD, above PNG,<br>
+      near Parihar Chowk, Aundh,<br>
+      Maharashtra-411007
+    </span>
+
+  </a>
+</div>
+
+<!-- PHONE FIXED (TEL LINK ADDED) -->
+      <div class="footer-contact">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+919326246981" style="color:inherit; text-decoration:none;">
+          +91 93262 46981
+        </a>
+      </div>
+
+<!-- EMAIL FIX (MAILTO ADDED) -->
+      <div class="footer-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:info@creativewebsolution.in" class="footer-link">
+          info@creativewebsolution.in
+        </a>
+      </div>
+
+<div class="footer-contact">
+  <a href="https://www.creativewebsolution.in/" 
+     target="_blank" 
+     style="color:inherit; text-decoration:none; display:flex; gap:10px;">
+    
+    <i class="fa-solid fa-globe"></i>
+
+    <span>www.creativewebsolution.in</span>
+
+  </a>
+</div>
+
+            </div>
+
+
+            <!-- column 2 -->
+
+            <div>
+
+                <h3 class="footer-title">Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="Product (1).html"><i class="fa-solid fa-chevron-right"></i> Product</a></li>
+                    <li><a href="BecomeAuthor.html"><i class="fa-solid fa-chevron-right"></i> Become Author</a></li>
+                    <li><a href="Blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="Help_Center.html"><i class="fa-solid fa-chevron-right"></i> Help Center</a></li>
+                    <li><a href="Cart.html"><i class="fa-solid fa-chevron-right"></i> Cart</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- column 3 -->
+
+            <div>
+
+                <h3 class="footer-title">Newsletters</h3>
+
+                <p class="footer-text">
+                    Elevate your business with Creative Web Solution.
+                    Experience growth through smart websites and cutting edge digital strategies.
+                </p>
+
+                <div class="newsletter">
+                    <input type="email" placeholder="Email goes here">
+                    <button>Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- footer bottom -->
+
+        <div class="footer-bottom">
+
+            <p style="color:gray;">
+                Copyright © 2026
+                <a href="#" style="color:white;">Creative Web Solution</a>.
+                ALL RIGHTS RESERVED
+            </p>
+
+<div class="footer-social">
+<a href="https://www.linkedin.com/company/creativewebsolution404/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/creativewebsolution/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+
+        /* toggle menu */
+
+        const toggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("navMenu");
+
+        toggle.onclick = () => {
+            nav.classList.toggle("active");
+        };
+
+
+    </script>
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const button = item.querySelector('.faq-question');
+            const icon = item.querySelector('.faq-icon');
+
+            button.addEventListener('click', () => {
+                faqItems.forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-icon').textContent = '›';
+                    }
+                });
+
+                item.classList.toggle('active');
+
+                if (item.classList.contains('active')) {
+                    icon.textContent = '⌄';
+                } else {
+                    icon.textContent = '›';
+                }
+            });
+        });
+    </script>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>

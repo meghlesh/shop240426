@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Confer - Consulting Website Template Free Download</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+
+    <title>Blog</title>
+    <!-- Template Stylesheet -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <style>
+
+        body {
+        font-family: 'Lato', sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+       
+    }
+       /* TOP BAR Start Css */
+
+.top-bar{
+background:#1f6fae;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 40px;
+font-size:14px;
+}
+
+.top-left{
+display:flex;
+}
+
+.top-item{
+display:flex;
+align-items:center;
+gap:10px;
+padding-right:20px;
+margin-right:20px;
+border-right:1px solid rgba(255,255,255,0.3);
+}
+
+.top-right{
+display:flex;
+gap:20px;
+}
+
+.social i{
+cursor:pointer;
+color: white;
+}
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 8px 12px;
+    font-size: 11px;
+    flex-wrap: nowrap;
+  }
+
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-item {
+    gap: 5px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  .top-right {
+    gap: 10px;
+  }
+
+  .social i {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .top-left {
+    gap: 6px;
+  }
+
+  .top-item {
+    gap: 4px;
+    padding-right: 6px;
+    margin-right: 6px;
+  }
+
+  .social i {
+    font-size: 12px;
+  }
+}
+/* TOP BAR end CSS  */
+            
+
+
+
+/* HEADER */
+ .header {
+            background: #0A2540;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 50px;
+            flex-wrap: wrap;
+            /* important for toggle */
+        }
+
+        /* LOGO */
+
+        #brand {
+            width: 180px;
+            margin-left: -30px;
+            
+        }
+
+        /* NAVIGATION */
+
+        .nav {
+            display: flex;
+            align-items: center;
+             gap: 30px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            margin-right: 4px;
+            margin-top: 18px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+    transition: 0.3s;
+        }
+
+        .nav ul li a:hover,
+        .nav ul li a.active {
+            color: #2ea3f2;
+            border-bottom: 2px solid #2ea3f2;
+                padding-bottom: 4px;
+        }
+
+
+
+        /* BUTTONS */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Common Button */
+.btn {
+    padding: 8px 35px;
+    font-size: 13px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* LOGIN BUTTON */
+.login {
+    border: 1px solid #38bdf8;
+    color: white;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.login:hover {
+    background: #38bdf8;
+}
+
+/* REGISTER BUTTON */
+.register {
+    border: 1px solid #38bdf8;
+    color: white;      /* blue text */
+    background: transparent;
+    transition: 0.3s;
+}
+
+/* ON HOVER / CLICK LOOK */
+.register:hover {
+    background: #38bdf8;
+    color: #fff;
+}
+       
+        /*======================================= */
+        /* HAMBURGER BUTTON */
+        /* ======================================= */
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            margin-right: -30px;
+            
+        }
+
+        /*nav bar ends here*/
+        /* BANNER CSS */
+        /* ===== BANNER ===== */
+
+        .banner {
+            position: relative;
+            background: #1f3c5b;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 100px;
+            overflow: hidden;
+        }
+
+        /* FIXED TEXT POSITION */
+        .banner h1,
+        .banner p {
+            position: relative;
+            top: 45px;
+        }
+
+        .banner h1 {
+          font-size:50px;
+            font-weight:700;
+            margin-bottom:15px;
+        }
+
+
+        .banner p {
+            font-size: 13px;
+            color: #dcdcdc;
+        }
+
+        /* SVG */
+        .banner svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+
+        .breadcrumb-link {
+            color: #dcdcdc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .breadcrumb-link:hover {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        .breadcrumb-link.active {
+            color:#38bdf8;
+            cursor: default;
+            text-decoration: none;
+        }
+  
+        /* BACK BUTTON FIXED INSIDE BANNER */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            padding: 6px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #38bdf8;
+            color: #fff;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .back-btn:hover {
+            background: #2ea3f2;
+            color: #fff;
+        }
+
+        /* ===== CONTENT ===== */
+
+        .content {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 70px; 
+        }
+
+        .content h2 {
+            font-size: 30px;
+            color: #0A2540;
+
+        }
+
+        /* UNDERLINE (IMPORTANT FIX) */
+        .line {
+            width: 60px;
+            height: 7px;
+            background: #38bdf8;
+            margin: 10px auto 15px;
+        }
+
+        .content p {
+            font-size: 17px;
+            color: #777;
+        }
+
+        /* ===== BLOG CARD ===== */
+
+.blog-card-wrapper {
+    margin-top: -50px; 
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+.blog-card {
+    position: relative; 
+    background: #000; 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    /* display: block; */
+}
+
+.blog-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    color: white;
+}
+
+.blog-text p {
+    font-size: 40px; 
+    font-weight: 600;
+    color: #0A2540;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    max-width: 600px;
+}
+
+.blog-text span {
+    font-size: 14px;
+    color: #555; 
+    margin-bottom: 25px;
+    display: block;
+    font-weight: 500;
+}
+
+.blog-text .read-more-btn {
+    padding: 5px 18px;
+    border: 2px solid #38bdf8;
+    font-size: 14px;
+    color: #38bdf8;
+    font-weight: 500;
+    width: 150px;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.blog-text .read-more-btn:hover {
+    background: transparent;
+    color: white;
+    background-color: #38bdf8;
+}
+
+/* ================= TABLET (992px) ================= */
+@media (max-width: 992px) {
+    .blog-card img {
+        height: 400px;
+    }
+    .blog-text {
+        padding: 40px;
+    }
+    .blog-text p {
+        font-size: 32px;
+        max-width: 80%;
+    }
+}
+
+/* ================= MOBILE (768px) ================= */
+@media (max-width: 768px) {
+    .blog-card-wrapper {
+        margin-top: 10px;
+        padding: 0 15px;
+    }
+
+    .blog-card img {
+        height: 350px; 
+    }
+
+    .blog-text {
+        padding: 20px;
+        
+        text-align: center;
+        align-items: center;
+    }
+
+    .blog-text p {
+        font-size: 24px; 
+        line-height: 1.3;
+    }
+
+    .blog-text span {
+        font-size: 14px;
+    }
+}
+
+/* ================= SMALL MOBILE (480px) ================= */
+@media (max-width: 480px) {
+    .blog-card img {
+        height: 300px;
+    }
+    .blog-text p {
+        font-size: 20px;
+    }
+     .blog-text span {
+        font-size: 12px;
+    }
+}
+        /* BANNER END CSS */
+
+        /* Featured Articles Start */
+
+
+/* Section */
+.featured-articles {
+    background: #e3f4ff;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+/* Title */
+.section-title {
+    font-size: 32px;
+    font-weight: 400;
+    color: #0A2540;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between; 
+    align-items: stretch; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+/* CARD */
+.article-card {
+    background: #fff;
+    width: 32%; 
+    padding: 15px;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+}
+
+.article-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.article-card h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 8px;
+    font-weight: 600;
+    min-height: 30px;
+}
+
+.article-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; 
+}
+
+.article-card a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: auto; 
+}
+.article-card a:hover {
+    text-decoration: none;
+    color: #2ea3f2;
+}
+
+@media(max-width:768px) {
+    .featured-articles {
+        padding: 40px 20px;
+    }
+    .section-title {
+        font-size: 26px;
+    }
+    .articles-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Tablet (iPad) */
+@media (max-width: 992px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-card {
+    width: 100%; /* IMPORTANT */
+}
+/* Featured articles End */
+
+      
+
+        /* Developer Guides  Start */
+
+       
+.developer-guides {
+    background: white;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.guides-grid {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.guide-card {
+    background: #fff;
+    width: 32%;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: left;
+    border: 1px solid #d1d5db;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column; 
+}
+
+.guide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+/* TITLE */
+.guide-card h3 {
+    font-size: 18px;
+    color: #0A2540;
+    margin-bottom: 8px;
+    font-weight: 600;
+    min-height: 30px; 
+}
+
+/* TEXT */
+.guide-card p {
+    font-size: 14px;
+    color: #363636;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; 
+}
+
+/* LINK */
+.guide-card a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: auto; 
+
+}
+.guide-card a:hover {
+    text-decoration: none;
+    color: #2ea3f2;
+}
+.view-btn {
+    background-color: #0d2b45;
+    color: #fff;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.view-btn:hover {
+    background-color: #2f86d7;
+}
+/* Responsive fixes */
+@media(max-width:768px) {
+    .guides-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .guide-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Tablet */
+@media (max-width: 992px) {
+    .guides-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.guide-card {
+    width: 100%; /* IMPORTANT */
+}
+        /* Developer Guides End */
+
+@media(max-width:768px) {
+    .developer-guides {
+        padding: 40px 20px;
+    }
+}
+
+.news-section {
+    background: #e3f4ff;
+    padding: 60px 0px;
+}
+
+.news-title {
+    font-size: 32px;
+    font-weight: 400;
+    color: #0A2540;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.news-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; 
+}
+
+/* CARD - Flexbox layout */
+.news-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.news-img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.news-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A2540;
+    margin-bottom: 12px;
+    min-height: 30px; 
+}
+
+.news-card p {
+    color: #6c757d;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+.news-card a {
+    color: #1e88e5;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto; 
+    display: inline-block;
+    font-size: 14px;
+}
+
+.news-card a:hover {
+    text-decoration: none;
+    color: #2ea3f2;
+}
+/* HOVER EFFECT */
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* VIEW ALL BUTTON */
+.view-btn-news {
+    background-color: #0d2b45;
+    color: #fff;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+   
+    cursor: pointer;
+}
+
+.view-btn-news:hover {
+    background-color: #2f86d7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .news-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-section {
+        padding: 40px 20px;
+    }
+    .news-title {
+        font-size: 26px;
+    }
+    .news-card {
+        margin-bottom: 20px;
+    }
+    .view-btn-news {
+        padding: 12px 50px;
+        width: 100%; 
+    }
+}
+        /* Marketplace section end */
+
+       /* FOOTER Start CSS */
+
+ .footer {
+            background: #0A2540;
+            color: white;
+            padding: 50px 30px 20px;
+            margin-top: 60px;
+        }
+
+        /* FOOTER GRID */
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        /* FOOTER LOGO */
+
+        .footer-logo {
+            width: 170px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+
+        .footer-contact {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #cfd9e6;
+            
+        }
+
+       .footer-contact i {
+            color: #2ea3f2;
+            margin-top: 6px;
+        }
+
+        /* TITLES */
+
+        .footer-title {
+            font-size: 22px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #2ea3f2;
+        }
+
+        /* LINKS */
+
+        .footer-links {
+            list-style: none;
+            
+           
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+            width: fit-content;
+            
+            
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #cfd9e6;
+            display: flex;
+            gap: 10px;
+            
+        }
+
+        .footer-links a:hover {
+            color: #2ea3f2;
+        }
+
+        .footer-links i {
+            color: #2ea3f2;
+            padding-top: 6px;
+        }
+
+        .footer-link {
+  color: #cfd9e6;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #2ea3f2;
+}
+        /* NEWSLETTER */
+
+        .footer-text {
+            color: #cfd9e6;
+            margin-bottom: 20px;
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #3c5570;
+            color: white;
+        }
+
+        .newsletter button {
+            padding: 12px 20px;
+            background: #2ea3f2;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background: #1a87e7;
+        }
+
+        /* FOOTER BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid #223b55;
+            margin-top: 30px;
+            margin-bottom: -20px;
+            padding-top: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom a{
+            color: #cfd9e6;
+            text-decoration: none;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .footer-social i {
+            color: white;
+            transition: 0.3s;
+        }
+
+
+
+        /* ======================================= */
+        /* TABLET RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:1024px) {
+
+            /* show toggle */
+
+            .menu-toggle {
+                display: block;
+            }
+
+            /* navigation layout */
+
+            .nav {
+                width: 100%;
+                display: none;
+                padding: 15px 0;
+                
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+                /* LEFT ALIGN */
+                padding-left: 30px;
+                /* spacing from left */
+                width: 100%;
+            }
+
+            .actions {
+                flex-direction: column;
+                margin-top: -30px;
+                /* LEFT ALIGN BUTTONS */
+                padding-bottom: 20px;
+                padding-right: 150px;
+            }
+
+
+            /* when toggle active */
+
+            .nav.active {
+                display: flex;
+            }
+
+            /* footer becomes 2 columns */
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+        }
+
+        /* ======================================= */
+        /* MOBILE RESPONSIVE */
+        /* ======================================= */
+
+        @media (max-width:768px) {
+
+            
+
+            
+
+            /* footer becomes single column */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* center footer bottom */
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+        }
+
+        /* small phones */
+
+        @media (max-width:420px) {
+
+            .newsletter {
+                flex-direction: column;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+        }
+
+/* Footer end  CSS*/
+    </style>
+
+    <!-- Top Bar Start -->
+    <div class="top-bar">
+
+        <div class="top-left">
+
+            <div class="top-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>10:00AM - 7:00PM Mon - Sat</span>
+            </div>
+
+            <div class="top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 93262 46981</span>
+            </div>
+
+        </div>
+
+        <div class="top-right">
+            <div class="social">
+                <a href="https://www.linkedin.com/company/creativewebsolution404/?viewAsMember=true" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="social">
+                <a href="https://www.instagram.com/creativewebsolution99?utm_source=qr&igsh=OWlxcGlvNG1tNG1s"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Top Bar End -->
+
+
+    <!-- Nav Bar Start -->
+
+    <header class="header">
+
+        <a href="index.html"><img src="img/creativesweb.png" id="brand"></a>
+        <!-- Hamburger button -->
+
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="nav" id="navMenu">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Product (1).html">PRODUCT</a></li>
+                <!-- <li><a href="#">BECOME AUTHER</a></li> -->
+                <!-- <li><a href="#">CATEGORIES</a></li> -->
+                <li><a href="BecomeAuthor.html">BECOME AUTHOR</a></li>
+                <li><a href="Blog.html" class="active">BLOG</a></li>
+                <li><a href="Help_Center.html">HELP CENTER</a></li>
+                <!-- <li><a href="#">SUPPORT</a></li> -->
+            </ul>
+
+            <div class="actions">
+                <a href="login.html" class="btn login">LOGIN</a>
+
+                <a href="Register.html" class="btn register">REGISTER</a>
+            </div>
+
+        </nav>
+
+    </header>
+    </div>
+    <!-- Nav Bar End -->
+    <!-- ##################################### -->
+    <!-- BANNER  Start-->
+    <div class="banner">
+
+        <h1>BLOG</h1>
+        <p>
+  <a href="index.html" class="breadcrumb-link">Home</a> &gt;
+  <span class="breadcrumb-link active">Blog</span>
+</p>
+
+        <!-- <button class="back-btn" onclick="goBack()">
+  ← Back
+</button> -->
+
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+            <path d="M0,60 L720,140 L1440,60 L1440,150 L0,150 Z" fill="#ffffff"></path>
+
+            <path d="M0,60 L720,140 L1440,60" fill="none" stroke="#2ea3f2" stroke-width="15" />
+        </svg>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h2>Learn, Build & Grow With Developer Insights</h2>
+        <div class="line"></div>
+        <i>Learn coding, development tips, and marketplace updates from expert developers.</i>
+    </div>
+
+    <!-- BLOG CARD -->
+   
+<div class="container blog-card-wrapper">
+    <div class="blog-card">
+        <img src="img/blog_1.png" alt="SaaS Application">
+
+        <div class="blog-text">
+            
+            <p>How To Build A SaaS Application </p>
+            <span> By John Dee  | <i class="fa-regular fa-calendar"></i> 12 Feb 2026</span>
+            <a href="#" class="read-more-btn">READ MORE</a>
+        </div>
+    </div>
+</div>
+    <!-- BANNER END -->
+
+    <!-- Featured Articles Section -->
+    <section class="featured-articles">
+        <div class="container">
+
+            <h2 class="section-title">Featured Articles</h2>
+
+            <div class="articles-grid">
+
+                <!-- Card 1 -->
+                <div class="article-card">
+                    <img src="img/AI & Machine Learning.png" alt="">
+                    <h3>AI & Machine Learning</h3>
+                    <p>
+                        Explore the latest advancements in artificial intelligence and machine learning,
+                        including real-world...
+                    </p>
+                    <a href="#">Read More →</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="article-card">
+                    <img src="img/Cloud Computing Trends.png" alt="">
+                    <h3>Cloud Computing Trends</h3>
+                    <p>
+                        Stay updated with modern cloud technologies, scalable infrastructure,
+                        DevOps practices, and emerging...
+                    </p>
+                    <a href="#">Read More →</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="article-card">
+                    <img src="img/Marketplace Updates.png" alt="">
+                    <h3>Marketplace Updates</h3>
+                    <p>
+                        Get the latest news on platform features, product launches, pricing updates,
+                        and important changes...
+                    </p>
+                    <a href="#">Read More →</a>
+                </div>
+
+            </div>
+            </div>
+
+    </section>
+
+    <!-- Developer Guides Section -->
+
+        <section class="developer-guides">
+  <div class="container">
+
+        <h2 class="section-title">Developer Guides</h2>
+
+        <div class="guides-grid">
+
+            <!-- Card 1 -->
+            <div class="guide-card">
+                <img src="img/JavaScript Best Practices.png" alt="">
+                <h3>JavaScript Best Practices</h3>
+                <p>
+                    Master clean, efficient, and maintainable JavaScript by following industry best practices, modern...
+                </p>
+                <a href="#">Read More →</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="guide-card">
+                <img src="img/API Integration Tips.png" alt="">
+                <h3>API Integration Tips</h3>
+                <p>
+                    Learn how to securely connect and manage APIs, handle data efficiently, and build seamless
+                    integrations...
+                </p>
+                <a href="#">Read More →</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="guide-card">
+                <img src="img/Web Development Tips.png" alt="">
+                <h3>Web Development Tips</h3>
+                <p>
+                    Discover proven techniques to create fast, responsive, and user-friendly websites using modern
+                    design...
+                </p>
+                <a href="#">Read More →</a>
+            </div>
+
+        </div>
+
+        <!-- Button -->
+        <div class="view-all">
+            <a href="#" class="view-btn">View All Guides</a>
+        </div>
+</div>
+    </section>
+
+    <!--developer guides end -->
+
+
+    <!--Marketplace section-->
+    <section class="news-section py-5">
+        <div class="container">
+
+            <h2 class="text-center mb-5 news-title">Marketplace News</h2>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="news-img">
+                        <h5>New Platform Features</h5>
+                        <p>
+                            Explore the latest tools, feature updates, and platform improvements designed to enhance
+                            user experience...
+                        </p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" class="news-img">
+                        <h5>E-Commerce Growth</h5>
+                        <p>
+                            Stay informed about emerging trends, customer behavior, and strategies driving growth in
+                            e-commerce...
+                        </p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" class="news-img">
+                        <h5>Pricing & Offers</h5>
+                        <p>
+                            Keep track of updated pricing plans, special discounts, and exclusive offers to maximize
+                            your purchases...
+                        </p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Button -->
+            <div class="text-center mt-5">
+                <button class="view-btn-news">View All News</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Marketplace  End-->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- column 1 -->
+
+            <div>
+
+                <a href="index.html"><img src="img/creativesweb.png" class="footer-logo"></a>
+
+<div class="footer-contact">
+  <a href="https://maps.app.goo.gl/TTv8ueeyD83GUAW86" 
+     target="_blank" 
+     style="color:inherit; text-decoration:none; display:flex; gap:10px;">
+    
+    <i class="fa-solid fa-location-dot"></i>
+
+    <span>
+      LWT, 203, C/O, ITI RD, above PNG,<br>
+      near Parihar Chowk, Aundh,<br>
+      Maharashtra-411007
+    </span>
+
+  </a>
+</div>
+
+<!-- PHONE FIXED (TEL LINK ADDED) -->
+      <div class="footer-contact">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+919326246981" style="color:inherit; text-decoration:none;">
+          +91 93262 46981
+        </a>
+      </div>
+
+<!-- EMAIL FIX (MAILTO ADDED) -->
+      <div class="footer-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:info@creativewebsolution.in" class="footer-link">
+          info@creativewebsolution.in
+        </a>
+      </div>
+
+<div class="footer-contact">
+  <a href="https://www.creativewebsolution.in/" 
+     target="_blank" 
+     style="color:inherit; text-decoration:none; display:flex; gap:10px;">
+    
+    <i class="fa-solid fa-globe"></i>
+
+    <span>www.creativewebsolution.in</span>
+
+  </a>
+</div>
+
+            </div>
+
+
+            <!-- column 2 -->
+
+            <div>
+
+                <h3 class="footer-title">Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="Product (1).html"><i class="fa-solid fa-chevron-right"></i> Product</a></li>
+                    <li><a href="BecomeAuthor.html"><i class="fa-solid fa-chevron-right"></i> Become Author</a></li>
+                    <li><a href="Blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="Help_Center.html"><i class="fa-solid fa-chevron-right"></i> Help Center</a></li>
+                    <li><a href="Cart.html"><i class="fa-solid fa-chevron-right"></i> Cart</a></li>
+                </ul>
+
+
+            </div>
+
+
+            <!-- column 3 -->
+
+            <div>
+
+                <h3 class="footer-title">Newsletters</h3>
+
+                <p class="footer-text">
+                    Elevate your business with Creative Web Solution.
+                    Experience growth through smart websites and cutting edge digital strategies.
+                </p>
+
+                <div class="newsletter">
+                    <input type="email" placeholder="Email goes here">
+                    <button>Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- footer bottom -->
+
+        <div class="footer-bottom">
+
+            <p style="color:gray;">
+                Copyright © 2026
+                <a href="#" style="color:white;">Creative Web Solution</a>.
+                ALL RIGHTS RESERVED
+            </p>
+
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/creativewebsolution404/?viewAsMember=true" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/creativewebsolution99?utm_source=qr&igsh=OWlxcGlvNG1tNG1s"
+                    target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+    <script>
+
+        /* toggle menu */
+
+        const toggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("navMenu");
+
+        toggle.onclick = () => {
+            nav.classList.toggle("active");
+        };
+
+
+        document.querySelectorAll(".read-more").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const extra = this.previousElementSibling.querySelector(".extra");
+
+                if (extra.style.display === "inline") {
+                    extra.style.display = "none";
+                    this.textContent = "Read More →";
+                } else {
+                    extra.style.display = "inline";
+                    this.textContent = "Read Less ←";
+                }
+            });
+        });
+
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "index.html"; // fallback
+            }
+        }
+    </script>
